@@ -13,7 +13,6 @@
   parent: [OrganAnimalStomach, OrganHumanStomach]
   categories: [ HideSpawnMenu ]
   components:
-  - type: organ
   - type: SolutionContainerManager
     solutions:
       stomach:

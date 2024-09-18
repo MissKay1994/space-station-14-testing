@@ -7,3 +7,16 @@
     metabolizerTypes: [ Vox ]
   - type: Lung
     alert: LowNitrogen
+- type: entity
+  id: OrganVoxStomach
+  parent: [OrganAnimalStomach, OrganHumanStomach]
+  categories: [ HideSpawnMenu ]
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 50
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5

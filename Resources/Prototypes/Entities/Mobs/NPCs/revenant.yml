@@ -21,6 +21,7 @@
     - Corporeal
   - type: Damageable
     damageContainer: Biological
+    damageModifierSet: GhostMob
   - type: NoSlip
   - type: Eye
     drawFov: false

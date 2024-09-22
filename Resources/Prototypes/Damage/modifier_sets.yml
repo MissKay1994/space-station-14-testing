@@ -306,3 +306,9 @@
   id: PotassiumIodide
   coefficients:
     Radiation: 0.1
+
+# oooooh! I'm haunting you!
+- type: damageModifierSet
+  id: GhostMob
+  coefficients:
+    Cold: 0.0 # Spooky ghost is already cold

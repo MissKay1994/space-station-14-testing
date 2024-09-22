@@ -307,7 +307,7 @@
   coefficients:
     Radiation: 0.1
 
-# oooooh! I'm haunting you!
+# Vegeta! I'm haunting you!
 - type: damageModifierSet
   id: GhostMob
   coefficients:

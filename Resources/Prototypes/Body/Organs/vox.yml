@@ -13,3 +13,11 @@
   - type: Item
     size: Small
     heldPrefix: lungs
+
+type: entity
+  id: OrganVoxBrain
+  parent: PositronicBrain
+  description: "The artificial brain stack of a vox"
+  suffix: "vox"
+  components:
+    visible: false

@@ -19,5 +19,6 @@ type: entity
   parent: PositronicBrain
   description: "The artificial brain stack of a vox"
   suffix: "vox"
-  #components:
-  #- visible: false
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Vox/organs.rsi

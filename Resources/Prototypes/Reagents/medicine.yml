@@ -772,6 +772,12 @@
             Heat: -0.33
             Shock: -0.33
             Cold: -0.33
+            - !type:ReagentThreshold
+          min: 65
+        damage:
+          types:
+            Brute: 3
+
 
 - type: reagent
   id: Lipozine

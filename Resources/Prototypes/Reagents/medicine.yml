@@ -780,7 +780,7 @@
       - !type:Jitter
         conditions:
         - !type:ReagentThreshold
-          min: 20
+          min: 65
 
 
 - type: reagent

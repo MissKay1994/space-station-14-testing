@@ -777,6 +777,10 @@
         damage:
           types:
             Brute: 3
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          min: 20
 
 
 - type: reagent

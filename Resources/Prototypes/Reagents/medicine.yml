@@ -764,22 +764,23 @@
         - !type:TotalDamage
           max: 50
         damage:
-          groups:
-            Brute: -1
           types:
-            Poison: -0.5 ##Should be about what it was when it healed the toxin group
+            Poison: -0.5
             Heat: -0.33
             Shock: -0.33
             Cold: -0.33
-         - !type:ReagentThreshold
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
           min: 65
         damage:
-          types:
+          groups:
             Brute: 3
-		 - !type:Jitter
+      - !type:Jitter
         conditions:
-         - !type:ReagentThreshold
+        - !type:ReagentThreshold
           min: 60
+          
 
 - type: reagent
   id: Lipozine

@@ -764,8 +764,10 @@
         - !type:TotalDamage
           max: 50
         damage:
+          groups:
+            Brute: -1
           types:
-            Poison: -0.5
+            Poison: -0.5 ##Should be about what it was when it healed the toxin group
             Heat: -0.33
             Shock: -0.33
             Cold: -0.33
@@ -775,11 +777,8 @@
           min: 65
         damage:
           groups:
-            Brute: 3
-      - !type:Jitter
-        conditions:
-        - !type:ReagentThreshold
-          min: 60
+            Brute: 2
+      
           
 
 - type: reagent

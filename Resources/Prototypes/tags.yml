@@ -1312,6 +1312,9 @@
 - type: Tag
   id: VoiceTrigger
 
+- type: Tag # Harmony change
+  id: VoxFood # Harmony change
+
 - type: Tag
   id: Wall
 

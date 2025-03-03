@@ -395,6 +395,11 @@
   - type: Extractable
     grindableSolutionName: food
   - type: SpaceGarbage
+#Harmony Vox change
+  - type: Food
+    requiresSpecialDigestion: true
+
+
 
 - type: entity
   name: baked banana peel

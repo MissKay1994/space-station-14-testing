@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "A remake of the vox band markings from https://github.com/ParadiseSS13/Paradise by MissKay1994 (Discord) for SS14 Harmony.",
+  "size": {
+    "x": 32,
+    "y": 32
+    },
+    "states": [
+      {
+      "name": "vox_band_primary",
+      "directions": 4
+      },
+      {
+      "name": "vox_band_secondary",
+      "directions": 4
+      }
+    ]
+}

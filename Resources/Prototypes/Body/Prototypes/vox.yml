@@ -18,10 +18,10 @@
       - right leg
       - left leg
       organs:
-        heart: OrganHumanHeart
+        heart: OrganVoxHeart # Harmony change
         lungs: OrganVoxLungs
-        stomach: OrganHumanStomach
-        liver: OrganHumanLiver
+        stomach: OrganVoxStomach # Harmony change
+        liver: OrganVoxLiver # Harmony change
         kidneys: OrganHumanKidneys
     right arm:
       part: RightArmVox

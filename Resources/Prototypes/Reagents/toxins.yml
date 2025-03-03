@@ -702,3 +702,32 @@
           shouldHave: false
         walkSpeedModifier: 0.4
         sprintSpeedModifier: 0.4
+
+#Harmony Vox change
+- type: reagent
+  id: ToxinTrash
+  name: reagent-name-toxintrash
+  group: Toxins
+  desc: reagent-desc-toxintrash
+  flavor:
+  physicalDesc: reagent-physical-desc-nondescript
+  metabolisms:
+    Poison:
+      metabolismRate: 1 # Slower metabolism so it can build up over time for slowdown
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Vox
+          shouldHave: false
+        damage:
+          types:
+            Poison: 1
+    Food:
+      effects:
+      - !type:SatiateHunger
+        factor: 1
+        conditions:
+        - !type:OrganType
+          type: Vox
+          shouldHave: false

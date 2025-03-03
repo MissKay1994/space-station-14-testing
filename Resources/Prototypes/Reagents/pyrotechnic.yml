@@ -159,9 +159,25 @@
   tileReactions:
   - !type:FlammableTileReaction {}
   metabolisms:
+    Food:
+      # Harmony change
+      effects:
+      - !type:SatiateThirst
+        factor: 1
+        conditions:
+        - !type:OrganType
+          type: Vox
+          shouldHave: false
+      # End Harmony change
     Poison:
       effects:
       - !type:HealthChange
+        # Harmony change
+        conditions:
+        - !type:OrganType
+          type: Vox
+          shouldHave: false
+        # end harmony change
         damage:
           types:
             Poison: 1

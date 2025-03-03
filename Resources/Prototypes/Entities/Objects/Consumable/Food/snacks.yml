@@ -126,7 +126,7 @@
   - type: Tag
     tags:
       - FoodSnack
-      - VoxFood
+      - VoxFood # Harmony change
   - type: SpawnItemsOnUse
     items:
       - id: FoodPacketChocolateTrash

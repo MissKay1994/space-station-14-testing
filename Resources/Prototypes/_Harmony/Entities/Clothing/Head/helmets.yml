@@ -1,0 +1,11 @@
+#Security Combat Helmet
+- type: entity
+  parent: ClothingHeadHelmetSwat
+  id: ClothingHeadCombatHelmet
+  name: security combat helmet
+  description: An extremely well made helmet offering greatly improved protection.
+  components:
+  - type: Sprite
+    sprite: _Harmony/Clothing/Head/Helmets/SecCombatHelmet.rsi
+  - type: Clothing
+    sprite: _Harmony/Clothing/Head/Helmets/SecCombatHelmet.rsi

@@ -67,6 +67,12 @@
   recipes:
   - StripperClip
 
+- type: latheRecipePack
+  id: HarmonySecurityArmor
+  recipes:
+  - ClothingOuterCombatArmor
+  - ClothingHeadCombatHelmet
+
 ## Service
 - type: latheRecipePack
   id: HarmonyServiceStatic

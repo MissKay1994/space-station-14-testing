@@ -1,0 +1,1 @@
+research-technology-sec-combat-gear = Security Combat Gear

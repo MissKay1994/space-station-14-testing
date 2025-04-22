@@ -1,0 +1,23 @@
+- type: entity
+  parent: [ ClothingOuterArmorBasic, ClothingBeltSecurity ]
+  id: ClothingOuterCombatArmor
+  name: security combat armor
+  description: A Type IV steel plate armor vest that excels at protecting from projectiles at the cost of weight and blunt resistance.
+  components:
+  - type: Sprite
+    sprite: _Harmony/Clothing/OuterClothing/Armor/SecCombatArmor.rsi
+  - type: Clothing
+    sprite: _Harmony/Clothing/OuterClothing/Armor/SecCombatArmor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.6
+        Piercing: 0.4
+        Heat: 0.85
+  - type: ExplosionResistance
+    damageCoefficient: 0.80
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier

@@ -1,0 +1,14 @@
+- type: technology
+  id: SecCombatGear
+  name: research-technology-sec-combat-gear
+  icon:
+    sprite: _Harmony/Clothing/OuterClothing/Armor/SecCombatArmor.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - ClothingOuterCombatArmor
+  - ClothingHeadCombatHelmet
+  technologyPrerequisites:
+  - AdvancedRiotControl

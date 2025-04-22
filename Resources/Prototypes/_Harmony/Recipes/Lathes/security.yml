@@ -11,3 +11,22 @@
   completetime: 2
   materials:
     Steel: 400
+
+#Modern Warfare 4: Sec edition
+- type: latheRecipe
+  id: ClothingOuterCombatArmor
+  result: ClothingOuterCombatArmor
+  materials:
+    Steel: 500
+    Plastic: 400
+    Cloth: 15000
+    Silver: 200
+
+- type: latheRecipe
+  id: ClothingHeadCombatHelmet
+  result: ClothingHeadCombatHelmet
+  materials:
+    Steel: 500
+    Plastic: 400
+    Cloth: 10000
+    Silver: 200

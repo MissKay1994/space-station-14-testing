@@ -19,7 +19,7 @@
   materials:
     Steel: 500
     Plastic: 400
-    Cloth: 15000
+    Cloth: 1500
     Silver: 200
 
 - type: latheRecipe
@@ -28,5 +28,5 @@
   materials:
     Steel: 500
     Plastic: 400
-    Cloth: 10000
+    Cloth: 1000
     Silver: 200

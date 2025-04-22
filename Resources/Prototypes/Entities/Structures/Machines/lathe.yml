@@ -406,6 +406,7 @@
     - SecurityAmmo
     - SecurityWeapons
     - SecurityDisablers
+    - HarmonySecurityArmor # Harmony
   - type: MaterialStorage
     whitelist:
       tags:

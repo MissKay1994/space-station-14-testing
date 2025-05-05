@@ -32,10 +32,10 @@
   parent: PartVox
   components:
     - type: Sprite
-      sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp
+      sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp, harmony
       state: "torso"
     - type: Icon
-      sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp
+      sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp, harmony
       state: "torso"
     - type: BodyPart
       partType: Torso

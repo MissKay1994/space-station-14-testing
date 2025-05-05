@@ -1,9 +1,3 @@
-## hey this is carousel
-## in service of vox being somewhat in line with impstation species design standards
-## i have rearranged the furniture in here quite severely
-## mouse here!! im also doing edits, textureswise mostly, to make voxtails actually tails
-## Who let the tails be part of the fucking TORSO
-
 - type: species
   id: Vox
   name: species-name-vox
@@ -12,7 +6,7 @@
   sprites: MobVoxSprites
   markingLimits: MobVoxMarkingLimits
   dollPrototype: MobVoxDummy
-  skinColoration: Hues #imp
+  skinColoration: Hues #imp, harmony
   defaultSkinTone: "#6c741d"
   maleFirstNames: NamesVox
   femaleFirstNames: NamesVox
@@ -27,7 +21,7 @@
   sprites:
     Head: MobVoxHead
     Snout: MobHumanoidAnyMarking
-    HeadSide: MobHumanoidAnyMarking #imp
+    HeadSide: MobHumanoidAnyMarking #imp, harmony
     Hair: MobHumanoidAnyMarking
     FacialHair: MobHumanoidAnyMarking
     UndergarmentTop: MobHumanoidAnyMarking
@@ -56,22 +50,22 @@
       required: false
     Head:
       points: 2
-      required: false #imp
-    HeadSide: #imp
+      required: false #imp. harmony
+    HeadSide: #imp, harmony
       points: 2
       required: false
     Snout:
       points: 1
       required: false #imp
-      #defaultMarkings: [ VoxBeak ]
+      #defaultMarkings: [ VoxBeak #imp, harmony
     Arms:
       points: 6
       required: false #imp
-      #defaultMarkings: [ VoxLArmScales, VoxRArmScales, VoxRHandScales, VoxLHandScales ]
+      #defaultMarkings: [ VoxLArmScales, VoxRArmScales, VoxRHandScales, VoxLHandScales ] #imp, harmony
     Legs:
       points: 6
-      required: false #imp
-      #defaultMarkings: [ VoxLLegScales, VoxRLegScales, VoxRFootScales, VoxLFootScales ]
+      required: false #imp, harmony
+      #defaultMarkings: [ VoxLLegScales, VoxRLegScales, VoxRFootScales, VoxLFootScales ] #imp, harmony
     UndergarmentTop:
       points: 1
       required: false
@@ -116,7 +110,7 @@
 - type: humanoidBaseSprite
   id: MobVoxTorso
   baseSprite:
-    sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp
+    sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp, harmony
     state: torso
 
 - type: humanoidBaseSprite
@@ -146,7 +140,7 @@
 - type: humanoidBaseSprite
   id: MobVoxLHand
   baseSprite:
-    sprite: Mobs/Customization/vox_parts.rsi #imp
+    sprite: Mobs/Customization/vox_parts.rsi #imp, harmony
     state: l_hand
 
 - type: humanoidBaseSprite
@@ -170,7 +164,7 @@
 - type: humanoidBaseSprite
   id: MobVoxRHand
   baseSprite:
-    sprite: Mobs/Customization/vox_parts.rsi #imp
+    sprite: Mobs/Customization/vox_parts.rsi #imp, harmony
     state: r_hand
 
 - type: humanoidBaseSprite

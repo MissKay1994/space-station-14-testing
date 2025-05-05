@@ -2,7 +2,7 @@
   parent: [ ClothingOuterArmorBasic, ClothingBeltSecurity ]
   id: ClothingOuterCombatArmor
   name: security combat armor
-  description: A Type IV steel plate armor vest that excels at protecting from projectiles at the cost of weight and blunt resistance.
+  description: A Type IV steel plate armor vest that excels at protecting from projectiles. Comes with integrated storage webbing. Cannot be worn with belt.
   components:
   - type: Sprite
     sprite: _Harmony/Clothing/OuterClothing/Armor/SecCombatArmor.rsi

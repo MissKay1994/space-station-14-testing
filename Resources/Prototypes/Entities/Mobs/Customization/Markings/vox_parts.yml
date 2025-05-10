@@ -13,6 +13,7 @@
 #      type:
 #        !type:SimpleColoring
 #        color: "#937e3d"
+#end imp & harmony changes
 
 - type: marking
   id: VoxLArmScales
@@ -30,6 +31,7 @@
 #      type:
 #        !type:SimpleColoring
 #        color: "#937e3d"
+#end imp & harmony changes
 
 - type: marking
   id: VoxLLegScales
@@ -47,6 +49,7 @@
 #      type:
 #        !type:SimpleColoring
 #        color: "#937e3d"
+#end imp & harmony changes
 
 - type: marking
   id: VoxRArmScales
@@ -64,6 +67,7 @@
 #      type:
 #        !type:SimpleColoring
 #        color: "#937e3d"
+#end imp & harmony changes
 
 - type: marking
   id: VoxRLegScales
@@ -81,6 +85,7 @@
 #      type:
 #        !type:SimpleColoring
 #        color: "#937e3d"
+#end imp & harmony changes
 
 - type: marking
   id: VoxRHandScales
@@ -98,6 +103,7 @@
 #      type:
 #        !type:SimpleColoring
 #        color: "#937e3d"
+#end imp & harmony changes
 
 - type: marking
   id: VoxLHandScales
@@ -115,6 +121,7 @@
 #      type:
 #        !type:SimpleColoring
 #        color: "#937e3d"
+#end imp & harmony changes
 
 - type: marking
   id: VoxLFootScales
@@ -132,6 +139,7 @@
 #      type:
 #        !type:SimpleColoring
 #        color: "#937e3d"
+#end imp & harmony changes
 
 - type: marking
   id: VoxRFootScales
@@ -160,3 +168,4 @@
 #  - sprite: Mobs/Customization/vox_parts.rsi
 #    # Ideally this should use the normal tail sprite and apply an actual mask over it, not just use a butchered sprite
 #    state: tail_stenciled
+#end imp & harmony changes

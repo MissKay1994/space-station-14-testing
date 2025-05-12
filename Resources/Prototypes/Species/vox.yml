@@ -71,8 +71,8 @@
       points: 1
       required: false
     Chest:
-      points: 2 #imp. harmony
-      required: false #imp. harmony
+      points: 2
+      required: false
     Overlay: #imp. harmony
       points: 4 #imp. harmony
       required: false #imp. harmony

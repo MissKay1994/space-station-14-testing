@@ -34,7 +34,7 @@
     - type: Sprite
       sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp, harmony
       state: "torso"
-    - type: Icon
+    - type: Icon #imp, harmony
       sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp, harmony
       state: "torso"
     - type: BodyPart
@@ -43,9 +43,9 @@
       juiceSolution:
         reagents:
         - ReagentId: Fat
-          Quantity: 3
-        - ReagentId: Blood
           Quantity: 10
+        - ReagentId: Blood
+          Quantity: 20
 
 - type: entity
   id: HeadVox

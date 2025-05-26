@@ -1,4 +1,4 @@
-#imp, harmony
+#imp, harmony: Disabled default beak marking
 #- type: marking
 # id: VoxBeak
 #  bodyPart: Snout
@@ -19,13 +19,12 @@
   id: VoxLArmScales
   bodyPart: LArm
   markingCategory: Arms
-  # forcedColoring: true #imp, harmony
-  # followSkinColor: false #imp, harmony
+  # forcedColoring: true #imp, harmony: Disables forced arm coloring
   speciesRestriction: [Vox]
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
     state: l_arm
-#imp, harmony
+#imp, harmony: Disables arm marking being forced
 #  coloring:
 #    default:
 #      type:
@@ -37,13 +36,12 @@
   id: VoxLLegScales
   bodyPart: LLeg
   markingCategory: Legs
-  # forcedColoring: true #imp, harmony
-  # followSkinColor: false #imp, harmony
+  # forcedColoring: true #imp, harmony: Disables forced leg color
   speciesRestriction: [Vox]
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
     state: l_leg
-#imp, harmony
+#imp, harmony: Disables leg marking being forced
 #  coloring:
 #    default:
 #      type:
@@ -55,13 +53,12 @@
   id: VoxRArmScales
   bodyPart: RArm
   markingCategory: Arms
-  # forcedColoring: true #imp, harmony
-  # followSkinColor: false #imp, harmony
+  # forcedColoring: true #imp, harmony: Disables forced arm coloring
   speciesRestriction: [Vox]
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
     state: r_arm
-#imp, harmony
+#imp, harmony: : Disables arm marking being forced
 #  coloring:
 #    default:
 #      type:
@@ -73,13 +70,12 @@
   id: VoxRLegScales
   bodyPart: RLeg
   markingCategory: Legs
-  # forcedColoring: true #imp, harmony
-  # followSkinColor: false #imp, harmony
+  # forcedColoring: true #imp, harmony: Disables forced leg color
   speciesRestriction: [Vox]
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
     state: r_leg
-#imp, harmony
+#imp, harmony: Disables leg marking being forced
 #  coloring:
 #    default:
 #      type:
@@ -91,13 +87,12 @@
   id: VoxRHandScales
   bodyPart: RHand
   markingCategory: Arms
-  # forcedColoring: true #imp, harmony
-  # followSkinColor: false #imp, harmony
+  # forcedColoring: true #imp, harmony: Disables forced hand color
   speciesRestriction: [Vox]
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
     state: r_hand
-#imp, harmony
+#imp, harmony: Disables hand marking being forced
 #  coloring:
 #    default:
 #      type:
@@ -109,13 +104,12 @@
   id: VoxLHandScales
   bodyPart: LHand
   markingCategory: Arms
-  # forcedColoring: true #imp, harmony
-  # followSkinColor: false #imp, harmony
+  # forcedColoring: true #imp, harmony: Disables forced hand color
   speciesRestriction: [Vox]
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
     state: l_hand
-#imp, harmony
+#imp, harmony: Disables hand marking being forced
 #  coloring:
 #    default:
 #      type:
@@ -127,13 +121,12 @@
   id: VoxLFootScales
   bodyPart: LFoot
   markingCategory: Legs
-  # forcedColoring: true #imp, harmony
-  # followSkinColor: false #imp, harmony
+  # forcedColoring: true #imp, harmony: Disables forced foot color
   speciesRestriction: [Vox]
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
     state: l_foot
-#imp, harmony
+#imp, harmony: Disables forced foot marking
 #  coloring:
 #    default:
 #      type:
@@ -145,13 +138,12 @@
   id: VoxRFootScales
   bodyPart: RFoot
   markingCategory: Legs
-  # forcedColoring: true #imp, harmony
-  # followSkinColor: false #imp, harmony
+  # forcedColoring: true #imp, harmony: Disables forced foot color
   speciesRestriction: [Vox]
   sprites:
   - sprite: Mobs/Customization/vox_parts.rsi
     state: r_foot
-#imp, harmony
+#imp, harmony: Disables forced foot marking, Disables default vox tail
 #  coloring:
 #    default:
 #      type:

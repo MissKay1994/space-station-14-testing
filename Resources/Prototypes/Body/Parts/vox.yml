@@ -28,9 +28,9 @@
   - type: Icon #imp
     sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp
     state: "torso"
-    # End harmony
   - type: BodyPart
     partType: Torso
+    # End harmony
   - type: Extractable
     juiceSolution:
       reagents:

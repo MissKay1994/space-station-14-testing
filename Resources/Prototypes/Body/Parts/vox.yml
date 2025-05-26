@@ -21,21 +21,23 @@
   id: TorsoVox
   name: "vox torso"
   components:
-    - type: Sprite
-      sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp, harmony
-      state: "torso"
-    - type: Icon #imp, harmony
-      sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp, harmony
-      state: "torso"
-    - type: BodyPart
-      partType: Torso
-    - type: Extractable
-      juiceSolution:
-        reagents:
-        - ReagentId: Fat
-          Quantity: 10
-        - ReagentId: Blood
-          Quantity: 20
+  - type: Sprite
+    sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp, harmony: Modified sprite path
+    state: "torso"
+    # Harmony change
+  - type: Icon #imp
+    sprite: _Impstation/Mobs/Species/Vox/parts.rsi #imp
+    state: "torso"
+    # End harmony
+  - type: BodyPart
+    partType: Torso
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood # Harmony: Changed reagent from AmmoniaBlood.
+        Quantity: 20
 
 - type: entity
   parent: [ PartVox, BaseHead ]

@@ -843,3 +843,9 @@ Entries:
       message: Moth hair not being able to be selected.
   id: 112
   time: '2025-10-15T08:28:19.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Add
+      message: Added a personal item for Dawn Nightflitter.
+  id: 113
+  time: '2025-10-15T08:29:07.0000000+00:00'

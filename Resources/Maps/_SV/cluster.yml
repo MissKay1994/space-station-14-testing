@@ -42,12 +42,12 @@
 # SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
 # SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Alfred Baumann <93665570+CheesePlated@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 # SPDX-FileCopyrightText: 2025 ScarKy0 <106310278+ScarKy0@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 ScarKy0 <scarky0@onet.eu>
 # SPDX-FileCopyrightText: 2025 Southbridge <7013162+southbridge-fur@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Spanky <scott@wearejacob.com>
 # SPDX-FileCopyrightText: 2025 ToxicSonicFan04 <167356917+ToxicSonicFan04@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 #
 # SPDX-License-Identifier: MIT
 
@@ -57,7 +57,7 @@ meta:
   engineVersion: 267.1.0
   forkId: sector-vestige
   forkVersion: 1cc510536331805fed2dd5b97337a8e9c16dc1eb
-  time: 10/17/2025 11:49:53
+  time: 10/17/2025 19:21:46
   entityCount: 13595
 maps:
 - 12281
@@ -5788,7 +5788,7 @@ entities:
       pos: 35.5,-25.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -45891.46
+      secondsUntilStateChange: -46246.4
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6261,7 +6261,7 @@ entities:
       pos: 47.5,5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -3203.26
+      secondsUntilStateChange: -3558.1978
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6464,7 +6464,7 @@ entities:
       pos: 48.5,5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -3204.86
+      secondsUntilStateChange: -3559.7979
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6521,7 +6521,7 @@ entities:
       pos: 1.5,-35.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -13984.526
+      secondsUntilStateChange: -14339.464
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -6568,18 +6568,20 @@ entities:
       rot: 3.141592653589793 rad
       pos: 23.5,38.5
       parent: 1
-  - uid: 12548
+  - uid: 7462
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 13.5,-36.5
       parent: 1
-  - uid: 12555
+    - type: AccessReader
+      accessListsOriginal: []
+  - uid: 7468
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: 11.5,-36.5
       parent: 1
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 13220
     components:
     - type: Transform
@@ -38954,7 +38956,7 @@ entities:
       pos: 37.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -31955.238
+      secondsUntilStateChange: -32310.176
       state: Closing
   - uid: 3502
     components:
@@ -64918,32 +64920,11 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -3.5,-28.5
       parent: 1
-  - uid: 7462
-    components:
-    - type: Transform
-      anchored: False
-      pos: 20.5,-20.5
-      parent: 1
-    - type: Physics
-      bodyType: Dynamic
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 7465
     components:
     - type: Transform
       anchored: False
       pos: 13.5,-20.5
-      parent: 1
-    - type: Physics
-      bodyType: Dynamic
-    - type: ApcPowerReceiver
-      powerLoad: 0
-  - uid: 7468
-    components:
-    - type: Transform
-      anchored: False
-      rot: 1.5707963267948966 rad
-      pos: 4.5,-26.5
       parent: 1
     - type: Physics
       bodyType: Dynamic
@@ -65442,6 +65423,17 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 14.5,-35.5
+      parent: 1
+  - uid: 12548
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 4.5,-27.5
+      parent: 1
+  - uid: 12555
+    components:
+    - type: Transform
+      pos: 18.5,-20.5
       parent: 1
   - uid: 12875
     components:

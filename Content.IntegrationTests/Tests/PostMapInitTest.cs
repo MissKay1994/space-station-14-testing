@@ -165,7 +165,8 @@ namespace Content.IntegrationTests.Tests
             // "Relic", // Vestige: Derotated Map
             "dm01-entryway",
             // "Exo", // Vestige: Derotated Map
-            "Vanquish",
+            "Vanquish", // LateStation Map by Lachri
+            "Cluster", // Sector Vestige, remade by Rebound
         };
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";

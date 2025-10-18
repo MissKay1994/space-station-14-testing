@@ -23,6 +23,8 @@
     - Foxfolk
     #- Rodentia #CD additions end
     - Felinid
+    - Harpy #Sector Vestige
+    - Resomi #Sector Vestige
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

@@ -873,3 +873,9 @@ Entries:
       message: Foxfolk now have Animal stomachs.
   id: 117
   time: '2025-10-18T15:24:45.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Tweak
+      message: Foxfolk can use use human hair markings.
+  id: 118
+  time: '2025-10-18T16:12:39.0000000+00:00'

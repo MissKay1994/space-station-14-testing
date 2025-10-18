@@ -4,6 +4,14 @@
   name: headphones
   description: Quality headphones from Drunk Masters, with good sound insulation.
   components:
+  # SV Change Start
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
+  - type: Headset
+  - type: EncryptionKeyHolder
+    keySlots: 4
+  # SV Change End
   - type: Sprite
     sprite: Clothing/Multiple/headphones.rsi
     layers:

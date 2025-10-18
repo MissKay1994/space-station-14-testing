@@ -1,3 +1,4 @@
+using Content.Client.Atmos;
 using Content.Client.Atmos.EntitySystems;
 using Content.Client.Hands.Systems;
 using Content.Shared.Interaction;
@@ -7,6 +8,7 @@ using Robust.Client;
 using Robust.Client.Placement;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
+using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.RCD;
@@ -22,9 +24,11 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
     [Dependency] private readonly IPlacementManager _placementManager = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
-    [Dependency] private readonly AtmosPipeLayersSystem _atmosPipeLayersSystem= default;
+    [Dependency] private readonly AlignAtmosPipeLayers  _alignPipe = default!;
+    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
 
     private Direction _placementDirection = default;
+    private ScreenCoordinates _mouseCordinates = default;
 
     public override void Update(float frameTime)
     {

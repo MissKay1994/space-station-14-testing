@@ -20,7 +20,7 @@
       organs:
         heart: OrganHumanHeart
         lungs: OrganHumanLungs
-        stomach: OrganAnimalStomach
+        stomach: OrganAnimalStomach # SV Change
         liver: OrganAnimalLiver
         kidneys: OrganHumanKidneys
     right arm:

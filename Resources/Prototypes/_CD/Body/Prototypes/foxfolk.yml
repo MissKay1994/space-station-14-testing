@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2025 Cosmatic Drift contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2022 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Jezithyr <Jezithyr@gmail.com>
+# SPDX-FileCopyrightText: 2023 Flareguy <78941145+Flareguy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+# SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
+#
+# SPDX-License-Identifier: MIT
+
 - type: body
   id: Foxfolk
   name: foxfolk
@@ -20,7 +31,7 @@
       organs:
         heart: OrganHumanHeart
         lungs: OrganHumanLungs
-        stomach: OrganHumanStomach
+        stomach: OrganAnimalStomach # SV Change
         liver: OrganAnimalLiver
         kidneys: OrganHumanKidneys
     right arm:

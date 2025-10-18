@@ -855,3 +855,9 @@ Entries:
       message: Cluster is recomissioned.
   id: 114
   time: '2025-10-17T12:38:07.0000000+00:00'
+- author: qu4drivium
+  changes:
+    - type: Tweak
+      message: Encryption keys can now fit inside headphones.
+  id: 115
+  time: '2025-10-18T13:02:46.0000000+00:00'

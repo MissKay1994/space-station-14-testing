@@ -23,6 +23,7 @@ using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using System.Linq;
+using Content.Shared._SV.RPD; //Sector Vestige: Added RPD
 
 namespace Content.Shared.RCD.Systems;
 
@@ -200,6 +201,19 @@ public sealed class RCDSystem : EntitySystem
                 }
 
                 break;
+
+            //Sector Vestige - Begin: RPD Logic
+            case  RcdMode.DeconstructPipe:
+
+                if (TryComp<RPDDeconstructableComponent>(args.Target, out var destructiblePipe))
+                {
+                    cost = destructiblePipe.Cost;
+                    delay = destructiblePipe.Delay;
+                    effectPrototype = destructiblePipe.Effect;
+                }
+
+                break;
+            //Sector Vestige - End: RPD Logic
         }
 
         #endregion
@@ -354,7 +368,8 @@ public sealed class RCDSystem : EntitySystem
             case RcdMode.ConstructObject:
                 return IsConstructionLocationValid(uid, component, gridUid, mapGrid, tile, position, user, popMsgs);
             case RcdMode.Deconstruct:
-                return IsDeconstructionStillValid(uid, tile, target, user, popMsgs);
+            case RcdMode.DeconstructPipe:  //Sector Vestige: RPD Logic
+                return IsDeconstructionStillValid(uid, tile, target, user, component, popMsgs);
         }
 
         return false;
@@ -463,11 +478,22 @@ public sealed class RCDSystem : EntitySystem
         return true;
     }
 
-    private bool IsDeconstructionStillValid(EntityUid uid, TileRef tile, EntityUid? target, EntityUid user, bool popMsgs = true)
+    private bool IsDeconstructionStillValid(EntityUid uid, TileRef tile, EntityUid? target, EntityUid user, RCDComponent component, bool popMsgs = true) //Sector Vestige: RPD Logic
     {
+        var prototype = _protoManager.Index(component.ProtoId); //Sector Vestige: RPD Logic
         // Attempt to deconstruct a floor tile
         if (target == null)
         {
+            // Sector Vestige - Begin: RPD Logic
+            if (prototype.Mode == RcdMode.DeconstructPipe)
+            {
+                if (popMsgs)
+                    _popup.PopupClient(Loc.GetString("rcd-component-deconstruct-target-not-on-whitelist-message"), uid, user);
+
+                return false;
+            }
+            // Sector Vestige - End: RPD Logic
+
             // The tile is empty
             if (tile.Tile.IsEmpty)
             {
@@ -499,17 +525,38 @@ public sealed class RCDSystem : EntitySystem
         }
 
         // Attempt to deconstruct an object
+        // Sector Vestige - Begin: RPD Logic
         else
         {
             // The object is not in the whitelist
-            if (!TryComp<RCDDeconstructableComponent>(target, out var deconstructible) || !deconstructible.Deconstructable)
+            switch (prototype.Mode)
             {
-                if (popMsgs)
-                    _popup.PopupClient(Loc.GetString("rcd-component-deconstruct-target-not-on-whitelist-message"), uid, user);
+                //Check if the object that is being deconstructed is in the RCD whitelist
+                case RcdMode.Deconstruct:
+                    if (!TryComp<RCDDeconstructableComponent>(target, out var deconstructible) || !deconstructible.Deconstructable)
+                    {
+                        if (popMsgs)
+                            _popup.PopupClient(Loc.GetString("rcd-component-deconstruct-target-not-on-whitelist-message"), uid, user);
 
-                return false;
+                        return false;
+                    }
+
+                    break;
+
+                //Check if the object that is being deconstructed is in the RPD whitelist, or is a tile
+                case RcdMode.DeconstructPipe:
+                    if (!TryComp<RPDDeconstructableComponent>(target, out var deconstructiblePipe) || !deconstructiblePipe.Deconstructable)
+                    {
+                        if (popMsgs)
+                            _popup.PopupClient(Loc.GetString("rcd-component-deconstruct-target-not-on-whitelist-message"), uid, user);
+
+                        return false;
+                    }
+
+                    break;
             }
-        }
+
+        } // Sector Vestige - End: RPD Logic
 
         return true;
     }
@@ -571,6 +618,14 @@ public sealed class RCDSystem : EntitySystem
                 }
 
                 break;
+
+            //Sector Vestige - Begin: RPD Logic
+            case RcdMode.DeconstructPipe:
+
+                _adminLogger.Add(LogType.RCD, LogImpact.High, $"{ToPrettyString(user):user} used RPD to delete: {ToPrettyString(target):target}");
+                QueueDel(target);
+                break;
+            //Sector Vestige - End: RPD Logic
         }
     }
 

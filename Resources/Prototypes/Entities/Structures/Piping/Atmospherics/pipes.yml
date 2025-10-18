@@ -65,6 +65,10 @@
     bodyType: static
   - type: StaticPrice
     price: 30
+  - type: RPDDeconstructable
+    cost: 1
+    delay: 0
+    fx: EffectRCDConstruct0
 
 - type: entity
   abstract: true

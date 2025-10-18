@@ -119,6 +119,7 @@ public enum RcdMode : byte
 {
     Invalid,
     Deconstruct,
+    DeconstructPipe,            //Sector Vestige: RPD System
     ConstructTile,
     ConstructObject,
 }
@@ -138,4 +139,5 @@ public enum RcdRotation : byte
     Fixed,      // The entity has a local rotation of zero
     Camera,     // The rotation of the entity matches the local player camera
     User,       // The entity can be rotated by the local player prior to placement
+    Pipe,       // The entity should use the AtmosPipeLaying system //Sector Vestige: RPD Logic
 }

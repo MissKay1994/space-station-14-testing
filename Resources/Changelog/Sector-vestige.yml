@@ -879,3 +879,11 @@ Entries:
       message: Foxfolk can use use human hair markings.
   id: 118
   time: '2025-10-18T16:12:39.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Fix
+      message: Resomi now start with a survival box.
+    - type: Fix
+      message: Harpies now start with a survival box.
+  id: 119
+  time: '2025-10-20T11:03:01.0000000+00:00'

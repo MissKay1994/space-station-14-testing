@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
 // SPDX-FileCopyrightText: 2020 Exp <theexp111@gmail.com>
 // SPDX-FileCopyrightText: 2020 Swept <sweptwastaken@protonmail.com>
 // SPDX-FileCopyrightText: 2020 Tyler Young <tyler.young@impromptu.ninja>
@@ -31,9 +33,9 @@
 // SPDX-FileCopyrightText: 2024 SpaceManiac <tad@platymuus.com>
 // SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Errant <35878406+Errant-4@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 // SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
 // SPDX-FileCopyrightText: 2025 vestige-bot <vestige-bot@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 //
 // SPDX-License-Identifier: MIT
 

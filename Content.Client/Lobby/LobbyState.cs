@@ -72,6 +72,7 @@ namespace Content.Client.Lobby
         private ClientGameTicker _gameTicker = default!;
         private ContentAudioSystem _contentAudioSystem = default!;
         private ReadyManifestSystem _readyManifest = default!; // Moffstation - Ready manifest
+        private bool _updatingReadyButton; // Sector Vestige - Flag to prevent recursive ready button updates
 
         protected override Type? LinkedScreenType { get; } = typeof(LobbyGui);
         public LobbyGui? Lobby;
@@ -161,6 +162,13 @@ namespace Content.Client.Lobby
 
         private void OnReadyToggled(BaseButton.ButtonToggledEventArgs args)
         {
+            // Sector Vestige - Prevent recursive updates from programmatic state changes
+            if (_updatingReadyButton)
+                return;
+
+            // Sector Vestige - Update button text immediately when toggled
+            Lobby!.ReadyButton.Text = Loc.GetString(args.Pressed ? "lobby-state-player-status-ready" : "lobby-state-player-status-not-ready");
+            // Sector Vestige - End
             SetReady(args.Pressed);
         }
 
@@ -238,11 +246,16 @@ namespace Content.Client.Lobby
             else
             {
                 Lobby!.StartTime.Text = string.Empty;
-                Lobby!.ReadyButton.Pressed = _gameTicker.AreWeReady;
-                Lobby!.ReadyButton.Text = Loc.GetString(Lobby!.ReadyButton.Pressed ? "lobby-state-player-status-ready": "lobby-state-player-status-not-ready");
+                // Sector Vestige - Fix ready button text and state order
+                Lobby!.ReadyButton.Text = Loc.GetString(_gameTicker.AreWeReady ? "lobby-state-player-status-ready" : "lobby-state-player-status-not-ready");
                 Lobby!.ReadyButton.ToggleMode = true;
                 Lobby!.ReadyButton.Disabled = false;
                 Lobby!.ManifestButton.Disabled = false; // Moffstation - Ready manifest
+                // Set flag to prevent OnReadyToggled from firing when we set Pressed programmatically
+                _updatingReadyButton = true;
+                Lobby!.ReadyButton.Pressed = _gameTicker.AreWeReady;
+                _updatingReadyButton = false;
+                // Sector Vestige - End
                 Lobby!.ObserveButton.Disabled = true;
             }
 

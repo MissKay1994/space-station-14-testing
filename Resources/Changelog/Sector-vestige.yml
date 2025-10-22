@@ -893,3 +893,9 @@ Entries:
       message: Fixed Riv's oopsie (the Ready button works again)
   id: 120
   time: '2025-10-20T19:01:20.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Rodentia come to the vestige sector.
+  id: 121
+  time: '2025-10-22T19:14:40.0000000+00:00'

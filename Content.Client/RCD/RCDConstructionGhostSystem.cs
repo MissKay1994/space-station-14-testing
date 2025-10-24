@@ -1,3 +1,4 @@
+using Content.Client.Atmos; //Sector Vestige: Used for displaying RPD pipe layers
 using Content.Client.Hands.Systems;
 using Content.Shared.Interaction;
 using Content.Shared.RCD;
@@ -16,6 +17,7 @@ namespace Content.Client.RCD;
 public sealed class RCDConstructionGhostSystem : EntitySystem
 {
     private const string PlacementMode = nameof(AlignRCDConstruction);
+    private const string RPDPlacementMode = nameof(AlignAtmosPipeLayers); //Sector Vestige: RPD logic
 
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IPlacementManager _placementManager = default!;
@@ -64,16 +66,43 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
         if (heldEntity == placerEntity && prototype.Prototype == placerProto)
             return;
 
-        // Create a new placer
-        var newObjInfo = new PlacementInformation
+        //Sector Vestige - Begin: RPD Logic
+        //If the entity that is being spawned is a pipe, use the AlignAtmosPipeLayers placement system
+        PlacementInformation? newObjInfo = null;
+
+        switch (prototype.Rotation)
         {
-            MobUid = heldEntity.Value,
-            PlacementOption = PlacementMode,
-            EntityType = prototype.Prototype,
-            Range = (int) Math.Ceiling(SharedInteractionSystem.InteractionRange),
-            IsTile = (prototype.Mode == RcdMode.ConstructTile),
-            UseEditorContext = false,
-        };
+            // Create a new placer
+            case RcdRotation.Camera:
+            case RcdRotation.Fixed:
+            case RcdRotation.User:
+                newObjInfo = new PlacementInformation
+                {
+                    MobUid = heldEntity.Value,
+                    PlacementOption = PlacementMode,
+                    EntityType = prototype.Prototype,
+                    Range = (int)Math.Ceiling(SharedInteractionSystem.InteractionRange),
+                    IsTile = (prototype.Mode == RcdMode.ConstructTile),
+                    UseEditorContext = false,
+                };
+                    break;
+
+            case RcdRotation.Pipe:
+                newObjInfo = new PlacementInformation
+                {
+                    MobUid = heldEntity.Value,
+                    PlacementOption = RPDPlacementMode,
+                    EntityType = prototype.Prototype,
+                    Range = (int)Math.Ceiling(SharedInteractionSystem.InteractionRange),
+                    UseEditorContext = false,
+                };
+                break;
+
+        }
+
+        if  (newObjInfo == null)
+            return;
+        //Sector Vestige - End: RPD Logic
 
         _placementManager.Clear();
         _placementManager.BeginPlacing(newObjInfo);

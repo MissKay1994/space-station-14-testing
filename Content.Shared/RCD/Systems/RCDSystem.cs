@@ -23,7 +23,10 @@ using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using System.Linq;
-using Content.Shared._SV.RPD; //Sector Vestige: Added RPD
+using System.Numerics; //Sector Vestige: RPD Logic
+using Content.Shared._SV.RPD; //Sector Vestige: RPD Logic
+using Content.Shared.Atmos.Components; //Sector Vestige: RPD Logic
+using Content.Shared.Atmos.EntitySystems; //Sector Vestige: RPD Logic
 
 namespace Content.Shared.RCD.Systems;
 
@@ -45,12 +48,15 @@ public sealed class RCDSystem : EntitySystem
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly TagSystem _tags = default!;
+    [Dependency] private readonly SharedAtmosPipeLayersSystem _layer = default!; //Sector Vestige: RPD Logic
+    [Dependency] private readonly IEntityManager _entityManager = default!; //Sector Vestige: RPD Logic
 
     private readonly int _instantConstructionDelay = 0;
     private readonly EntProtoId _instantConstructionFx = "EffectRCDConstruct0";
     private readonly ProtoId<RCDPrototype> _deconstructTileProto = "DeconstructTile";
     private readonly ProtoId<RCDPrototype> _deconstructLatticeProto = "DeconstructLattice";
     private static readonly ProtoId<TagPrototype> CatwalkTag = "Catwalk";
+    private AtmosPipeLayer _currentLayer = AtmosPipeLayer.Primary; //Sector Vestige: RPD Logic
 
     private HashSet<EntityUid> _intersectingEntities = new();
 
@@ -141,6 +147,30 @@ public sealed class RCDSystem : EntitySystem
             _popup.PopupClient(Loc.GetString("rcd-component-no-valid-grid"), uid, user);
             return;
         }
+
+        //Sector Vestige - Begin: RPD Logic
+        //Get the layer that the pipe needs to be on via where the click is
+        if (prototype.Prototype == null)
+            return;
+        if (prototype.Rotation == RcdRotation.Pipe &&
+            _protoManager.TryIndex(prototype.Prototype, out var proto) &&
+            proto.TryGetComponent<AtmosPipeLayersComponent>(out var fuck, _entityManager.ComponentFactory))
+        {
+            var gridRotation = _transform.GetWorldRotation(gridUid.Value);
+            var currentTile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, location);
+            float tileSize = mapGrid.TileSize;
+            var mouseDeadzone = 0.25f;
+            var tileCenter = new Vector2(currentTile.X + tileSize / 2, currentTile.Y + tileSize / 2);
+            var mouseCordsDiff = location.Position - tileCenter - new Vector2(0.5f, 0.5f);
+
+            if (mouseCordsDiff.Length() > mouseDeadzone)
+            {
+                var direction = (new Angle(mouseCordsDiff)+ 0 + gridRotation + Math.PI / 2).GetCardinalDir();
+                _currentLayer = (direction == Direction.North || direction == Direction.East) ? AtmosPipeLayer.Secondary : AtmosPipeLayer.Tertiary;
+            }
+        }
+        //Sector Vestige - End: RPD Logic
+
         var tile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, location);
         var position = _mapSystem.TileIndicesFor(gridUid.Value, mapGrid, location);
 
@@ -582,23 +612,52 @@ public sealed class RCDSystem : EntitySystem
                 _adminLogger.Add(LogType.RCD, LogImpact.High, $"{ToPrettyString(user):user} used RCD to set grid: {gridUid} {position} to {prototype.Prototype}");
                 break;
 
+            //Sector Vestige - Begin: RPD Logic
+            //Most of this is stolen from funky station
+            //Gets the alternate pipe layer of the selected layer from the above function, then assign it to what gets spawned
             case RcdMode.ConstructObject:
-                var ent = Spawn(prototype.Prototype, _mapSystem.GridTileToLocal(gridUid, mapGrid, position));
-
-                switch (prototype.Rotation)
+                //var ent = Spawn(prototype.Prototype, _mapSystem.GridTileToLocal(gridUid, mapGrid, position));
+                string ent;
+                if (_protoManager.TryIndex<EntityPrototype>(prototype.Prototype, out var entProto) &&
+                    entProto.TryGetComponent<AtmosPipeLayersComponent>(out var pipeLayer, _entityManager.ComponentFactory) &&
+                    _layer.TryGetAlternativePrototype(pipeLayer, _currentLayer, out var actualPipe))
                 {
-                    case RcdRotation.Fixed:
-                        Transform(ent).LocalRotation = Angle.Zero;
-                        break;
-                    case RcdRotation.Camera:
-                        Transform(ent).LocalRotation = Transform(uid).LocalRotation;
-                        break;
-                    case RcdRotation.User:
-                        Transform(ent).LocalRotation = direction.ToAngle();
-                        break;
+                    ent = actualPipe;
+                }
+                else
+                {
+                    ent = prototype.Prototype;
                 }
 
-                _adminLogger.Add(LogType.RCD, LogImpact.High, $"{ToPrettyString(user):user} used RCD to spawn {ToPrettyString(ent)} at {position} on grid {gridUid}");
+                var rotation = prototype.Rotation switch
+                {
+                    RcdRotation.Fixed => Angle.Zero,
+                    RcdRotation.Camera => Transform(uid).LocalRotation,
+                    RcdRotation.User or RcdRotation.Pipe => direction.ToAngle(),
+                    _ => Angle.Zero,
+                };
+
+                var entCords = _mapSystem.GridTileToLocal(gridUid, mapGrid, position);
+                var mapCords = _transform.ToMapCoordinates(entCords);
+
+                var entspawn = Spawn(ent, mapCords, rotation: rotation);
+
+//                switch (prototype.Rotation)
+//                {
+//                    case RcdRotation.Fixed:
+//                        Transform(ent).LocalRotation = Angle.Zero;
+//                        break;
+//                    case RcdRotation.Camera:
+//                        Transform(ent).LocalRotation = Transform(uid).LocalRotation;
+//                        break;
+//                    case RcdRotation.User:
+//                    case RcdRotation.Pipe:
+//                        Transform(ent).LocalRotation = direction.ToAngle();
+//                        break;
+//                }
+                //Sector Vestige - End: RPD Logic
+
+                _adminLogger.Add(LogType.RCD, LogImpact.High, $"{ToPrettyString(user):user} used RCD to spawn {ToPrettyString(entspawn)} at {position} on grid {gridUid}"); // Sector Vestige: Set the logger to log the entity that was spawned
                 break;
 
             case RcdMode.Deconstruct:

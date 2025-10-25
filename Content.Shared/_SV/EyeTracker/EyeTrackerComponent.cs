@@ -1,0 +1,15 @@
+using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
+
+namespace Content.Shared._SV.EyeTracker;
+
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+public sealed partial class EyeTrackerComponent : Component
+{
+    /// <summary>
+    /// The current rotation of the user camera
+    /// This is a stupid component but there isn't a better way of doing it
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public Angle Rotation = 0;
+}

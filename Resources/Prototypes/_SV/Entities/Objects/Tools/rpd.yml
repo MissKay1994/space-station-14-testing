@@ -30,3 +30,4 @@
     - ManualValve
     - SignalValve
     - PneumaticValve
+  - type: EyeTrackerComponent

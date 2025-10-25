@@ -27,6 +27,7 @@ using System.Numerics; //Sector Vestige: RPD Logic
 using Content.Shared._SV.RPD; //Sector Vestige: RPD Logic
 using Content.Shared.Atmos.Components; //Sector Vestige: RPD Logic
 using Content.Shared.Atmos.EntitySystems; //Sector Vestige: RPD Logic
+using Content.Shared._SV.EyeTracker; //Sector Vestige: RPD Logic
 
 namespace Content.Shared.RCD.Systems;
 
@@ -162,10 +163,14 @@ public sealed class RCDSystem : EntitySystem
             var mouseDeadzone = 0.25f;
             var tileCenter = new Vector2(currentTile.X + tileSize / 2, currentTile.Y + tileSize / 2);
             var mouseCordsDiff = location.Position - tileCenter - new Vector2(0.5f, 0.5f);
+            var eyeTrackerComponent = proto.TryGetComponent<EyeTrackerComponent>(out var eye, _entityManager.ComponentFactory);
+
+            if (eye == null)
+                return;
 
             if (mouseCordsDiff.Length() > mouseDeadzone)
             {
-                var direction = (new Angle(mouseCordsDiff)+ 0 + gridRotation + Math.PI / 2).GetCardinalDir();
+                var direction = (new Angle(mouseCordsDiff)+ eye.Rotation + gridRotation + Math.PI / 2).GetCardinalDir();
                 _currentLayer = (direction == Direction.North || direction == Direction.East) ? AtmosPipeLayer.Secondary : AtmosPipeLayer.Tertiary;
             }
         }

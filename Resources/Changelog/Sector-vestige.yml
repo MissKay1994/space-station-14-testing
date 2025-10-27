@@ -899,3 +899,9 @@ Entries:
       message: Rodentia come to the vestige sector.
   id: 121
   time: '2025-10-22T19:14:40.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Tweak
+      message: Reduced Meteor swarms.
+  id: 122
+  time: '2025-10-27T12:58:02.0000000+00:00'

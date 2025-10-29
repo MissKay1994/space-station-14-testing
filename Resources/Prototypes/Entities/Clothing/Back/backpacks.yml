@@ -345,6 +345,17 @@
     state: icon
   - type: Clothing
     stripDelay: 10
+  - type: SuitSensor #SV Added tracking for the electropack - Start
+    randomMode: false
+    controlsLocked: true
+    mode: SensorCords
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: SuitSensor
+    savableAddress: false #SV Added tracking for the electropack - End
+  - type: WirelessNetworkConnection
+    range: 1200
+  - type: StationLimitedNetwork
     equipDelay: 5 # to avoid accidentally falling into the trap associated with SelfUnremovableClothing
   - type: SelfUnremovableClothing
   - type: ShockOnTrigger

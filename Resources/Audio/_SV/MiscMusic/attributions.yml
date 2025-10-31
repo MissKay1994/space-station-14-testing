@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
-# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
-# SPDX-FileCopyrightText: 2025 purpleskittleo <thenewredgd@gmail.com>
-#
-# SPDX-License-Identifier: MIT
-
 - files: ["onwards_postround.ogg",
           "shiftfall_stardust.ogg"]
   license: "CC-BY-4.0"

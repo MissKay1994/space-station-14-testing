@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
-# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
-# SPDX-FileCopyrightText: 2025 purpleskittleo <thenewredgd@gmail.com>
-#
-# SPDX-License-Identifier: MIT
-
 - files: ["ambi_doublebass_crec1.ogg",
           "ambi_lowdrone1_30s.ogg",
           "ambi_lowdrone2_30s.ogg",

@@ -4,6 +4,7 @@
   name: RPD
   description: The rapid piping device can be used to quickly place and remove various pipes and atmospherics furnishings. Requires compressed matter to function.
   components:
+  - type: EyeTracker
   - type: RCD
     availablePrototypes:
     - PipeHalf
@@ -30,4 +31,3 @@
     - ManualValve
     - SignalValve
     - PneumaticValve
-  - type: EyeTrackerComponent

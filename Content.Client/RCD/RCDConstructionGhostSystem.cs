@@ -1,4 +1,4 @@
-using Content.Client.Atmos; //Sector Vestige: Used for displaying RPD pipe layers
+using Content.Client._SV.RPD; //Sector Vestige: Used for displaying RPD pipe layers
 using Content.Client.Hands.Systems;
 using Content.Shared.Interaction;
 using Content.Shared.RCD;
@@ -17,7 +17,7 @@ namespace Content.Client.RCD;
 public sealed class RCDConstructionGhostSystem : EntitySystem
 {
     private const string PlacementMode = nameof(AlignRCDConstruction);
-    private const string RPDPlacementMode = nameof(AlignAtmosPipeLayers); //Sector Vestige: RPD logic
+    private const string RPDPlacementMode = nameof(AlignRPDPipeLayers); //Sector Vestige: RPD logic
 
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IPlacementManager _placementManager = default!;

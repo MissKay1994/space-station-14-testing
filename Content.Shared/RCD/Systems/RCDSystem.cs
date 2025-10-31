@@ -51,13 +51,15 @@ public sealed class RCDSystem : EntitySystem
     [Dependency] private readonly TagSystem _tags = default!;
     [Dependency] private readonly SharedAtmosPipeLayersSystem _layer = default!; //Sector Vestige: RPD Logic
     [Dependency] private readonly IEntityManager _entityManager = default!; //Sector Vestige: RPD Logic
+    [Dependency] private readonly IEntityNetworkManager _entityNetworkManager = default!; //Sector Vestige: RPD Logic
+    [Dependency] private readonly IMapManager _mapManager = default!; //Sector Vestige: RPD Logic
 
     private readonly int _instantConstructionDelay = 0;
     private readonly EntProtoId _instantConstructionFx = "EffectRCDConstruct0";
     private readonly ProtoId<RCDPrototype> _deconstructTileProto = "DeconstructTile";
     private readonly ProtoId<RCDPrototype> _deconstructLatticeProto = "DeconstructLattice";
     private static readonly ProtoId<TagPrototype> CatwalkTag = "Catwalk";
-    private AtmosPipeLayer _currentLayer = AtmosPipeLayer.Primary; //Sector Vestige: RPD Logic
+    private AtmosPipeLayer _currentLayer = default; //Sector Vestige: RPD Logic
 
     private HashSet<EntityUid> _intersectingEntities = new();
 
@@ -154,19 +156,19 @@ public sealed class RCDSystem : EntitySystem
         if (prototype.Prototype == null)
             return;
         if (prototype.Rotation == RcdRotation.Pipe &&
-            _protoManager.TryIndex(prototype.Prototype, out var proto) &&
-            proto.TryGetComponent<AtmosPipeLayersComponent>(out var fuck, _entityManager.ComponentFactory))
+            _entityManager.TryGetComponent<EyeTrackerComponent>(args.Used, out var eye))
         {
+            _entityNetworkManager.SendSystemNetworkMessage(new GetEyeRotationEvent(eye));
+            var alignedMouseCords = location.AlignWithClosestGridTile(2f, _entityManager, _mapManager);
             var gridRotation = _transform.GetWorldRotation(gridUid.Value);
-            var currentTile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, location);
+            var currentTile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, alignedMouseCords);
             float tileSize = mapGrid.TileSize;
             var mouseDeadzone = 0.25f;
             var tileCenter = new Vector2(currentTile.X + tileSize / 2, currentTile.Y + tileSize / 2);
-            var mouseCordsDiff = location.Position - tileCenter - new Vector2(0.5f, 0.5f);
-            var eyeTrackerComponent = proto.TryGetComponent<EyeTrackerComponent>(out var eye, _entityManager.ComponentFactory);
+            alignedMouseCords = new EntityCoordinates(location.EntityId, tileCenter);
+            var mouseCordsDiff = location.Position - alignedMouseCords.Position;
 
-            if (eye == null)
-                return;
+            _currentLayer = AtmosPipeLayer.Primary;
 
             if (mouseCordsDiff.Length() > mouseDeadzone)
             {

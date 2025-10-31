@@ -921,3 +921,9 @@ Entries:
       message: Various ambient SFX!
   id: 123
   time: '2025-10-31T20:01:39.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Tweak
+      message: The electropack now has sensors.
+  id: 124
+  time: '2025-10-31T20:55:45.0000000+00:00'

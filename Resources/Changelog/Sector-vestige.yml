@@ -927,3 +927,11 @@ Entries:
       message: The electropack now has sensors.
   id: 124
   time: '2025-10-31T20:55:45.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Borgs can go into sleep mode.
+    - type: Tweak
+      message: Borgs can unlock themselves.
+  id: 125
+  time: '2025-11-01T18:18:13.0000000+00:00'

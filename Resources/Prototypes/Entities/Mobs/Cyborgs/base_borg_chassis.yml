@@ -106,11 +106,6 @@
     doAfterDelay: 10
     allowSelfRepair: false
   - type: BorgChassis
-  # - type: LockingWhitelist
-  #   blacklist:
-  #     components:
-  #     - BorgChassis
-  #     - RoboticsConsole
   - type: WiresPanel
     openingTool: Prying
   - type: ActivatableUIRequiresPanel
@@ -166,10 +161,13 @@
     - cell_slot
   - type: Lock
     locked: true
-    unlockOnClick: false
+    unlockOnClick: false # SV: Prevent clicking on borg from triggering unlock, must use verb menu
+    useAccess: false # SV: Allow borgs to lock/unlock themselves without access checks
   - type: UIRequiresLock
     userInterfaceKeys:
     - enum.BorgUiKey.Key
+    popup: null # SV: Suppress "It's locked!" popup when hovering over locked borg
+    accessDeniedSound: null # SV: Suppress access denied sound when hovering over locked borg
   - type: LockedWiresPanel
   - type: Damageable
     damageContainer: Silicon

@@ -79,6 +79,8 @@
   - type: ActionGrant
     actions:
     - ActionViewLaws
+    - ActionBorgShutdown # SV: Allow borgs to enter sleep mode to conserve power
+  - type: BorgShutdown # SV: Component for managing shutdown state and stored charge
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider

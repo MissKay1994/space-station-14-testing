@@ -26,3 +26,19 @@
     useDelay: 0.5
   - type: InstantAction
     event: !type:BorgToggleSelectTypeEvent
+
+# SV: Action for borgs to enter sleep mode (drain battery) and wake up
+- type: entity
+  parent: BaseAction
+  id: ActionBorgShutdown
+  name: Sleep Mode
+  description: Enter sleep mode to conserve power. Toggle again to wake up.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: Interface/Actions/actions_borg.rsi
+      state: state-laws
+    useDelay: 1
+  - type: InstantAction
+    event: !type:BorgShutdownActionEvent

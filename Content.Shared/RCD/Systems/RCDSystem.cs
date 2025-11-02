@@ -158,7 +158,7 @@ public sealed class RCDSystem : EntitySystem
         if (prototype.Rotation == RcdRotation.Pipe &&
             _entityManager.TryGetComponent<EyeTrackerComponent>(args.Used, out var eye))
         {
-            _entityNetworkManager.SendSystemNetworkMessage(new GetEyeRotationEvent(eye));
+            _entityNetworkManager.SendSystemNetworkMessage(new GetEyeRotationEvent(_entityManager.GetNetEntity(args.Used), _entityManager.GetNetEntity(user)));
             var alignedMouseCords = location.AlignWithClosestGridTile(2f, _entityManager, _mapManager);
             var gridRotation = _transform.GetWorldRotation(gridUid.Value);
             var currentTile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, alignedMouseCords);

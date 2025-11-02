@@ -6,12 +6,8 @@ namespace Content.Shared._SV.EyeTracker;
 /// Get and network the current eye rotation
 /// </summary>
 [Serializable, NetSerializable]
-public sealed class GetEyeRotationEvent : EntityEventArgs
+public sealed class GetEyeRotationEvent(NetEntity ent, NetEntity player) : EntityEventArgs
 {
-    public EyeTrackerComponent EyeTrackerComponent { get; set; }
-
-    public GetEyeRotationEvent(EyeTrackerComponent component)
-    {
-        EyeTrackerComponent = component;
-    }
+    public NetEntity NetEntity { get; set; } = ent;
+    public NetEntity PlayerEntity { get; set; } = player;
 }

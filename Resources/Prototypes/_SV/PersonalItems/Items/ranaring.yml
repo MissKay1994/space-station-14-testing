@@ -16,7 +16,7 @@
     - state: ring
       color: "#e2e2e2"
   - type: Clothing
-    sprite: _SV/PersonalItems/RanaRing.rsi
+    sprite: _SV/PersonalItems/Wearables/RanaRing.rsi
 
 - type: loadout
   id: PersonalItemRanaRing

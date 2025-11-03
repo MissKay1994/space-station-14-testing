@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Wizards Den contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors
+# SPDX-FileCopyrightText: 2024 Fahasor <70820551+Fahasor@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Firewatch <54725557+musicmanvr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
+#
+# SPDX-License-Identifier: MIT
+
+- files:
+  - "cyrus_whistle_1.ogg"
+  - "cyrus_whistle_2.ogg"
+  - "cyrus_whistle_3.ogg"
+  license: "CC0-1.0"
+  copyright: "User MagiaZ on pixabay.com. Modified by qu4drivium on github"
+  source: "https://pixabay.com/sound-effects/whistle-whistle-392905/"

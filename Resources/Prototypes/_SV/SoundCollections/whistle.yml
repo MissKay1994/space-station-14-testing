@@ -7,6 +7,6 @@
 - type: soundCollection
   id: CyrusPersonalWhistle
   files:
-    - /Audio/Items/Whistle/cyrus_whistle_1.ogg
-    - /Audio/Items/Whistle/cyrus_whistle_2.ogg
-    - /Audio/Items/Whistle/cyrus_whistle_3.ogg
+    - /Audio/_SV/Items/Whistle/cyrus_whistle_1.ogg
+    - /Audio/_SV/Items/Whistle/cyrus_whistle_2.ogg
+    - /Audio/_SV/Items/Whistle/cyrus_whistle_3.ogg

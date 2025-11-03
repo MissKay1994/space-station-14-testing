@@ -7,6 +7,7 @@
     { "pattern": "Resources/Prototypes/_LateStation/**", "license": "AGPL" },
     { "pattern": "Resources/Audio/_LateStation/**", "license": "AGPL" },
     { "pattern": "Resources/Locale/en-US/_LateStation/**", "license": "AGPL" },
+    { "pattern": "Resources/Maps/_LateStation/**", "license": "AGPL" },
 
     { "pattern": "Content.Server/_Harmony/**", "license": "AGPL" },
     { "pattern": "Content.Client/_Harmony/**", "license": "AGPL" },
@@ -15,6 +16,7 @@
     { "pattern": "Resources/Prototypes/_Harmony/**", "license": "AGPL" },
     { "pattern": "Resources/Audio/_Harmony/**", "license": "AGPL" },
     { "pattern": "Resources/Locale/en-US/_Harmony/**", "license": "AGPL" },
+    { "pattern": "Resources/Maps/_Harmony/**", "license": "AGPL" },
 
     { "pattern": "Content.Server/_DV/**", "license": "AGPL" },
     { "pattern": "Content.Client/_DV/**", "license": "AGPL" },
@@ -23,6 +25,7 @@
     { "pattern": "Resources/Prototypes/_DV/**", "license": "AGPL" },
     { "pattern": "Resources/Audio/_DV/**", "license": "AGPL" },
     { "pattern": "Resources/Locale/en-US/_DV/**", "license": "AGPL" },
+    { "pattern": "Resources/Maps/_DV/**", "license": "AGPL" },
 
     { "pattern": "Content.Server/_Floofstation/**", "license": "AGPL" },
     { "pattern": "Content.Client/_Floofstation/**", "license": "AGPL" },
@@ -31,6 +34,7 @@
     { "pattern": "Resources/Prototypes/_Floofstation/**", "license": "AGPL" },
     { "pattern": "Resources/Audio/_Floofstation/**", "license": "AGPL" },
     { "pattern": "Resources/Locale/en-US/_Floofstation/**", "license": "AGPL" },
+    { "pattern": "Resources/Maps/_Floofstation/**", "license": "AGPL" },
 
     { "pattern": "Content.Server/_Impstation/**", "license": "AGPL" },
     { "pattern": "Content.Client/_Impstation/**", "license": "AGPL" },
@@ -39,6 +43,7 @@
     { "pattern": "Resources/Prototypes/_Impstation/**", "license": "AGPL" },
     { "pattern": "Resources/Audio/_Impstation/**", "license": "AGPL" },
     { "pattern": "Resources/Locale/en-US/_Impstation/**", "license": "AGPL" },
+    { "pattern": "Resources/Maps/_Impstation/**", "license": "AGPL" },
 
     { "pattern": "Content.Server/_EinsteinEngines/**", "license": "AGPL" },
     { "pattern": "Content.Client/_EinsteinEngines/**", "license": "AGPL" },
@@ -47,6 +52,7 @@
     { "pattern": "Resources/Prototypes/_EinsteinEngines/**", "license": "AGPL" },
     { "pattern": "Resources/Audio/_EinsteinEngines/**", "license": "AGPL" },
     { "pattern": "Resources/Locale/en-US/_EinsteinEngines/**", "license": "AGPL" },
+    { "pattern": "Resources/Maps/_EinsteinEngines/**", "license": "AGPL" },
 
     { "pattern": "Content.Server/_Funkystation/**", "license": "AGPL" },
     { "pattern": "Content.Client/_Funkystation/**", "license": "AGPL" },
@@ -55,6 +61,7 @@
     { "pattern": "Resources/Prototypes/_Funkystation/**", "license": "AGPL" },
     { "pattern": "Resources/Audio/_Funkystation/**", "license": "AGPL" },
     { "pattern": "Resources/Locale/en-US/_Funkystation/**", "license": "AGPL" },
+    { "pattern": "Resources/Maps/_Funkystation/**", "license": "AGPL" },
 
     { "pattern": "Content.Server/_AXOLOTL/**", "license": "MIT" },
     { "pattern": "Content.Client/_AXOLOTL/**", "license": "MIT" },
@@ -63,6 +70,7 @@
     { "pattern": "Resources/Prototypes/_AXOLOTL/**", "license": "MIT" },
     { "pattern": "Resources/Audio/_AXOLOTL/**", "license": "MIT" },
     { "pattern": "Resources/Locale/en-US/_AXOLOTL/**", "license": "MIT" },
+    { "pattern": "Resources/Maps/_AXOLOTL/**", "license": "MIT" },
 
     { "pattern": "Content.Server/_CD/**", "license": "MIT" },
     { "pattern": "Content.Client/_CD/**", "license": "MIT" },
@@ -71,6 +79,7 @@
     { "pattern": "Resources/Prototypes/_CD/**", "license": "MIT" },
     { "pattern": "Resources/Audio/_CD/**", "license": "MIT" },
     { "pattern": "Resources/Locale/en-US/_CD/**", "license": "MIT" },
+    { "pattern": "Resources/Maps/_CD/**", "license": "MIT" },
 
     { "pattern": "Content.Server/_Umbra/**", "license": "MIT" },
     { "pattern": "Content.Client/_Umbra/**", "license": "MIT" },
@@ -79,6 +88,7 @@
     { "pattern": "Resources/Prototypes/_Umbra/**", "license": "MIT" },
     { "pattern": "Resources/Audio/_Umbra/**", "license": "MIT" },
     { "pattern": "Resources/Locale/en-US/_Umbra/**", "license": "MIT" },
+    { "pattern": "Resources/Maps/_Umbra/**", "license": "MIT" },
 
     { "pattern": "Content.Server/_NF/**", "license": "AGPL" },
     { "pattern": "Content.Client/_NF/**", "license": "AGPL" },
@@ -87,6 +97,7 @@
     { "pattern": "Resources/Prototypes/_NF/**", "license": "AGPL" },
     { "pattern": "Resources/Audio/_NF/**", "license": "AGPL" },
     { "pattern": "Resources/Locale/en-US/_NF/**", "license": "AGPL" },
+    { "pattern": "Resources/Maps/_NF/**", "license": "AGPL" },
 
     { "pattern": "Content.Server/_SV/**", "license": "AGPL" },
     { "pattern": "Content.Client/_SV/**", "license": "AGPL" },
@@ -95,6 +106,7 @@
     { "pattern": "Resources/Prototypes/_SV/**", "license": "AGPL" },
     { "pattern": "Resources/Audio/_SV/**", "license": "AGPL" },
     { "pattern": "Resources/Locale/en-US/_SV/**", "license": "AGPL" },
+    { "pattern": "Resources/Maps/_SV/**", "license": "AGPL" },
 
     { "pattern": "Content.Server/_Moffstation/**", "license": "MIT" },
     { "pattern": "Content.Client/_Moffstation/**", "license": "MIT" },
@@ -103,6 +115,7 @@
     { "pattern": "Resources/Prototypes/_Moffstation/**", "license": "MIT" },
     { "pattern": "Resources/Audio/_Moffstation/**", "license": "MIT" },
     { "pattern": "Resources/Locale/en-US/_Moffstation/**", "license": "MIT" },
+    { "pattern": "Resources/Maps/_Moffstation/**", "license": "MIT" },
 
     { "pattern": "Content.Server/**", "license": "MIT" },
     { "pattern": "Content.Client/**", "license": "MIT" },

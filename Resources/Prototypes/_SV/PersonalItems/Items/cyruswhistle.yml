@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
 # SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
 # SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
+# SPDX-FileCopyrightText: 2025 OnyxTheBrave <vinjeerik@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -12,10 +13,10 @@
   description: A vaguely familiar trench whistle with "For honor." inscribed on the underside.
   components:
   - type: Sprite
-    sprite: _SV/PersonalItems/CyrusWhistle.rsi
+    sprite: _SV/PersonalItems/Items/CyrusWhistle.rsi
     state: cyrus-whistle
   - type: Clothing
-    sprite: _SV/PersonalItems/CyrusWhistle.rsi
+    sprite: _SV/PersonalItems/Items/CyrusWhistle.rsi
     equippedPrefix: cyrus-whistle
     slots: neck
   - type: Whistle

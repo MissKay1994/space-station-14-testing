@@ -4,27 +4,21 @@ using Content.Shared._SV.EyeTracker;
 namespace Content.Server._SV.EyeTracker;
 
 //[Access(typeof(EyeTrackerComponent))]
-public sealed class SharedEyeTrackerSystem : EntitySystem
+public sealed class ServerEyeTrackerSystem : EntitySystem
 {
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
-
-    private void GetEyeRotationEvent(GetEyeRotationEvent ev)
+    public override void Initialize()
     {
-        //Used for clientside event
+        SubscribeAllEvent<GetNetworkedEyeRotationEvent>(SetServerEyeRotation);
+        base.Initialize();
     }
 
-    public void SetEyeRotation(Angle angle, NetEntity tracker, EntityUid player)
+    private void SetServerEyeRotation(GetNetworkedEyeRotationEvent args)
     {
-
-        _entityManager.TryGetEntity(tracker, out var entity);
-
-        if (!_entityManager.TryGetComponent<EyeTrackerComponent>(_entityManager.GetEntity(tracker), out var eye))
+        if (!_entityManager.TryGetComponent<EyeTrackerComponent>(_entityManager.GetEntity(args.NetEntity), out var tracker))
             return;
-        //_adminLog.Add(LogType.RCD,
-        //    LogImpact.Extreme,
-        //    $"{ToPrettyString(entity)} is setting {eye.ToString()} to {angle}");
-        //_popupSystem.PopupClient($"{ToPrettyString(player)} is setting {entity} to {angle}", player);
-        eye.Rotation = angle;
+
+        tracker.Rotation = args.Angle;
     }
 }

@@ -27,7 +27,8 @@ using System.Numerics; //Sector Vestige: RPD Logic
 using Content.Shared._SV.RPD; //Sector Vestige: RPD Logic
 using Content.Shared.Atmos.Components; //Sector Vestige: RPD Logic
 using Content.Shared.Atmos.EntitySystems; //Sector Vestige: RPD Logic
-using Content.Shared._SV.EyeTracker; //Sector Vestige: RPD Logic
+using Content.Shared._SV.EyeTracker;
+using Content.Shared.Hands; //Sector Vestige: RPD Logic
 
 namespace Content.Shared.RCD.Systems;
 
@@ -53,7 +54,6 @@ public sealed class RCDSystem : EntitySystem
     [Dependency] private readonly IEntityManager _entityManager = default!; //Sector Vestige: RPD Logic
     [Dependency] private readonly IEntityNetworkManager _entityNetworkManager = default!; //Sector Vestige: RPD Logic
     [Dependency] private readonly IMapManager _mapManager = default!; //Sector Vestige: RPD Logic
-    [Dependency] private readonly SharedEyeTrackerSystem _sharedEyeTracker = default!;
 
     private readonly int _instantConstructionDelay = 0;
     private readonly EntProtoId _instantConstructionFx = "EffectRCDConstruct0";
@@ -151,33 +151,8 @@ public sealed class RCDSystem : EntitySystem
             _popup.PopupClient(Loc.GetString("rcd-component-no-valid-grid"), uid, user);
             return;
         }
-
-        //Sector Vestige - Begin: RPD Logic
-        //Get the layer that the pipe needs to be on via where the click is
-        if (prototype.Prototype == null)
-            return;
-        if (prototype.Rotation == RcdRotation.Pipe &&
-            _entityManager.TryGetComponent<EyeTrackerComponent>(args.Used, out var eye))
-        {
-            _entityNetworkManager.SendSystemNetworkMessage(new GetEyeRotationEvent(_entityManager.GetNetEntity(args.Used), _entityManager.GetNetEntity(user)));
-            var alignedMouseCords = location.AlignWithClosestGridTile(2f, _entityManager, _mapManager);
-            var gridRotation = _transform.GetWorldRotation(gridUid.Value);
-            var currentTile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, alignedMouseCords);
-            float tileSize = mapGrid.TileSize;
-            var mouseDeadzone = 0.25f;
-            var tileCenter = new Vector2(currentTile.X + tileSize / 2, currentTile.Y + tileSize / 2);
-            alignedMouseCords = new EntityCoordinates(location.EntityId, tileCenter);
-            var mouseCordsDiff = location.Position - alignedMouseCords.Position;
-
-            _currentLayer = AtmosPipeLayer.Primary;
-
-            if (mouseCordsDiff.Length() > mouseDeadzone)
-            {
-                var direction = (new Angle(mouseCordsDiff)+ eye.Rotation + gridRotation + Math.PI / 2).GetCardinalDir();
-                _currentLayer = (direction == Direction.North || direction == Direction.East) ? AtmosPipeLayer.Secondary : AtmosPipeLayer.Tertiary;
-            }
-        }
-        //Sector Vestige - End: RPD Logic
+        if (prototype.Rotation == RcdRotation.Pipe)
+            _entityNetworkManager.SendSystemNetworkMessage(new GetEyeRotationEvent(_entityManager.GetNetEntity(args.Used), _entityManager.GetNetEntity(user))); // Sector Vestige: Get Eye rotation for RPD
 
         var tile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, location);
         var position = _mapSystem.TileIndicesFor(gridUid.Value, mapGrid, location);
@@ -337,7 +312,7 @@ public sealed class RCDSystem : EntitySystem
             return;
 
         // Finalize the operation (this should handle prediction properly)
-        FinalizeRCDOperation(uid, component, gridUid.Value, mapGrid, tile, position, args.Direction, args.Target, args.User);
+        FinalizeRCDOperation(uid, component, gridUid.Value, mapGrid, tile, position, args.Direction, args.Target, args.User, location);
 
         // Play audio and consume charges
         _audio.PlayPredicted(component.SuccessSound, uid, args.User);
@@ -603,7 +578,7 @@ public sealed class RCDSystem : EntitySystem
 
     #region Entity construction/deconstruction
 
-    private void FinalizeRCDOperation(EntityUid uid, RCDComponent component, EntityUid gridUid, MapGridComponent mapGrid, TileRef tile, Vector2i position, Direction direction, EntityUid? target, EntityUid user)
+    private void FinalizeRCDOperation(EntityUid uid, RCDComponent component, EntityUid gridUid, MapGridComponent mapGrid, TileRef tile, Vector2i position, Direction direction, EntityUid? target, EntityUid user, EntityCoordinates location)
     {
         if (!_net.IsServer)
             return;
@@ -625,6 +600,32 @@ public sealed class RCDSystem : EntitySystem
             //Gets the alternate pipe layer of the selected layer from the above function, then assign it to what gets spawned
             case RcdMode.ConstructObject:
                 //var ent = Spawn(prototype.Prototype, _mapSystem.GridTileToLocal(gridUid, mapGrid, position));
+
+                //Sector Vestige - Begin: RPD Logic
+                //Get the layer that the pipe needs to be on via where the click is
+                if (prototype.Prototype == null)
+                    return;
+                if (prototype.Rotation == RcdRotation.Pipe &&
+                    _entityManager.TryGetComponent<EyeTrackerComponent>(uid, out var eye))
+                {
+                    _entityNetworkManager.SendSystemNetworkMessage(new GetEyeRotationEvent(_entityManager.GetNetEntity(uid), _entityManager.GetNetEntity(user)));
+                    var gridRotation = _transform.GetWorldRotation(gridUid);
+                    float tileSize = mapGrid.TileSize;
+                    var mouseDeadzone = 0.25f;
+                    var tileCenter = new Vector2(tile.X + tileSize / 2, tile.Y + tileSize / 2);
+                    var alignedMouseCords = new EntityCoordinates(location.EntityId, tileCenter);
+                    var mouseCordsDiff = location.Position - alignedMouseCords.Position;
+
+                    _currentLayer = AtmosPipeLayer.Primary;
+
+                    if (mouseCordsDiff.Length() > mouseDeadzone)
+                    {
+                        var pipeRotation = (new Angle(mouseCordsDiff)+ eye.Rotation + gridRotation + Math.PI / 2).GetCardinalDir();
+                        _currentLayer = (pipeRotation == Direction.North || pipeRotation == Direction.East) ? AtmosPipeLayer.Secondary : AtmosPipeLayer.Tertiary;
+                    }
+                }
+                //Sector Vestige - End: RPD Logic
+
                 string ent;
                 if (_protoManager.TryIndex<EntityPrototype>(prototype.Prototype, out var entProto) &&
                     entProto.TryGetComponent<AtmosPipeLayersComponent>(out var pipeLayer, _entityManager.ComponentFactory) &&

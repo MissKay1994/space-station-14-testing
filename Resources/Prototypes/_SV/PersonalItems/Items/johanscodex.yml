@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 OnyxTheBrave <vinjeerik@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Player: Boaz1111 - Character: Johan Ullman
+- type: entity
+  name: Johan's codex
+  parent: BaseItem
+  id: PersonalItemJohanCodex
+  description: Johan's Personal Data Storage Device. Made originally for research, now used to store a complete data archive.
+  suffix: PersonalItem
+  components:
+  - type: Sprite
+    sprite: _SV/PersonalItems/Items/johanscodex.rsi
+    state: screen
+  - type: Item
+    size: Small
+    sprite: _SV/PersonalItems/Items/johanscodex.rsi
+
+- type: loadout
+  id: PersonalItemJohanCodex
+  storage:
+    back:
+    - PersonalItemJohanCodex
+  effects:
+  - !type:PersonalItemLoadoutEffect
+    character:
+    - Johan Ullman

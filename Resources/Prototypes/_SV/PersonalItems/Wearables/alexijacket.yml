@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 OnyxTheBrave <vinjeerik@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Player: Boaz1111 - Character: Alexi Ullman
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, ClothingOuterWinterCoat]
+  id: PersonalItemAlexiJacket
+  name: Alexi's jacket
+  description: A sturdy black windbreaker with a red collar. The left side of the jacket has some small engineering pins attached to it, and the right arm has a lesbian flag patch on it.
+  suffix: PersonalItem
+  components:
+  - type: Sprite
+    sprite: _SV/PersonalItems/Wearables/alexijacket.rsi
+  - type: Clothing
+    sprite: _SV/PersonalItems/Wearables/alexijacket.rsi
+
+- type: loadout
+  id: PersonalItemAlexiJacket
+  storage:
+    back:
+    - PersonalItemAlexiJacket
+  effects:
+  - !type:PersonalItemLoadoutEffect
+     character:
+      - Alexi Ullman

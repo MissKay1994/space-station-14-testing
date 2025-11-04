@@ -42,7 +42,6 @@
 // SPDX-FileCopyrightText: 2025 Lachryphage <lachri.lachryphage@gmail.com>
 // SPDX-FileCopyrightText: 2025 Lachryphage <stuart.e.clough@gmail.com>
 // SPDX-FileCopyrightText: 2025 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
-// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 // SPDX-FileCopyrightText: 2025 Rellu225 <1blackrilfe1@gmail.com>
 // SPDX-FileCopyrightText: 2025 Spanky <scott@wearejacob.com>
 // SPDX-FileCopyrightText: 2025 Spessmann <156740760+Spessmann@users.noreply.github.com>
@@ -52,8 +51,9 @@
 // SPDX-FileCopyrightText: 2025 compilatron <40789662+jbox144@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 jajsha <corbinbinouche7@gmail.com>
 // SPDX-FileCopyrightText: 2025 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 tanuko <signar2005@gmail.com>
 // SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
+// SPDX-FileCopyrightText: 2025 tanuko <signar2005@gmail.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 //
 // SPDX-License-Identifier: MIT
 
@@ -121,6 +121,7 @@ namespace Content.IntegrationTests.Tests
             {"/Maps/Shuttles/ShuttleEvent/cruiser.yml", ["ShuttleGunPerforator"]},
             {"/Maps/Shuttles/ShuttleEvent/instigator.yml", ["ShuttleGunFriendship"]},
             {"/Maps/_LateStation/shuttles/avenger.yml", ["ShuttleGunSvalinnMachineGun", "ShuttleGunDuster"]},
+            {"/Maps/_SV/cluster.yml", ["RubberStampMime"]},
         };
 
         /// <summary>
@@ -165,7 +166,8 @@ namespace Content.IntegrationTests.Tests
             // "Relic", // Vestige: Derotated Map
             "dm01-entryway",
             // "Exo", // Vestige: Derotated Map
-            "Vanquish",
+            "Vanquish", // LateStation Map by Lachri
+            "Cluster", // Sector Vestige, remade by Rebound
         };
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";

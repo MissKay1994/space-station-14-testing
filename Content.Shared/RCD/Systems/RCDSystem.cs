@@ -53,6 +53,7 @@ public sealed class RCDSystem : EntitySystem
     [Dependency] private readonly IEntityManager _entityManager = default!; //Sector Vestige: RPD Logic
     [Dependency] private readonly IEntityNetworkManager _entityNetworkManager = default!; //Sector Vestige: RPD Logic
     [Dependency] private readonly IMapManager _mapManager = default!; //Sector Vestige: RPD Logic
+    [Dependency] private readonly SharedEyeTrackerSystem _sharedEyeTracker = default!;
 
     private readonly int _instantConstructionDelay = 0;
     private readonly EntProtoId _instantConstructionFx = "EffectRCDConstruct0";

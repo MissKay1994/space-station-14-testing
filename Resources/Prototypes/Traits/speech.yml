@@ -83,6 +83,17 @@
   components:
   - type: SpanishAccent
 
+# SV Adding the Russian accent DA
+- type: trait
+  id: RussianAccent
+  name: trait-russian-name
+  description: trait-russian-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: RussianAccent
+# SV end of changes
+
 - type: trait
   id: Liar
   name: trait-liar-name

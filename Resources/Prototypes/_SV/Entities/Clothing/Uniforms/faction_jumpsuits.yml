@@ -15,15 +15,3 @@
     sprite: _SV/Clothing/Uniforms/Jumpsuit/marine.rsi
   - type: Clothing
     sprite: _SV/Clothing/Uniforms/Jumpsuit/marine.rsi
-
-# Mothfolk Tunic
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitAstrareTunic 
-  name: mothfolk tunic
-  description: A traditional tunic worn by Astrare Yariu'niol mothfolk.
-  components:
-  - type: Sprite
-    sprite: _SV/Clothing/Uniforms/Jumpsuit/astrare1.rsi
-  - type: Clothing
-    sprite: _SV/Clothing/Uniforms/Jumpsuit/astrare1.rsi

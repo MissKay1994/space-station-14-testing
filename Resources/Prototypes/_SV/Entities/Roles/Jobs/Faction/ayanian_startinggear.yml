@@ -15,10 +15,7 @@
     shoes: ClothingShoesBootsJack
     belt: ClothingBeltSecurity
     head: ClothingHeadHatBeretFederation
-    neck: ClothingNeckScarfAyanian
     mask: ClothingMaskGasExplorer
-  inhand:
-  - WeaponRifleLecter
 
 - type: startingGear
   id: AyanianNavalAdmiralGear

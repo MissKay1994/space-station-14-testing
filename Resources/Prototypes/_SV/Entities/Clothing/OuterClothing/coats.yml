@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatAyanianAdmiral
+  name: Admiral Great Coat
+  description: A Great Coat befitting the role of a Federation Admiral.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Coats/ayanian_admiralty.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Coats/ayanian_admiralty.rsi

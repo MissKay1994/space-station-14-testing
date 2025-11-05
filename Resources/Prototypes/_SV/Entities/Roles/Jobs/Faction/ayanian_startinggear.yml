@@ -1,0 +1,25 @@
+- type: startingGear
+  id: AyanianMarineGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAyanianMarine
+    back: ClothingBackpackSatchel 
+    outerClothing: ClothingOuterAyanianMarine
+    id: VisitorPDA
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsJack
+    belt: ClothingBeltSecurity
+    head: ClothingHeadHatBeretFederation
+    neck: ClothingNeckScarfAyanian
+    mask: ClothingMaskGasExplorer
+  inhand:
+  - WeaponRifleLecter
+
+- type: startingGear
+  id: AyanianNavalAdmiralGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAyanianMarine
+    back: ClothingBackpackSatchel 
+    outerClothing: ClothingOuterCoatAyanianAdmiral
+    gloves: ClothingHandsGlovesHop
+
+    #shoes: ClothingShoesBootsLace

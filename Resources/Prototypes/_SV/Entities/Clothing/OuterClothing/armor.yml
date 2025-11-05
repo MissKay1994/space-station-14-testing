@@ -1,0 +1,32 @@
+#Ayanian Marine Armour
+- type: entity
+  parent: [ClothingOuterArmorBase, ClothingOuterArmorBulletproof]
+  id: ClothingOuterAyanianMarine
+  name: ayanian marine armor
+  description: A vest designed to protect the marines from enemy fire.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Armor/ayanianmarine.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Armor/ayanianmarine.rsi
+
+#Astrare 
+- type: entity
+  parent: ClothingOuterArmorBase
+  id: ClothingOuterAstrareChestplate
+  name: astrare chestplace
+  description: A chestplate made from an alloy of multiple metals originating from the astrare homeworlds.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Armor/astrarechestplate.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Armor/astrarechestplate.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.4
+        Heat: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.80

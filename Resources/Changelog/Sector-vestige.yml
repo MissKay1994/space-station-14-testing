@@ -983,3 +983,9 @@ Entries:
       message: Cluster Evac now has a powered medical door
   id: 133
   time: '2025-11-04T19:02:33.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Added the Russian accent.
+  id: 134
+  time: '2025-11-06T12:06:00.0000000+00:00'

@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: CentcomPDA
+  id: MagistratePDA
+  name: magistrate PDA
+  description: A prestigious PDA befitting a Central Command judicial official.
+  components:
+  - type: Pda
+    id: MagistrateIDCard
+    penSlot:
+      startingItem: LuxuryPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       sv-pda-magistrate
+  - type: PdaBorderColor
+    borderColor: "#6f6192"
+  - type: Icon
+    state: sv-pda-magistrate

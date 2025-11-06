@@ -17,6 +17,7 @@
 # SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 # SPDX-FileCopyrightText: 2025 jajsha <corbinbinouche7@gmail.com>
 # SPDX-FileCopyrightText: 2025 youtissoum <51883137+youtissoum@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
 #
 # SPDX-License-Identifier: MIT
 
@@ -92,3 +93,5 @@
             Borg: [ 2, 2 ]
             #misc (2)
             Prisoner: [ 2, 2 ] #Sector Vestige: Add prioner to the map rotations
+            #Central Command
+            SVMagistrate: [ 1, 1 ]

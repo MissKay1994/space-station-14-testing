@@ -14,3 +14,14 @@
     sprite: _SV/Clothing/OuterClothing/Coats/ayanian_admiralty.rsi
   - type: Clothing
     sprite: _SV/Clothing/OuterClothing/Coats/ayanian_admiralty.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatCentCommAdmiral
+  name: CentComm Great Coat
+  description: A Great Coat befitting the role of a Central Commander.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Coats/centcomm_admiralty.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Coats/centcomm_admiralty.rsi

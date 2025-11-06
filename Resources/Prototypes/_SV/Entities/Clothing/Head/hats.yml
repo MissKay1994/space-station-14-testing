@@ -38,7 +38,7 @@
 - type: entity
   parent: [ClothingHeadBase, ClothingHeadHatBeretFederation]
   id: ClothingHeadHatAdmiralFederation
-  name: Ayanian Admiral Hat
+  name: Ayanian admiral hat
   description: A hat commonly worn by Ayanian admirals
   components:
   - type: Sprite

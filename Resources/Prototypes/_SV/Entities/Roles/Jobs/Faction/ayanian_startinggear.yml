@@ -26,14 +26,3 @@
     gloves: ClothingHandsGlovesHop
     shoes: ClothingShoesBootsLaceup
     head: ClothingHeadHatAdmiralFederation
-
-- type: startingGear
-  id: AyanianAdmiralGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitAyanianMarine
-    back: ClothingBackpackSatchel 
-    outerClothing: ClothingOuterCoatAyanianAdmiral
-    id: VisitorPDA
-    gloves: ClothingHandsGlovesHop
-    shoes: ClothingShoesBootsLaceup
-    head: ClothingHeadHatAdmiralFederation

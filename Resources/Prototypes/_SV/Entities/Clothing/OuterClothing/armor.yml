@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+#Ayanian Marine Armour
+- type: entity
+  parent: [ClothingOuterArmorBase, ClothingOuterArmorBulletproof]
+  id: ClothingOuterAyanianMarine
+  name: ayanian marine armor
+  description: A vest designed to protect the marines from enemy fire.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Armor/ayanianmarine.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Armor/ayanianmarine.rsi

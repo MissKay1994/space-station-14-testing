@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: startingGear
+  id: AyanianMarineGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAyanianMarine
+    back: ClothingBackpackSatchel
+    outerClothing: ClothingOuterAyanianMarine
+    id: VisitorPDA
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsJack
+    belt: ClothingBeltSecurity
+    head: ClothingHeadHatBeretFederation
+
+- type: startingGear
+  id: AyanianAdmiralGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAyanianMarine
+    back: ClothingBackpackSatchel
+    outerClothing: ClothingOuterCoatAyanianAdmiral
+    id: VisitorPDA
+    gloves: ClothingHandsGlovesHop
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatAdmiralFederation

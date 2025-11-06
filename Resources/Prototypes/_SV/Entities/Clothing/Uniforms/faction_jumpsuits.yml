@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Marine Uniform
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAyanianMarine
+  name: ayanian marine uniform
+  description: An outfit worn by the Ayanian Federation Marines. Makes you feel like a teenage dirtbag.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/Uniforms/Jumpsuit/marine.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/Uniforms/Jumpsuit/marine.rsi

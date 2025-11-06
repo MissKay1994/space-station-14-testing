@@ -8,7 +8,7 @@
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatAyanianAdmiral
   name: admiral great coat
-  description: A Great Coat befitting the role of a Federation Admiral.
+  description: A great coat befitting the role of a Federation admiral.
   components:
   - type: Sprite
     sprite: _SV/Clothing/OuterClothing/Coats/ayanian_admiralty.rsi

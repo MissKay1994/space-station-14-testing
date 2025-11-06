@@ -37,7 +37,7 @@
   parent: [ClothingHeadBase, ClothingHeadHatBeretFederation]
   id: ClothingHeadHatAdmiralFederation
   name: Ayanian Admiral Hat
-  description: A hat commonly worn by Ayanian Admirals
+  description: A hat commonly worn by Ayanian admirals
   components:
   - type: Sprite
     sprite: _SV/Clothing/Head/Hats/admiral_cap.rsi

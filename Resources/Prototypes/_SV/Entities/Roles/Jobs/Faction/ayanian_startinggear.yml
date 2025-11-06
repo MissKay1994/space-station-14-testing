@@ -23,5 +23,7 @@
     jumpsuit: ClothingUniformJumpsuitAyanianMarine
     back: ClothingBackpackSatchel 
     outerClothing: ClothingOuterCoatAyanianAdmiral
+    id: VisitorPDA
     gloves: ClothingHandsGlovesHop
     shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatAdmiralFederation

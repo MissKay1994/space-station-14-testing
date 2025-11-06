@@ -18,7 +18,7 @@
     mask: ClothingMaskGasExplorer
 
 - type: startingGear
-  id: AyanianNavalAdmiralGear
+  id: AyanianAdmiralGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitAyanianMarine
     back: ClothingBackpackSatchel 

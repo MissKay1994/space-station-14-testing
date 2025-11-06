@@ -19,7 +19,7 @@
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatCentCommAdmiral
   name: CentComm great coat
-  description: A Great Coat befitting the role of a Central Commander.
+  description: A great coat befitting the role of a Central Commander.
   components:
   - type: Sprite
     sprite: _SV/Clothing/OuterClothing/Coats/centcomm_admiralty.rsi

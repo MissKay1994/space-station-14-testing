@@ -24,5 +24,4 @@
     back: ClothingBackpackSatchel 
     outerClothing: ClothingOuterCoatAyanianAdmiral
     gloves: ClothingHandsGlovesHop
-
-    #shoes: ClothingShoesBootsLace
+    shoes: ClothingShoesBootsLaceup

@@ -26,3 +26,16 @@
     layers:
       - state: green
       - state: lawyer
+
+- type: entity
+  parent: ArrivalsSpawnPointJobBase
+  id: ArrivalsSpawnPointSVMagistrate
+  suffix: magistrate
+  components:
+  - type: ArrivalsSpawnPoint
+    jobs:
+      - SVMagistrate
+  - type: Sprite
+    layers:
+      - state: green
+      - state: lawyer

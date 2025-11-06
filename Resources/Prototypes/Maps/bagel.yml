@@ -92,3 +92,5 @@
             Borg: [ 2, 2 ]
             #misc (2)
             Prisoner: [ 2, 2 ] #Sector Vestige: Add prioner to the map rotations
+            #Central Command
+            SVMagistrate: [ 1, 1 ]

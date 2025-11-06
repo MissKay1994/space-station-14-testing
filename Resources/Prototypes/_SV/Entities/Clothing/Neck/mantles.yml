@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleMagistrate
+  name: magistrate's mantle
+  description: A distinguished mantle bearing the authority of Central Command's judicial office.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/mantles/_SV/magistratemantle.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/mantles/_SV/magistratemantle.rsi

@@ -33,7 +33,7 @@
 - type: loadout
   id: MagistrateNeckMantle
   equipment:
-    neck: ClothingNeckMantleCap
+    neck: ClothingNeckMantleMagistrate
 
 # Briefcase
 - type: loadout

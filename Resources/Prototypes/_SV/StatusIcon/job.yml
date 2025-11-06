@@ -12,3 +12,12 @@
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: SeniorCourier
   jobName: job-name-senior-courier
+
+# Magistrate
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSVMagistrate
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: SV-Magistrate
+  jobName: job-name-sv-magistrate

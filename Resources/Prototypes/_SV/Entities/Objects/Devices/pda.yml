@@ -15,7 +15,12 @@
       whitelist:
         tags:
         - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       sv-pda-magistrate
   - type: PdaBorderColor
-    borderColor: "#2e2e4e"
+    borderColor: "#6f6192"
   - type: Icon
-    state: pda-lawyer
+    state: sv-pda-magistrate

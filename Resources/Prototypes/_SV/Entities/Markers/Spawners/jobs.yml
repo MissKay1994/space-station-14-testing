@@ -13,3 +13,16 @@
     layers:
       - state: green
       - state: lawyer
+
+- type: entity
+  id: SpawnPointSVMagistrateLatejoin
+  parent: SpawnPointJobBase
+  name: magistrate latejoin
+  components:
+  - type: SpawnPoint
+    spawn_type: LateJoin
+    job_id: SVMagistrate
+  - type: Sprite
+    layers:
+      - state: green
+      - state: lawyer

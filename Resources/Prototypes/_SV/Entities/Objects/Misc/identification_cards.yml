@@ -2,14 +2,14 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
-  parent: CentcomIDCard
+  parent: IDCardStandard
   id: MagistrateIDCard
   name: magistrate ID card
   description: A prestigious identification card bearing the seal of judicial authority from Central Command.
   components:
   - type: Sprite
     layers:
-    - state: centcom
-    - state: idlawyer
+    - state: blue
+    - state: sv-idmagistrate
   - type: PresetIdCard
     job: SVMagistrate

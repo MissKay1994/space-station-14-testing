@@ -17,7 +17,7 @@
       time: 90000 # 25 hours
   weight: 10
   startingGear: SVMagistrateGear
-  icon: "JobIconLawyer"
+  icon: "JobIconSVMagistrate"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:

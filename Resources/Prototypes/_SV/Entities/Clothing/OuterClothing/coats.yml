@@ -18,7 +18,7 @@
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatCentCommAdmiral
-  name: CentComm Great Coat
+  name: CentComm great coat
   description: A Great Coat befitting the role of a Central Commander.
   components:
   - type: Sprite

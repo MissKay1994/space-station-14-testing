@@ -8,7 +8,7 @@
   id: AyanianMarineGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitAyanianMarine
-    back: ClothingBackpackSatchel 
+    back: ClothingBackpackSatchel
     outerClothing: ClothingOuterAyanianMarine
     id: VisitorPDA
     gloves: ClothingHandsGlovesCombat
@@ -20,9 +20,10 @@
   id: AyanianAdmiralGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitAyanianMarine
-    back: ClothingBackpackSatchel 
+    back: ClothingBackpackSatchel
     outerClothing: ClothingOuterCoatAyanianAdmiral
     id: VisitorPDA
     gloves: ClothingHandsGlovesHop
     shoes: ClothingShoesBootsLaceup
     head: ClothingHeadHatAdmiralFederation
+    

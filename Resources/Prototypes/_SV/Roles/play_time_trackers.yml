@@ -7,3 +7,7 @@
 # Senior Courier
 - type: playTimeTracker
   id: JobSeniorCourier
+
+# Magistrate
+- type: playTimeTracker
+  id: JobSVMagistrate

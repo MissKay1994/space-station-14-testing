@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Custom department for high-level Central Command roles that are player-selectable
+- type: department
+  id: SVCentralCommand
+  name: department-sv-centralcommand
+  description: department-sv-centralcommand-description
+  color: "#0c344d"
+  roles:
+  - SVMagistrate
+  weight: 115

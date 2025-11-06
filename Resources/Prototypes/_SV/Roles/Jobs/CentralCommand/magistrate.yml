@@ -1,0 +1,52 @@
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: job
+  id: SVMagistrate
+  name: job-name-sv-magistrate
+  description: job-description-sv-magistrate
+  playTimeTracker: JobSVMagistrate
+  setPreference: true
+  whitelisted: true
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobCaptain
+      time: 90000 # 25 hours
+    - !type:RoleTimeRequirement
+      role: JobHeadOfSecurity
+      time: 90000 # 25 hours
+  weight: 10
+  startingGear: SVMagistrateGear
+  icon: "JobIconLawyer"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SVMagistrateGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLawyerBlack
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesCommand
+    id: MagistratePDA
+    ears: ClothingHeadsetAltCentCom
+    belt: BoxFolderClipboardThreePapers
+    pocket1: RubberStampLawyer
+  storage:
+    back:
+    - BookSpaceLaw
+    - Flash
+
+- type: chameleonOutfit
+  id: SVMagistrateChameleonOutfit
+  job: SVMagistrate
+  hasMindShield: true
+  equipment:
+    neck: ClothingNeckLawyerbadge
+    mask: ClothingMaskBreath

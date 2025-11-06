@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: CentcomIDCard
+  id: MagistrateIDCard
+  name: magistrate ID card
+  description: A prestigious identification card bearing the seal of judicial authority from Central Command.
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idlawyer
+  - type: PresetIdCard
+    job: SVMagistrate

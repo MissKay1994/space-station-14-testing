@@ -71,3 +71,40 @@
   loadouts:
   - SeniorCourierBootsSteel
   - SeniorCourierWinterBoots
+
+# Magistrate
+- type: loadoutGroup
+  id: MagistrateHead
+  name: loadout-group-magistrate-head
+  minLimit: 0
+  loadouts:
+  - MagistrateHeadBowler
+
+- type: loadoutGroup
+  id: MagistrateGloves
+  name: loadout-group-magistrate-gloves
+  minLimit: 0
+  loadouts:
+  - MagistrateGlovesBlack
+
+- type: loadoutGroup
+  id: MagistrateOuterClothing
+  name: loadout-group-magistrate-outerclothing
+  loadouts:
+  - MagistrateOuterJudgeRobes
+  - MagistrateOuterWintercoat
+
+- type: loadoutGroup
+  id: MagistrateNeck
+  name: loadout-group-magistrate-neck
+  minLimit: 0
+  loadouts:
+  - MagistrateNeckBadge
+  - MagistrateNeckMantle
+
+- type: loadoutGroup
+  id: MagistrateBriefcase
+  name: loadout-group-magistrate-briefcase
+  minLimit: 0
+  loadouts:
+  - MagistrateBriefcase

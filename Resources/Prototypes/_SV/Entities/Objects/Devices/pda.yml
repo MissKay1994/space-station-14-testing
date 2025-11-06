@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: CentcomPDA
+  id: MagistratePDA
+  name: magistrate PDA
+  description: A prestigious PDA befitting a Central Command judicial official.
+  components:
+  - type: Pda
+    id: MagistrateIDCard
+    penSlot:
+      startingItem: LuxuryPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#2e2e4e"
+  - type: Icon
+    state: pda-lawyer

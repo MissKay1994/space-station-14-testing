@@ -18,3 +18,21 @@
   - Trinkets
   - GroupSpeciesBreathTool
   - PersonalItemsJobAgnostic
+
+# Magistrate
+- type: roleLoadout
+  id: JobSVMagistrate
+  groups:
+  - GroupTankHarness
+  - MagistrateHead
+  - MagistrateGloves
+  - MagistrateOuterClothing
+  - MagistrateNeck
+  - MagistrateBriefcase
+  - CommonBackpack
+  - FormalShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic

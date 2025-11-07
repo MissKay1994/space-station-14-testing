@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
 

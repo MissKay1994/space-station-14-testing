@@ -1827,6 +1827,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #endregion
 
+        // SV changes start - Job whitelist groups
         #region Job Whitelist Groups
 
         public async Task<bool> AddJobWhitelistGroup(Guid player, string groupId)
@@ -1885,6 +1886,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         }
 
         #endregion
+        // SV changes end
 
         # region IPIntel
 

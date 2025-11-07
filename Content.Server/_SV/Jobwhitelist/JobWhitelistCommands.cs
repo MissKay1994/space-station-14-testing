@@ -40,7 +40,7 @@ public sealed class JobWhitelistAddGroupCommand : LocalizedCommands
 
         var player = args[0].Trim();
         var groupId = args[1].Trim();
-        
+
         if (!_prototypes.TryIndex<JobWhitelistGroupPrototype>(groupId, out var group))
         {
             shell.WriteError(Loc.GetString("cmd-jobwhitelist-group-does-not-exist", ("group", groupId)));
@@ -110,7 +110,7 @@ public sealed class JobWhitelistRemoveGroupCommand : LocalizedCommands
 
         var player = args[0].Trim();
         var groupId = args[1].Trim();
-        
+
         if (!_prototypes.TryIndex<JobWhitelistGroupPrototype>(groupId, out var group))
         {
             shell.WriteError(Loc.GetString("cmd-jobwhitelist-group-does-not-exist", ("group", groupId)));

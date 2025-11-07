@@ -369,6 +369,7 @@ namespace Content.Server.Database
 
         #endregion
 
+        // SV changes start - Job whitelist groups
         #region Job Whitelist Groups
 
         Task AddJobWhitelistGroup(Guid player, string groupId);
@@ -377,6 +378,7 @@ namespace Content.Server.Database
         Task<bool> RemoveJobWhitelistGroup(Guid player, string groupId);
 
         #endregion
+        // SV changes end
 
         #region IPintel
 
@@ -1078,6 +1080,7 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.RemoveJobWhitelist(player, job));
         }
 
+        // SV changes start - Job whitelist groups
         public Task AddJobWhitelistGroup(Guid player, string groupId)
         {
             DbWriteOpsMetric.Inc();
@@ -1101,6 +1104,7 @@ namespace Content.Server.Database
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.RemoveJobWhitelistGroup(player, groupId));
         }
+        // SV changes end
 
         public Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)
         {

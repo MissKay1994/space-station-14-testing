@@ -83,7 +83,7 @@ namespace Content.Server.Database
         public DbSet<AdminWatchlist> AdminWatchlists { get; set; } = null!;
         public DbSet<AdminMessage> AdminMessages { get; set; } = null!;
         public DbSet<RoleWhitelist> RoleWhitelists { get; set; } = null!;
-        public DbSet<JobWhitelistGroup> JobWhitelistGroups { get; set; } = null!;
+        public DbSet<JobWhitelistGroup> JobWhitelistGroups { get; set; } = null!; // SV changes - Job whitelist groups
         public DbSet<BanTemplate> BanTemplate { get; set; } = null!;
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
 
@@ -385,12 +385,14 @@ namespace Content.Server.Database
                 .HasPrincipalKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            // SV changes start - Job whitelist groups
             modelBuilder.Entity<JobWhitelistGroup>()
                 .HasOne(w => w.Player)
                 .WithMany(p => p.JobWhitelistGroups)
                 .HasForeignKey(w => w.PlayerUserId)
                 .HasPrincipalKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
+            // SV changes end
 
             // Changes for modern HWID integration
             modelBuilder.Entity<Player>()
@@ -658,7 +660,7 @@ namespace Content.Server.Database
         public List<ServerRoleBan> AdminServerRoleBansCreated { get; set; } = null!;
         public List<ServerRoleBan> AdminServerRoleBansLastEdited { get; set; } = null!;
         public List<RoleWhitelist> JobWhitelists { get; set; } = null!;
-        public List<JobWhitelistGroup> JobWhitelistGroups { get; set; } = null!;
+        public List<JobWhitelistGroup> JobWhitelistGroups { get; set; } = null!; // SV changes - Job whitelist groups
     }
 
     [Table("whitelist")]
@@ -1285,6 +1287,7 @@ namespace Content.Server.Database
         public string RoleId { get; set; } = default!;
     }
 
+    // SV changes start - Job whitelist groups
     [PrimaryKey(nameof(PlayerUserId), nameof(GroupId))]
     public class JobWhitelistGroup
     {
@@ -1295,6 +1298,7 @@ namespace Content.Server.Database
         [Required]
         public string GroupId { get; set; } = default!;
     }
+    // SV changes end
 
     /// <summary>
     /// Defines a template that admins can use to quickly fill out ban information.

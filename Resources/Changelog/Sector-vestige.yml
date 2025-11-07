@@ -1001,3 +1001,9 @@ Entries:
       message: Added the Magistrate!
   id: 136
   time: '2025-11-06T20:49:34.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Added group job whitelists.
+  id: 137
+  time: '2025-11-07T19:29:16.0000000+00:00'

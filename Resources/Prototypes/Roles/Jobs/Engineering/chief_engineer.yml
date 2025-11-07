@@ -3,6 +3,8 @@
   name: job-name-ce
   description: job-description-ce
   playTimeTracker: JobChiefEngineer
+  setPreference: true
+  whitelisted: true
   requirements:
     - !type:RoleTimeRequirement
       role: JobAtmosphericTechnician

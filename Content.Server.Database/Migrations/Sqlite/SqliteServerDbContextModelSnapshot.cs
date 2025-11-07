@@ -532,7 +532,20 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("ban_template", (string)null);
                 });
 
- modelBuilder.Entity("Content.Server.Database.CDModel+CDProfile", b =>
+            modelBuilder.Entity("Content.Server.Database.Blacklist", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("UserId")
+                        .HasName("PK_blacklist");
+
+                    b.ToTable("blacklist", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.CDModel+CDProfile", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -600,19 +613,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasDatabaseName("IX_cd_character_record_entries_cd_character_record_entries_id");
 
                     b.ToTable("cd_character_record_entries", (string)null);
-                });
-
-            modelBuilder.Entity("Content.Server.Database.Blacklist", b =>
-                {
-                    b.Property<Guid>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("user_id");
-
-                    b.HasKey("UserId")
-                        .HasName("PK_blacklist");
-
-                    b.ToTable("blacklist", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>
@@ -729,6 +729,22 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasFilter("priority = 3");
 
                     b.ToTable("job", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.JobWhitelistGroup", b =>
+                {
+                    b.Property<Guid>("PlayerUserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("player_user_id");
+
+                    b.Property<string>("GroupId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("group_id");
+
+                    b.HasKey("PlayerUserId", "GroupId")
+                        .HasName("PK_job_whitelist_groups");
+
+                    b.ToTable("job_whitelist_groups", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.PlayTime", b =>
@@ -1729,6 +1745,19 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Profile");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.JobWhitelistGroup", b =>
+                {
+                    b.HasOne("Content.Server.Database.Player", "Player")
+                        .WithMany("JobWhitelistGroups")
+                        .HasForeignKey("PlayerUserId")
+                        .HasPrincipalKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_job_whitelist_groups_player_player_user_id");
+
+                    b.Navigation("Player");
+                });
+
             modelBuilder.Entity("Content.Server.Database.Player", b =>
                 {
                     b.OwnsOne("Content.Server.Database.TypedHwid", "LastSeenHWId", b1 =>
@@ -2081,6 +2110,8 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("AdminWatchlistsLastEdited");
 
                     b.Navigation("AdminWatchlistsReceived");
+
+                    b.Navigation("JobWhitelistGroups");
 
                     b.Navigation("JobWhitelists");
                 });

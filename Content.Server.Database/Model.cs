@@ -44,6 +44,7 @@ namespace Content.Server.Database
         public DbSet<AdminWatchlist> AdminWatchlists { get; set; } = null!;
         public DbSet<AdminMessage> AdminMessages { get; set; } = null!;
         public DbSet<RoleWhitelist> RoleWhitelists { get; set; } = null!;
+        public DbSet<JobWhitelistGroup> JobWhitelistGroups { get; set; } = null!;
         public DbSet<BanTemplate> BanTemplate { get; set; } = null!;
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
 
@@ -345,6 +346,13 @@ namespace Content.Server.Database
                 .HasPrincipalKey(p => p.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<JobWhitelistGroup>()
+                .HasOne(w => w.Player)
+                .WithMany(p => p.JobWhitelistGroups)
+                .HasForeignKey(w => w.PlayerUserId)
+                .HasPrincipalKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             // Changes for modern HWID integration
             modelBuilder.Entity<Player>()
                 .OwnsOne(p => p.LastSeenHWId)
@@ -611,6 +619,7 @@ namespace Content.Server.Database
         public List<ServerRoleBan> AdminServerRoleBansCreated { get; set; } = null!;
         public List<ServerRoleBan> AdminServerRoleBansLastEdited { get; set; } = null!;
         public List<RoleWhitelist> JobWhitelists { get; set; } = null!;
+        public List<JobWhitelistGroup> JobWhitelistGroups { get; set; } = null!;
     }
 
     [Table("whitelist")]
@@ -1235,6 +1244,17 @@ namespace Content.Server.Database
 
         [Required]
         public string RoleId { get; set; } = default!;
+    }
+
+    [PrimaryKey(nameof(PlayerUserId), nameof(GroupId))]
+    public class JobWhitelistGroup
+    {
+        [Required, ForeignKey("Player")]
+        public Guid PlayerUserId { get; set; }
+        public Player Player { get; set; } = default!;
+
+        [Required]
+        public string GroupId { get; set; } = default!;
     }
 
     /// <summary>

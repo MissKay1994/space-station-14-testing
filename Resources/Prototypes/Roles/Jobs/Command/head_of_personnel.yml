@@ -55,6 +55,8 @@
   name: job-name-hop
   description: job-description-hop
   playTimeTracker: JobHeadOfPersonnel
+  setPreference: true
+  whitelisted: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering

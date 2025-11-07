@@ -1785,6 +1785,65 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #endregion
 
+        #region Job Whitelist Groups
+
+        public async Task<bool> AddJobWhitelistGroup(Guid player, string groupId)
+        {
+            await using var db = await GetDb();
+            var exists = await db.DbContext.JobWhitelistGroups
+                .Where(w => w.PlayerUserId == player)
+                .Where(w => w.GroupId == groupId)
+                .AnyAsync();
+
+            if (exists)
+                return false;
+
+            var whitelist = new JobWhitelistGroup
+            {
+                PlayerUserId = player,
+                GroupId = groupId
+            };
+            db.DbContext.JobWhitelistGroups.Add(whitelist);
+            await db.DbContext.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<List<string>> GetJobWhitelistGroups(Guid player, CancellationToken cancel)
+        {
+            await using var db = await GetDb(cancel);
+            return await db.DbContext.JobWhitelistGroups
+                .Where(w => w.PlayerUserId == player)
+                .Select(w => w.GroupId)
+                .ToListAsync(cancellationToken: cancel);
+        }
+
+        public async Task<bool> IsJobWhitelistGroupWhitelisted(Guid player, string groupId)
+        {
+            await using var db = await GetDb();
+            return await db.DbContext.JobWhitelistGroups
+                .Where(w => w.PlayerUserId == player)
+                .Where(w => w.GroupId == groupId)
+                .AnyAsync();
+        }
+
+        public async Task<bool> RemoveJobWhitelistGroup(Guid player, string groupId)
+        {
+            await using var db = await GetDb();
+            var entry = await db.DbContext.JobWhitelistGroups
+                .Where(w => w.PlayerUserId == player)
+                .Where(w => w.GroupId == groupId)
+                .SingleOrDefaultAsync();
+
+            if (entry == null)
+                return false;
+
+            db.DbContext.JobWhitelistGroups.Remove(entry);
+            await db.DbContext.SaveChangesAsync();
+            return true;
+        }
+
+        #endregion
+
         # region IPIntel
 
         public async Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)

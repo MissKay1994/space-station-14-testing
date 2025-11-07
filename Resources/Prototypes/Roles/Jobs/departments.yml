@@ -117,8 +117,8 @@
   roles:
   - AtmosphericTechnician
   - ChiefEngineer
-  - StationEngineer
   - SeniorEngineer
+  - StationEngineer
   - TechnicalAssistant
 
 - type: department
@@ -129,11 +129,11 @@
   roles:
   - Chemist
   - ChiefMedicalOfficer
+  - SeniorPhysician
   - MedicalDoctor
   - MedicalIntern
   - Psychologist
   - Paramedic
-  - SeniorPhysician
 
 - type: department
   id: Security

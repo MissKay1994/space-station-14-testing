@@ -3,6 +3,8 @@
   name: job-name-qm
   description: job-description-qm
   playTimeTracker: JobQuartermaster
+  setPreference: true
+  whitelisted: true
   requirements:
     - !type:RoleTimeRequirement
       role: JobCargoTechnician

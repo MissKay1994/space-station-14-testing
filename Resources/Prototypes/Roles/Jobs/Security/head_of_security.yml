@@ -3,6 +3,8 @@
   name: job-name-hos
   description: job-description-hos
   playTimeTracker: JobHeadOfSecurity
+  setPreference: true
+  whitelisted: true
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden

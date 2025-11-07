@@ -1,0 +1,24 @@
+# Job Whitelist Groups
+# Define groups of jobs that can be whitelisted together
+# This allows admins to grant access to multiple jobs at once
+
+- type: jobWhitelistGroup
+  id: Trusted
+  name: "Trusted"
+  description: "Access to all command roles and senior positions"
+  jobs:
+  # Command
+  - Captain
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ChiefEngineer
+  - ResearchDirector
+  - ChiefMedicalOfficer
+  - Quartermaster
+  # Senior Jobs
+  - SeniorEngineer
+  - SeniorPhysician
+  - SeniorResearcher
+  - SeniorOfficer
+  - SeniorCourier
+  

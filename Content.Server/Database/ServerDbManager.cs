@@ -335,6 +335,15 @@ namespace Content.Server.Database
 
         #endregion
 
+        #region Job Whitelist Groups
+
+        Task AddJobWhitelistGroup(Guid player, string groupId);
+        Task<List<string>> GetJobWhitelistGroups(Guid player, CancellationToken cancel = default);
+        Task<bool> IsJobWhitelistGroupWhitelisted(Guid player, string groupId);
+        Task<bool> RemoveJobWhitelistGroup(Guid player, string groupId);
+
+        #endregion
+
         #region IPintel
 
         Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score);
@@ -1033,6 +1042,30 @@ namespace Content.Server.Database
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.RemoveJobWhitelist(player, job));
+        }
+
+        public Task AddJobWhitelistGroup(Guid player, string groupId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.AddJobWhitelistGroup(player, groupId));
+        }
+
+        public Task<List<string>> GetJobWhitelistGroups(Guid player, CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetJobWhitelistGroups(player, cancel));
+        }
+
+        public Task<bool> IsJobWhitelistGroupWhitelisted(Guid player, string groupId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.IsJobWhitelistGroupWhitelisted(player, groupId));
+        }
+
+        public Task<bool> RemoveJobWhitelistGroup(Guid player, string groupId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.RemoveJobWhitelistGroup(player, groupId));
         }
 
         public Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)

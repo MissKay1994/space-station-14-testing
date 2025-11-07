@@ -3,6 +3,8 @@
   name: job-name-rd
   description: job-description-rd
   playTimeTracker: JobResearchDirector
+  setPreference: true
+  whitelisted: true
   requirements:
   - !type:RoleTimeRequirement
     role: JobScientist

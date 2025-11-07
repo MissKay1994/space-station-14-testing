@@ -39,6 +39,8 @@
   name: job-name-senior-courier
   description: job-description-senior-courier
   playTimeTracker: JobSeniorCourier
+  setPreference: true
+  whitelisted: true
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800 #3 hrs

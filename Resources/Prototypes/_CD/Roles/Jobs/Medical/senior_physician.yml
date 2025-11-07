@@ -3,6 +3,8 @@
   name: job-name-senior-physician
   description: job-description-senior-physician
   playTimeTracker: JobSeniorPhysician
+  setPreference: true
+  whitelisted: true
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800 #3 hrs

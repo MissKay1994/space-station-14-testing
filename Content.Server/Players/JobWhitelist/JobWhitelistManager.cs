@@ -5,6 +5,7 @@ using Content.Server.Database;
 using Content.Shared.CCVar;
 using Content.Shared.Players.JobWhitelist;
 using Content.Shared.Roles;
+using Content.Shared._SV.JobWhitelist;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
@@ -24,6 +25,7 @@ public sealed class JobWhitelistManager : IPostInjectInit
     [Dependency] private readonly UserDbDataManager _userDb = default!;
 
     private readonly Dictionary<NetUserId, HashSet<string>> _whitelists = new();
+    private readonly Dictionary<NetUserId, HashSet<string>> _groupWhitelists = new();
 
     public void Initialize()
     {
@@ -32,9 +34,11 @@ public sealed class JobWhitelistManager : IPostInjectInit
 
     private async Task LoadData(ICommonSession session, CancellationToken cancel)
     {
-        var whitelists = await _db.GetJobWhitelists(session.UserId, cancel);
+        var whitelists = await _db.GetJobWhitelists(session.UserId.UserId, cancel);
+        var groups = await _db.GetJobWhitelistGroups(session.UserId.UserId, cancel);
         cancel.ThrowIfCancellationRequested();
         _whitelists[session.UserId] = whitelists.ToHashSet();
+        _groupWhitelists[session.UserId] = groups.ToHashSet();
     }
 
     private void FinishLoad(ICommonSession session)
@@ -45,6 +49,7 @@ public sealed class JobWhitelistManager : IPostInjectInit
     private void ClientDisconnected(ICommonSession session)
     {
         _whitelists.Remove(session.UserId);
+        _groupWhitelists.Remove(session.UserId);
     }
 
     public async void AddWhitelist(NetUserId player, ProtoId<JobPrototype> job)
@@ -86,7 +91,24 @@ public sealed class JobWhitelistManager : IPostInjectInit
             return false;
         }
 
-        return whitelists.Contains(job);
+        // Check direct job whitelist
+        if (whitelists.Contains(job))
+            return true;
+
+        // Check if player has any groups that include this job
+        if (_groupWhitelists.TryGetValue(player, out var groups))
+        {
+            foreach (var groupId in groups)
+            {
+                if (_prototypes.TryIndex<JobWhitelistGroupPrototype>(groupId, out var groupProto) &&
+                    groupProto.Jobs.Contains(job))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     public async void RemoveWhitelist(NetUserId player, ProtoId<JobPrototype> job)
@@ -98,11 +120,58 @@ public sealed class JobWhitelistManager : IPostInjectInit
             SendJobWhitelist(session);
     }
 
+    public async void AddGroup(NetUserId player, string groupId)
+    {
+        if (!_groupWhitelists.TryGetValue(player, out var groups))
+        {
+            groups = new HashSet<string>();
+            _groupWhitelists[player] = groups;
+        }
+        
+        groups.Add(groupId);
+
+        await _db.AddJobWhitelistGroup(player.UserId, groupId);
+
+        if (_player.TryGetSessionById(player, out var session))
+            SendJobWhitelist(session);
+    }
+
+    public async void RemoveGroup(NetUserId player, string groupId)
+    {
+        _groupWhitelists.GetValueOrDefault(player)?.Remove(groupId);
+        await _db.RemoveJobWhitelistGroup(player.UserId, groupId);
+
+        if (_player.TryGetSessionById(new NetUserId(player), out var session))
+            SendJobWhitelist(session);
+    }
+
+    public IEnumerable<string> GetPlayerGroups(NetUserId player)
+    {
+        return _groupWhitelists.GetValueOrDefault(player) ?? Enumerable.Empty<string>();
+    }
+
     public void SendJobWhitelist(ICommonSession player)
     {
+        var whitelist = new HashSet<string>(_whitelists.GetValueOrDefault(player.UserId) ?? new HashSet<string>());
+        
+        // Add jobs from all groups the player is in
+        if (_groupWhitelists.TryGetValue(player.UserId, out var groups))
+        {
+            foreach (var groupId in groups)
+            {
+                if (_prototypes.TryIndex<JobWhitelistGroupPrototype>(groupId, out var groupProto))
+                {
+                    foreach (var job in groupProto.Jobs)
+                    {
+                        whitelist.Add(job.Id);
+                    }
+                }
+            }
+        }
+        
         var msg = new MsgJobWhitelist
         {
-            Whitelist = _whitelists.GetValueOrDefault(player.UserId) ?? new HashSet<string>()
+            Whitelist = whitelist
         };
 
         _net.ServerSendMessage(msg, player.Channel);

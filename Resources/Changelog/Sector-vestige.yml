@@ -1007,3 +1007,9 @@ Entries:
       message: Added group job whitelists.
   id: 137
   time: '2025-11-07T19:29:16.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Fixed the Hypophonia trait.
+  id: 138
+  time: '2025-11-08T15:35:00.0000000+00:00'

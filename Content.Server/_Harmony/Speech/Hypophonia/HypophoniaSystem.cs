@@ -1,3 +1,11 @@
+// SPDX-FileCopyrightText: 2025 Harmony contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2024 FluffMe <1780586+FluffMe@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Chat.Systems;
 using Content.Server.Popups;
 using Content.Server.Speech.EntitySystems;
@@ -55,7 +63,11 @@ namespace Content.Server._Harmony.Speech.Hypophonia
             if (HasComp<VentriloquistPuppetComponent>(uid) || HasComp<MutedComponent>(uid))
                 return;
 
-            // Cancel the event and show the popup
+            // Allow whispering - Hypophonia means you can only whisper
+            if (args.IsWhisper)
+                return;
+
+            // Cancel the event and show the popup for normal speech
             _popupSystem.PopupEntity(Loc.GetString("speech-hypophonia"), uid, uid);
             args.Cancel();
         }

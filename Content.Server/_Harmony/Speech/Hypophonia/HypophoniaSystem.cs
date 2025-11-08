@@ -55,7 +55,11 @@ namespace Content.Server._Harmony.Speech.Hypophonia
             if (HasComp<VentriloquistPuppetComponent>(uid) || HasComp<MutedComponent>(uid))
                 return;
 
-            // Cancel the event and show the popup
+            // Allow whispering - Hypophonia means you can only whisper
+            if (args.IsWhisper)
+                return;
+
+            // Cancel the event and show the popup for normal speech
             _popupSystem.PopupEntity(Loc.GetString("speech-hypophonia"), uid, uid);
             args.Cancel();
         }

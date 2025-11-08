@@ -484,7 +484,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
-        if (!_actionBlocker.CanSpeak(source) && !ignoreActionBlocker)
+        if (!_actionBlocker.CanSpeak(source, true) && !ignoreActionBlocker) // Sector Vestige: support hypophonia trait
             return;
 
         var message = TransformSpeech(source, FormattedMessage.RemoveMarkupOrThrow(originalMessage));

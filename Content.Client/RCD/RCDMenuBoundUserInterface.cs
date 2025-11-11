@@ -24,10 +24,10 @@ public sealed class RCDMenuBoundUserInterface : BoundUserInterface
             ["Airlocks"] = ("rcd-component-airlocks", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/airlocks.png"))),
             ["Electrical"] = ("rcd-component-electrical", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/multicoil.png"))),
             ["Lighting"] = ("rcd-component-lighting", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/lighting.png"))),
-            ["Piping"] = ("rcd-component-piping", new SpriteSpecifier.Texture(new  ResPath("/Textures/_SV/Interface/Radial/RPD/RPDPiping.png"))), //Sector Vestige: Added RPD
-            ["Utility"] = ("rcd-component-utility", new SpriteSpecifier.Texture(new  ResPath("/Textures/_SV/Interface/Radial/RPD/RPDPiping.png"))), //Sector Vestige: Added RPD
-            ["Vents"] = ("rcd-component-vents", new SpriteSpecifier.Texture(new  ResPath("/Textures/_SV/Interface/Radial/RPD/RPDPiping.png"))), //Sector Vestige: Added RPD
-            ["Pumps"] = ("rcd-component-pumps", new SpriteSpecifier.Texture(new  ResPath("/Textures/_SV/Interface/Radial/RPD/RPDPiping.png"))), //Sector Vestige: Added RPD
+            ["Piping"] = ("rcd-component-piping", new SpriteSpecifier.Texture(new  ResPath("/Textures/_SV/Interface/Radial/RPD/pipeStraight.png"))), //Sector Vestige: Added RPD
+            ["Utility"] = ("rcd-component-utility", new SpriteSpecifier.Texture(new  ResPath("/Textures/_SV/Interface/Radial/RPD/gasSensor.png"))), //Sector Vestige: Added RPD
+            ["Vents"] = ("rcd-component-vents", new SpriteSpecifier.Texture(new  ResPath("/Textures/_SV/Interface/Radial/RPD/ventMultiple.png"))), //Sector Vestige: Added RPD
+            ["Pumps"] = ("rcd-component-pumps", new SpriteSpecifier.Texture(new  ResPath("/Textures/_SV/Interface/Radial/RPD/pump.png"))), //Sector Vestige: Added RPD
         };
 
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;

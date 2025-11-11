@@ -17,6 +17,12 @@ public sealed class RCDConstructionGhostRotationEvent(NetEntity netEntity, Direc
 }
 
 [Serializable, NetSerializable]
+public sealed class RCDConstructionGhostFlipEvent(NetEntity netEntity) : EntityEventArgs
+{
+    public readonly NetEntity NetEntity = netEntity;
+}
+
+[Serializable, NetSerializable]
 public enum RcdUiKey : byte
 {
     Key

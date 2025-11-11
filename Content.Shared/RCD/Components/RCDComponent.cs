@@ -57,4 +57,10 @@ public sealed partial class RCDComponent : Component
     /// </remarks>
     [ViewVariables(VVAccess.ReadOnly)]
     public Transform ConstructionTransform { get; private set; }
+
+    /// <summary>
+    /// Dictates if the RCD should use the flippedPrototype for construction
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool UseFlippedPrototype { get; set; }
 }

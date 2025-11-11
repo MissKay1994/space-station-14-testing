@@ -44,6 +44,14 @@ public sealed partial class RCDPrototype : IPrototype
     [DataField, ViewVariables(VVAccess.ReadOnly)]
     public string? Prototype { get; private set; }
 
+    //Sector Vestige - Begin: RPD System to allow for flipping atmospheric systems
+    /// <summary>
+    /// The flipped prototype of the stored prototype
+    /// </summary>
+    [DataField, ViewVariables(VVAccess.ReadOnly)]
+    public string? FlippedPrototype { get; private set; }
+    //Sector Vestige - End: RPD System to allow for flipping atmospheric systems
+
     /// <summary>
     /// Number of charges consumed when the operation is completed
     /// </summary>

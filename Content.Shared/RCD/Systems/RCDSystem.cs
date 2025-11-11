@@ -27,8 +27,7 @@ using System.Numerics; //Sector Vestige: RPD Logic
 using Content.Shared._SV.RPD; //Sector Vestige: RPD Logic
 using Content.Shared.Atmos.Components; //Sector Vestige: RPD Logic
 using Content.Shared.Atmos.EntitySystems; //Sector Vestige: RPD Logic
-using Content.Shared._SV.EyeTracker;
-using Content.Shared.Hands; //Sector Vestige: RPD Logic
+using Content.Shared._SV.EyeTracker; //Sector Vestige: RPD Logic
 
 namespace Content.Shared.RCD.Systems;
 
@@ -53,7 +52,6 @@ public sealed class RCDSystem : EntitySystem
     [Dependency] private readonly SharedAtmosPipeLayersSystem _layer = default!; //Sector Vestige: RPD Logic
     [Dependency] private readonly IEntityManager _entityManager = default!; //Sector Vestige: RPD Logic
     [Dependency] private readonly IEntityNetworkManager _entityNetworkManager = default!; //Sector Vestige: RPD Logic
-    [Dependency] private readonly IMapManager _mapManager = default!; //Sector Vestige: RPD Logic
 
     private readonly int _instantConstructionDelay = 0;
     private readonly EntProtoId _instantConstructionFx = "EffectRCDConstruct0";
@@ -75,6 +73,7 @@ public sealed class RCDSystem : EntitySystem
         SubscribeLocalEvent<RCDComponent, DoAfterAttemptEvent<RCDDoAfterEvent>>(OnDoAfterAttempt);
         SubscribeLocalEvent<RCDComponent, RCDSystemMessage>(OnRCDSystemMessage);
         SubscribeNetworkEvent<RCDConstructionGhostRotationEvent>(OnRCDconstructionGhostRotationEvent);
+        SubscribeNetworkEvent<RCDConstructionGhostFlipEvent>(OnRCDFlipPrototype);
     }
 
     #region Event handling
@@ -497,7 +496,7 @@ public sealed class RCDSystem : EntitySystem
         // Attempt to deconstruct a floor tile
         if (target == null)
         {
-            // Sector Vestige - Begin: RPD Logic
+            // Sector Vestige - Begin: RPD Deconstruction Logic
             if (prototype.Mode == RcdMode.DeconstructPipe)
             {
                 if (popMsgs)
@@ -505,7 +504,7 @@ public sealed class RCDSystem : EntitySystem
 
                 return false;
             }
-            // Sector Vestige - End: RPD Logic
+            // Sector Vestige - End: RPD Deconstruction Logic
 
             // The tile is empty
             if (tile.Tile.IsEmpty)
@@ -599,16 +598,12 @@ public sealed class RCDSystem : EntitySystem
             //Most of this is stolen from funky station
             //Gets the alternate pipe layer of the selected layer from the above function, then assign it to what gets spawned
             case RcdMode.ConstructObject:
-                //var ent = Spawn(prototype.Prototype, _mapSystem.GridTileToLocal(gridUid, mapGrid, position));
-
-                //Sector Vestige - Begin: RPD Logic
-                //Get the layer that the pipe needs to be on via where the click is
                 if (prototype.Prototype == null)
                     return;
                 if (prototype.Rotation == RcdRotation.Pipe &&
                     _entityManager.TryGetComponent<EyeTrackerComponent>(uid, out var eye))
                 {
-                    _entityNetworkManager.SendSystemNetworkMessage(new GetEyeRotationEvent(_entityManager.GetNetEntity(uid), _entityManager.GetNetEntity(user)));
+                    //Get the layer that the pipe needs to be on via where the click is
                     var gridRotation = _transform.GetWorldRotation(gridUid);
                     float tileSize = mapGrid.TileSize;
                     var mouseDeadzone = 0.25f;
@@ -624,7 +619,6 @@ public sealed class RCDSystem : EntitySystem
                         _currentLayer = (pipeRotation == Direction.North || pipeRotation == Direction.East) ? AtmosPipeLayer.Secondary : AtmosPipeLayer.Tertiary;
                     }
                 }
-                //Sector Vestige - End: RPD Logic
 
                 string ent;
                 if (_protoManager.TryIndex<EntityPrototype>(prototype.Prototype, out var entProto) &&
@@ -636,6 +630,13 @@ public sealed class RCDSystem : EntitySystem
                 else
                 {
                     ent = prototype.Prototype;
+                }
+
+                if (_entityManager.TryGetComponent<RCDComponent>(uid, out var rcd) &&
+                    rcd.UseFlippedPrototype &&
+                    !string.IsNullOrEmpty(prototype.FlippedPrototype))
+                {
+                    ent = prototype.FlippedPrototype;
                 }
 
                 var rotation = prototype.Rotation switch
@@ -709,6 +710,17 @@ public sealed class RCDSystem : EntitySystem
         return boundingPolygon.ComputeAABB(boundingTransform, 0).Intersects(fixture.Shape.ComputeAABB(entXform, 0));
     }
 
+    //Sector Vestig - Begin: RPD prototype flipping
+    private void OnRCDFlipPrototype(RCDConstructionGhostFlipEvent args)
+    {
+        var rcd = _entityManager.GetEntity(args.NetEntity);
+        if (!_entityManager.TryGetComponent<RCDComponent>(rcd, out var component))
+            return;
+
+        component.UseFlippedPrototype = !component.UseFlippedPrototype;
+        Dirty(rcd, component);
+    }
+    //Sector Vestig - End: RPD prototype flipping
     #endregion
 }
 

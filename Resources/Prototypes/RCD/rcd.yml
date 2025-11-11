@@ -439,6 +439,7 @@
   sprite: /Textures/_SV/Interface/Radial/RPD/RPDPiping.png
   mode: ConstructObject
   prototype: GasFilter
+  flippedPrototype: GasFilterFlipped
   cost: 2
   delay: 0
   rotation: User
@@ -450,6 +451,7 @@
   sprite: /Textures/_SV/Interface/Radial/RPD/RPDPiping.png
   mode: ConstructObject
   prototype: GasMixer
+  flippedPrototype: GasMixerFlipped
   cost: 2
   delay: 0
   rotation: User

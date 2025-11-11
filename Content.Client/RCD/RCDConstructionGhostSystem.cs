@@ -1,4 +1,5 @@
 using Content.Client._SV.RPD; //Sector Vestige: Used for displaying RPD pipe layers
+using Content.Shared.Input; //Sector Vestige: Used for displaying RPD pipe layers
 using Content.Client.Hands.Systems;
 using Content.Shared.Interaction;
 using Content.Shared.RCD;
@@ -8,6 +9,8 @@ using Robust.Client.Placement;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Input; //Sector Vestige: Used for flipping the prototypes for gas mixers or gas filters
+using Robust.Shared.Input.Binding; //Sector Vestige: Used for flipping the prototypes for gas mixers or gas filters
 
 namespace Content.Client.RCD;
 
@@ -25,6 +28,50 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
     [Dependency] private readonly HandsSystem _hands = default!;
 
     private Direction _placementDirection = default;
+
+    //Sector Vestige - Begin: Logic to get the RPD to flip the prototype.
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        // bind key
+        CommandBinds.Builder
+            .Bind(ContentKeyFunctions.EditorFlipObject,
+                new PointerInputCmdHandler(HandleFlip, outsidePrediction: true))
+            .Register<RCDConstructionGhostSystem>();
+    }
+
+    public override void Shutdown()
+    {
+        CommandBinds.Unregister<RCDConstructionGhostSystem>();
+        base.Shutdown();
+    }
+
+    private bool HandleFlip(in PointerInputCmdHandler.PointerInputCmdArgs args)
+    {
+        if (args.State == BoundKeyState.Down)
+        {
+            if (!_placementManager.IsActive || _placementManager.Eraser)
+                return false;
+
+            var placerEntity = _placementManager.CurrentPermission?.MobUid;
+
+            if (!TryComp<RCDComponent>(placerEntity, out var rcd) ||
+                string.IsNullOrEmpty(_protoManager.Index(rcd.ProtoId).FlippedPrototype))
+                return false;
+
+            var prototype = _protoManager.Index(rcd.ProtoId);
+
+            var useProto = rcd.UseFlippedPrototype && !string.IsNullOrEmpty(prototype.FlippedPrototype)
+                ? prototype.FlippedPrototype
+                : prototype.Prototype;
+
+            RaiseNetworkEvent(new RCDConstructionGhostFlipEvent(GetNetEntity(placerEntity.Value)));
+            CreatePlacer(placerEntity.Value, rcd, useProto);
+        }
+        return true;
+    }
+    //Sector Vestige - Begin: Logic to get the RPD to flip the prototype.
 
     public override void Update(float frameTime)
     {
@@ -62,15 +109,27 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
             RaiseNetworkEvent(new RCDConstructionGhostRotationEvent(GetNetEntity(heldEntity.Value), _placementDirection));
         }
 
+        var useProto = rcd.UseFlippedPrototype && !string.IsNullOrEmpty(prototype.FlippedPrototype) //Sector Vestige: Use the flipped prototype if it is called for, and if there is a flipped prototype provided
+            ? prototype.FlippedPrototype //Sector Vestige: Use the flipped prototype if it is called for, and if there is a flipped prototype provided
+            : prototype.Prototype; //Sector Vestige: Use the flipped prototype if it is called for, and if there is a flipped prototype provided
+
         // If the placer has not changed, exit
-        if (heldEntity == placerEntity && prototype.Prototype == placerProto)
+        if (heldEntity == placerEntity && useProto == placerProto) //Sector Vestige: Use the flipped prototype if it is called for, and if there is a flipped prototype provided
             return;
 
         //Sector Vestige - Begin: RPD Logic
-        //If the entity that is being spawned is a pipe, use the AlignAtmosPipeLayers placement system
-        PlacementInformation? newObjInfo = null;
+        if (rcd.UseFlippedPrototype &&
+            prototype.FlippedPrototype != null)
+            CreatePlacer(heldEntity.Value, rcd, prototype.FlippedPrototype);
+        else
+            CreatePlacer(heldEntity.Value, rcd, prototype.Prototype);
+    }
 
-        switch (prototype.Rotation)
+    private void CreatePlacer(EntityUid uid, RCDComponent rcd, string? prototype)
+    {
+    //If the entity that is being spawned is a pipe, use the AlignAtmosPipeLayers placement system
+        PlacementInformation? newObjInfo = null;
+        switch (_protoManager.Index(rcd.ProtoId).Rotation)
         {
             // Create a new placer
             case RcdRotation.Camera:
@@ -78,11 +137,11 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
             case RcdRotation.User:
                 newObjInfo = new PlacementInformation
                 {
-                    MobUid = heldEntity.Value,
+                    MobUid = uid,
                     PlacementOption = PlacementMode,
-                    EntityType = prototype.Prototype,
+                    EntityType = prototype,
                     Range = (int)Math.Ceiling(SharedInteractionSystem.InteractionRange),
-                    IsTile = (prototype.Mode == RcdMode.ConstructTile),
+                    IsTile = (_protoManager.Index(rcd.ProtoId).Mode == RcdMode.ConstructTile),
                     UseEditorContext = false,
                 };
                     break;
@@ -90,9 +149,9 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
             case RcdRotation.Pipe:
                 newObjInfo = new PlacementInformation
                 {
-                    MobUid = heldEntity.Value,
+                    MobUid = uid,
                     PlacementOption = RPDPlacementMode,
-                    EntityType = prototype.Prototype,
+                    EntityType = prototype,
                     Range = (int)Math.Ceiling(SharedInteractionSystem.InteractionRange),
                     UseEditorContext = false,
                 };

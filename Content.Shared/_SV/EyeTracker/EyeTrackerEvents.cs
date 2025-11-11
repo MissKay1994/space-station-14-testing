@@ -13,9 +13,8 @@ public sealed class GetEyeRotationEvent(NetEntity ent, NetEntity player) : Entit
 }
 
 [Serializable, NetSerializable]
-public sealed class GetNetworkedEyeRotationEvent(NetEntity ent, NetEntity player, Angle angle) : EntityEventArgs
+public sealed class GetNetworkedEyeRotationEvent(NetEntity ent, Angle angle) : EntityEventArgs
 {
     public NetEntity NetEntity { get; set; } = ent;
-    public NetEntity PlayerEntity { get; set; } = player;
     public Angle Angle { get; set; } = angle;
 }

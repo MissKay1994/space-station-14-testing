@@ -1,24 +1,19 @@
-using Content.Shared._SV.EyeTracker;
-using Content.Shared.Hands.Components;
-using Robust.Client;
-using Robust.Client.Placement.Modes;
-using Robust.Client.Player;
-using Robust.Client.State;
-using Robust.Shared.Containers;
-
-namespace Content.Client._SV.RPD;
-
+using Content.Client.Gameplay;
+using Content.Client.Hands.Systems;
 using Content.Client.Construction;
+using Content.Shared._SV.EyeTracker;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.EntitySystems;
 using Content.Shared.Construction.Prototypes;
+using Content.Shared.Interaction;
+using Content.Shared.RCD.Components;
+using Content.Shared.RCD.Systems;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Placement;
 using Robust.Client.Player;
 using Robust.Client.State;
 using Robust.Client.Placement.Modes;
-using Robust.Client.Utility;
 using Robust.Shared.Enums;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
@@ -26,9 +21,10 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Numerics;
 using static Robust.Client.Placement.PlacementManager;
-using Content.Client._SV.EyeTracker;
 
-public sealed class AlignRPDPipeLayers :SnapgridCenter
+namespace Content.Client._SV.RPD;
+
+public sealed class AlignRPDPipeLayers : SnapgridCenter
 {
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
@@ -37,16 +33,21 @@ public sealed class AlignRPDPipeLayers :SnapgridCenter
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IStateManager _stateManager = default!;
 
+    [Dependency] private readonly IEntityNetworkManager _entityNetworkManager = default!;
+
     private readonly SharedMapSystem _mapSystem;
     private readonly SharedTransformSystem _transformSystem;
     private readonly SharedAtmosPipeLayersSystem _pipeLayersSystem;
     private readonly SpriteSystem _spriteSystem;
+    private readonly HandsSystem _handsSystem;
+    private readonly RCDSystem _rcdSystem;
 
     private const float SearchBoxSize = 2f;
-    private EntityCoordinates _unalignedMouseCoords = default;
+    private EntityCoordinates _unalignedMouseCoords;
     private const float MouseDeadzoneRadius = 0.25f;
 
     private Color _guideColor = new Color(0, 0, 0.5785f);
+    private const float PlaceColorBaseAlpha = 0.5f;
     private const float GuideRadius = 0.1f;
     private const float GuideOffset = 0.21875f;
 
@@ -58,11 +59,22 @@ public sealed class AlignRPDPipeLayers :SnapgridCenter
         _transformSystem = _entityManager.System<SharedTransformSystem>();
         _pipeLayersSystem = _entityManager.System<SharedAtmosPipeLayersSystem>();
         _spriteSystem = _entityManager.System<SpriteSystem>();
+        _handsSystem = _entityManager.System<HandsSystem>();
+        _rcdSystem = _entityManager.System<RCDSystem>();
     }
 
     /// <inheritdoc/>
     public override void Render(in OverlayDrawArgs args)
     {
+
+        // Early exit if mouse is out of interaction range - Code from funky station
+        if (_playerManager.LocalSession?.AttachedEntity is not { } player ||
+            !_entityManager.TryGetComponent<TransformComponent>(player, out var xform) ||
+            !_transformSystem.InRange(xform.Coordinates, MouseCoords, SharedInteractionSystem.InteractionRange))
+        {
+            return;
+        }
+
         var gridUid = _entityManager.System<SharedTransformSystem>().GetGrid(MouseCoords);
 
         if (gridUid == null || Grid == null)
@@ -128,6 +140,69 @@ public sealed class AlignRPDPipeLayers :SnapgridCenter
         // Otherwise update the debug placer
         else
             UpdatePlacer(layer);
+
+        if (_playerManager.LocalSession?.AttachedEntity is not { } player)
+            return;
+
+        var heldEntity = _handsSystem.GetActiveItemOrSelf(player);
+        if (!_entityManager.TryGetComponent<EyeTrackerComponent>(heldEntity, out var tracker) ||
+            heldEntity == player)
+            return;
+
+        if (tracker.Rotation != _eyeManager.CurrentEye.Rotation)
+        {
+            _entityNetworkManager.SendSystemNetworkMessage(new GetNetworkedEyeRotationEvent(
+                _entityManager.GetNetEntity(heldEntity),
+                _eyeManager.CurrentEye.Rotation));
+        }
+    }
+
+    public override bool IsValidPosition(EntityCoordinates position)
+    {
+        var player = _playerManager.LocalSession?.AttachedEntity;
+
+        // If the destination is out of interaction range, set the placer alpha to zero
+        if (!_entityManager.TryGetComponent<TransformComponent>(player, out var xform))
+            return false;
+
+        if (!_transformSystem.InRange(xform.Coordinates, position, SharedInteractionSystem.InteractionRange))
+        {
+            InvalidPlaceColor = InvalidPlaceColor.WithAlpha(0);
+            return false;
+        }
+
+        // Otherwise restore the alpha value
+        else
+        {
+            InvalidPlaceColor = InvalidPlaceColor.WithAlpha(PlaceColorBaseAlpha);
+        }
+
+        // Determine if player is carrying an RCD in their active hand
+        if (!_handsSystem.TryGetActiveItem(player.Value, out var heldEntity))
+            return false;
+
+        if (!_entityManager.TryGetComponent<RCDComponent>(heldEntity, out var rcd))
+            return false;
+
+        var gridUid = _transformSystem.GetGrid(position);
+        if (!_entityManager.TryGetComponent<MapGridComponent>(gridUid, out var mapGrid))
+            return false;
+        var tile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, position);
+        var posVector = _mapSystem.TileIndicesFor(gridUid.Value, mapGrid, position);
+
+        // Determine if the user is hovering over a target
+        var currentState = _stateManager.CurrentState;
+
+        if (currentState is not GameplayStateBase screen)
+            return false;
+
+        var target = screen.GetClickedEntity(_transformSystem.ToMapCoordinates(_unalignedMouseCoords));
+
+        // Determine if the RCD operation is valid or not
+        if (!_rcdSystem.IsRCDOperationStillValid(heldEntity.Value, rcd, gridUid.Value, mapGrid, tile, posVector, target, player.Value, false))
+            return false;
+
+        return true;
     }
 
     private void UpdateHijackedPlacer(AtmosPipeLayer layer, ScreenCoordinates mouseScreen)
@@ -206,10 +281,5 @@ public sealed class AlignRPDPipeLayers :SnapgridCenter
     private void RefreshGrid(ScreenCoordinates mouseScreen)
     {
         base.AlignPlacementMode(mouseScreen);
-    }
-
-    private void UpdateEye(Angle eyeAngle)
-    {
-
     }
 }

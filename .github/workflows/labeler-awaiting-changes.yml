@@ -3,6 +3,7 @@ name: "Labels: Awaiting Changes"
 permissions:
   contents: read
   pull-requests: write
+  issues: write
 
 on:
   pull_request_review:

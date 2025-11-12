@@ -520,7 +520,7 @@ public sealed class RCDSystem : EntitySystem
         // Attempt to deconstruct a floor tile
         if (target == null)
         {
-            // Sector Vestige - Begin: RPD Deconstruction Logic
+            // Sector Vestige - Begin: RPD Deconstruction Logic - Ensure the RPD can't deconstruct tiles
             if (prototype.Mode == RcdMode.DeconstructPipe)
             {
                 if (popMsgs)
@@ -528,7 +528,7 @@ public sealed class RCDSystem : EntitySystem
 
                 return false;
             }
-            // Sector Vestige - End: RPD Deconstruction Logic
+            // Sector Vestige - End: RPD Deconstruction Logic - Ensure the RPD can't deconstruct tiles
 
             // The tile is empty
             if (tile.Tile.IsEmpty)
@@ -620,7 +620,7 @@ public sealed class RCDSystem : EntitySystem
 
             //Sector Vestige - Begin: RPD Logic
             //Most of this is stolen from funky station
-            //Gets the alternate pipe layer of the selected layer from the above function, then assign it to what gets spawned
+            //Gets the alternate pipe layer of the selected layer, then assign it to what gets spawned
             case RcdMode.ConstructObject:
                 if (prototype.Prototype == null)
                     return;
@@ -656,6 +656,7 @@ public sealed class RCDSystem : EntitySystem
                     ent = prototype.Prototype;
                 }
 
+                //Use the flipped prototype if it is called for, and if there is a flipped prototype provided
                 if (_entityManager.TryGetComponent<RCDComponent>(uid, out var rcd) &&
                     rcd.UseFlippedPrototype &&
                     !string.IsNullOrEmpty(prototype.FlippedPrototype))

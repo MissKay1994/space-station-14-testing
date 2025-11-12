@@ -8,7 +8,7 @@
   id: DeconstructPiping
   name: rcd-component-deconstruct
   category: Main
-  sprite: /Textures/Interface/Radial/RCD/deconstruct.png
+  sprite: /Textures/_SV/Interface/Radial/RPD/deconstruct.png
   mode: DeconstructPipe
   prototype: EffectRCDDeconstructPreview
   rotation: Camera

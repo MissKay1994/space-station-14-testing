@@ -8,6 +8,11 @@
   copyright: "injector state taken from https://github.com/tgstation/tgstation at commit 3e8407c4716bd8abcc79326f464384a5156eddfa."
   source: "https://github.com/tgstation/tgstation/commit/3e8407c4716bd8abcc79326f464384a5156eddfa"
 
+- files: ["deconstruct.png"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4 and modified by OnyxTheBrave (Github)."
+  source: "https://github.com/tgstation/tgstation/commit/3e8407c4716bd8abcc79326f464384a5156eddfa"
+
 - files: ["gasConnector.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
@@ -89,9 +94,9 @@
   source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["piping.png"]
-  license:
-  copyright: "Based on various textures from https://github.com/tgstation/tgstation from commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "Onyx_The_Brave - Discord"
+  license: "CC-BY-SA-3.0"
+  copyright: "Based on various textures from https://github.com/tgstation/tgstation from commit 4cd056eae4ddb818969668cf168f28e2ee774dc4  and modified by OnyxTheBrave (Github)"
+  source: "OnyxTheBrave (Github)"
 
 - files: ["pneumaticValve.png"]
   license: "CC-BY-SA-3.0"
@@ -110,8 +115,8 @@
 
 - files: ["pumps_and_valves.png"]
   license: "CC-BY-SA-3.0"
-  copyright: "Based on various textures from https://github.com/tgstation/tgstation from commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "Onyx_The_Brave - Discord"
+  copyright: "Based on various textures from https://github.com/tgstation/tgstation from commit 4cd056eae4ddb818969668cf168f28e2ee774dc4  and modified by OnyxTheBrave (Github)"
+  source: "OnyxTheBrave (Github)"
 
 - files: ["signalValve.png"]
   license: "CC-BY-SA-3.0"
@@ -120,13 +125,13 @@
 
 - files: ["utility.png"]
   license: "CC-BY-SA-3.0"
-  copyright: "Based on various textures from https://github.com/tgstation/tgstation from commit 4cd056eae4ddb818969668cf168f28e2ee774dc4, as well as textures from https://github.com/BeeStation/BeeStation-Hornet at commit d0aaca728e504ce966d99e1638b5508845a082b5"
-  source: "Onyx_The_Brave - Discord"
+  copyright: "Based on various textures from https://github.com/tgstation/tgstation from commit 4cd056eae4ddb818969668cf168f28e2ee774dc4, as well as textures from https://github.com/BeeStation/BeeStation-Hornet at commit d0aaca728e504ce966d99e1638b5508845a082b5  and modified by OnyxTheBrave (Github)"
+  source: "OnyxTheBrave (Github)"
 
 - files: ["ventMultiple.png"]
   license: "CC-BY-SA-3.0"
-  copyright: "Based on various textures from https://github.com/BeeStation/BeeStation-Hornet at commit d0aaca728e504ce966d99e1638b5508845a082b5"
-  source: "Onyx_The_Brave - Discord"
+  copyright: "Based on various textures from https://github.com/BeeStation/BeeStation-Hornet at commit d0aaca728e504ce966d99e1638b5508845a082b5 and modified by OnyxTheBrave (Github)"
+  source: "OnyxTheBrave (Github)"
 
 - files: ["volumePump.png"]
   license: "CC-BY-SA-3.0"

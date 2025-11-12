@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
 // SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
-// SPDX-FileCopyrightText: 2025 OnyxTheBrave <vinjeerik@gmail.com>
 // SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 OnyxTheBrave <vinjeerik@gmail.com>
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 

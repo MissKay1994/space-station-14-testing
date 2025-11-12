@@ -71,9 +71,11 @@ public sealed partial class RCDComponent : Component
     [ViewVariables(VVAccess.ReadOnly)]
     public Transform ConstructionTransform { get; private set; }
 
+    //Sector Vestige - Begin: Allows an RCD or RPD to have a flipped prototype that one can flip between
     /// <summary>
     /// Dictates if the RCD should use the flippedPrototype for construction
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool UseFlippedPrototype { get; set; }
+    //Sector Vestige - End: Allows an RCD or RPD to have a flipped prototype that one can flip between
 }

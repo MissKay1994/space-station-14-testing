@@ -69,10 +69,10 @@
           nodeGroupID: Pipe
           pipeDirection: South
     - type: CollideOnAnchor
-    - type: RPDDeconstructable
-      cost: 2
-      delay: 1
-      fx: EffectRCDConstruct0
+    - type: RPDDeconstructable #Sector Vestige: Make atmos items deconstructable
+      cost: 1 #Sector Vestige: Make atmos items deconstructable
+      delay: 1 #Sector Vestige: Make atmos items deconstructable
+      fx: EffectRCDConstruct0 #Sector Vestige: Make atmos items deconstructable
 
 - type: entity
   parent: [GasUnaryBase, AirSensorBase]

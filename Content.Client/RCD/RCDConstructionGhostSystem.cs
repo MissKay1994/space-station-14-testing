@@ -16,7 +16,6 @@ using Content.Client.Hands.Systems;
 using Content.Shared.Interaction;
 using Content.Shared.RCD;
 using Content.Shared.RCD.Components;
-using Robust.Client;
 using Robust.Client.Placement;
 using Robust.Client.Player;
 using Robust.Shared.Enums;

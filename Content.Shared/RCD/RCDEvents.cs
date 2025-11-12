@@ -26,11 +26,13 @@ public sealed class RCDConstructionGhostRotationEvent(NetEntity netEntity, Direc
     public readonly Direction Direction = direction;
 }
 
+//Sector Vestige - Begin: Logic for an RCD or RPD to have a flipped prototype that one can flip between
 [Serializable, NetSerializable]
 public sealed class RCDConstructionGhostFlipEvent(NetEntity netEntity) : EntityEventArgs
 {
     public readonly NetEntity NetEntity = netEntity;
 }
+//Sector Vestige - End: Logic for an RCD or RPD to have a flipped prototype that one can flip between
 
 [Serializable, NetSerializable]
 public enum RcdUiKey : byte

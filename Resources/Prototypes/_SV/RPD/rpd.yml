@@ -10,6 +10,7 @@
 #Piping
 - type: rcd
   id: PipeStraight
+  name: rpd-pipe-straight
   category: Piping
   sprite: /Textures/_SV/Interface/Radial/RPD/pipeStraight.png
   mode: ConstructObject
@@ -21,6 +22,7 @@
 
 - type: rcd
   id: PipeHalf
+  name: rpd-pipe-half
   category: Piping
   sprite: /Textures/_SV/Interface/Radial/RPD/pipeHalf.png
   mode: ConstructObject
@@ -32,6 +34,7 @@
 
 - type: rcd
   id: PipeBend
+  name: rpd-pipe-bend
   category: Piping
   sprite: /Textures/_SV/Interface/Radial/RPD/pipeBend.png
   mode: ConstructObject
@@ -43,6 +46,7 @@
 
 - type: rcd
   id: PipeTee
+  name: rpd-pipe-tee
   category: Piping
   sprite: /Textures/_SV/Interface/Radial/RPD/pipeTee.png
   mode: ConstructObject
@@ -54,6 +58,7 @@
 
 - type: rcd
   id: PipeCross
+  name: rpd-pipe-cross
   category: Piping
   sprite: /Textures/_SV/Interface/Radial/RPD/pipeCross.png
   mode: ConstructObject

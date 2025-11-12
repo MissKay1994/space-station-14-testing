@@ -16,17 +16,17 @@
 - files: ["gasConnector.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["gasFilter.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["gasMixer.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["gasScrubber.png"]
   license: "CC-BY-SA-3.0"
@@ -56,7 +56,7 @@
 - files: ["passiveGate.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["passiveVent.png"]
   license: "CC-BY-SA-3.0"
@@ -66,17 +66,17 @@
 - files: ["pipeBend.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["pipeCross.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["pipeHalf.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["pipeManifold.png"]
   license: "CC-BY-SA-3.0"
@@ -86,17 +86,17 @@
 - files: ["pipeStraight.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["pipeTee.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["piping.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Based on various textures from https://github.com/tgstation/tgstation from commit 4cd056eae4ddb818969668cf168f28e2ee774dc4  and modified by OnyxTheBrave (Github)"
-  source: "OnyxTheBrave (Github)"
+  source: "https://github.com/Sector-Vestige/Sector-Vestige/pull/71"
 
 - files: ["pneumaticValve.png"]
   license: "CC-BY-SA-3.0"
@@ -106,17 +106,17 @@
 - files: ["pressureRegulator.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["pump.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
-  source: "https://github.com/tgstation/tgstation at commit 4cd056eae4ddb818969668cf168f28e2ee774dc4"
+  source: "https://github.com/tgstation/tgstation/commit/4cd056eae4ddb818969668cf168f28e2ee774dc4"
 
 - files: ["pumps_and_valves.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Based on various textures from https://github.com/tgstation/tgstation from commit 4cd056eae4ddb818969668cf168f28e2ee774dc4  and modified by OnyxTheBrave (Github)"
-  source: "OnyxTheBrave (Github)"
+  source: "https://github.com/Sector-Vestige/Sector-Vestige/pull/71"
 
 - files: ["signalValve.png"]
   license: "CC-BY-SA-3.0"
@@ -126,12 +126,12 @@
 - files: ["utility.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Based on various textures from https://github.com/tgstation/tgstation from commit 4cd056eae4ddb818969668cf168f28e2ee774dc4, as well as textures from https://github.com/BeeStation/BeeStation-Hornet at commit d0aaca728e504ce966d99e1638b5508845a082b5  and modified by OnyxTheBrave (Github)"
-  source: "OnyxTheBrave (Github)"
+  source: "https://github.com/Sector-Vestige/Sector-Vestige/pull/71"
 
 - files: ["ventMultiple.png"]
   license: "CC-BY-SA-3.0"
   copyright: "Based on various textures from https://github.com/BeeStation/BeeStation-Hornet at commit d0aaca728e504ce966d99e1638b5508845a082b5 and modified by OnyxTheBrave (Github)"
-  source: "OnyxTheBrave (Github)"
+  source: "https://github.com/Sector-Vestige/Sector-Vestige/pull/71"
 
 - files: ["volumePump.png"]
   license: "CC-BY-SA-3.0"

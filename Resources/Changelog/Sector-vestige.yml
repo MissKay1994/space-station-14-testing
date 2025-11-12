@@ -1013,3 +1013,9 @@ Entries:
       message: Fixed the Hypophonia trait.
   id: 138
   time: '2025-11-08T15:35:00.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Add
+      message: Added the Rapid Piping Device.
+  id: 139
+  time: '2025-11-12T21:55:26.0000000+00:00'

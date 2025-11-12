@@ -75,7 +75,7 @@
   mode: ConstructObject
   prototype: GasPipeManifold
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -88,7 +88,7 @@
   mode: ConstructObject
   prototype: GasPassiveVent
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -99,7 +99,7 @@
   mode: ConstructObject
   prototype: GasOutletInjector
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -110,7 +110,7 @@
   mode: ConstructObject
   prototype: GasVentPump
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -121,7 +121,7 @@
   mode: ConstructObject
   prototype: GasVentScrubber
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -134,7 +134,7 @@
   mode: ConstructObject
   prototype: AirSensor
   cost: 4
-  delay: 0
+  delay: 2
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -145,7 +145,7 @@
   mode: ConstructObject
   prototype: HeatExchanger
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -156,7 +156,7 @@
   mode: ConstructObject
   prototype: HeatExchangerBend
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -168,7 +168,7 @@
   prototype: GasFilter
   flippedPrototype: GasFilterFlipped
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -180,7 +180,7 @@
   prototype: GasMixer
   flippedPrototype: GasMixerFlipped
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -191,7 +191,7 @@
   mode: ConstructObject
   prototype: GasPort
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0
 
@@ -270,6 +270,6 @@
   mode: ConstructObject
   prototype: PressureControlledValve
   cost: 2
-  delay: 0
+  delay: 1
   rotation: User
   fx: EffectRCDConstruct0

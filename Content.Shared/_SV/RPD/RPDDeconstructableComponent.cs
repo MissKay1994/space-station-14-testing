@@ -18,13 +18,13 @@ public sealed partial class RPDDeconstructableComponent : Component
     /// The length of the deconstruction
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public float Delay = 0f;
+    public float Delay;
 
     /// <summary>
     /// The visual effect that plays during deconstruction
     /// </summary>
     [DataField("fx"), ViewVariables(VVAccess.ReadWrite)]
-    public EntProtoId? Effect = null;
+    public EntProtoId? Effect;
 
     /// <summary>
     /// Toggles whether this entity is deconstructable or not

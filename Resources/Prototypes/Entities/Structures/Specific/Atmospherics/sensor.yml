@@ -90,6 +90,10 @@
         enum.PowerDeviceVisualLayers.Powered:
           True: { state: gsensor1 }
           False: { state: gsensor0 }
+  - type: RPDDeconstructable #Sector Vestige: Able to be deconstructed by RPD
+    cost: 2 #Sector Vestige: Able to be deconstructed by RPD
+    delay: 1 #Sector Vestige: Able to be deconstructed by RPD
+    fx: EffectRCDConstruct0 #Sector Vestige: Able to be deconstructed by RPD
 
 - type: entity
   parent: BaseItem

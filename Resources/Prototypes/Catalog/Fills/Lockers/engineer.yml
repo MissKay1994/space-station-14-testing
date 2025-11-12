@@ -156,7 +156,7 @@
     - id: GasAnalyzer
     - id: MedkitOxygenFilled
     - id: HolofanProjector
-    - id: RCD
+    - id: RPD #Sector Vestige: RPD instead of RCD for atmos techs
     - id: RCDAmmo
     - id: AirGrenade
 

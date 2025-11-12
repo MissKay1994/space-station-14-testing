@@ -24,5 +24,6 @@ public sealed class ServerEyeTrackerSystem : EntitySystem
             return;
 
         tracker.Rotation = args.Angle;
+        Dirty(_entityManager.GetEntity(args.NetEntity), tracker);
     }
 }

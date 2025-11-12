@@ -97,7 +97,7 @@ public sealed class RCDSystem : EntitySystem
         SubscribeLocalEvent<RCDComponent, DoAfterAttemptEvent<RCDDoAfterEvent>>(OnDoAfterAttempt);
         SubscribeLocalEvent<RCDComponent, RCDSystemMessage>(OnRCDSystemMessage);
         SubscribeNetworkEvent<RCDConstructionGhostRotationEvent>(OnRCDconstructionGhostRotationEvent);
-        SubscribeNetworkEvent<RCDConstructionGhostFlipEvent>(OnRCDFlipPrototype);
+        SubscribeNetworkEvent<RCDConstructionGhostFlipEvent>(OnRCDFlipPrototype); //Sector Vestige: Handle prototype flipping
     }
 
     #region Event handling
@@ -174,7 +174,7 @@ public sealed class RCDSystem : EntitySystem
             _popup.PopupClient(Loc.GetString("rcd-component-no-valid-grid"), uid, user);
             return;
         }
-        if (prototype.Rotation == RcdRotation.Pipe)
+        if (prototype.Rotation == RcdRotation.Pipe) // Sector Vestige: Get Eye rotation for RPD
             _entityNetworkManager.SendSystemNetworkMessage(new GetEyeRotationEvent(_entityManager.GetNetEntity(args.Used), _entityManager.GetNetEntity(user))); // Sector Vestige: Get Eye rotation for RPD
 
         var tile = _mapSystem.GetTileRef(gridUid.Value, mapGrid, location);
@@ -335,7 +335,7 @@ public sealed class RCDSystem : EntitySystem
             return;
 
         // Finalize the operation (this should handle prediction properly)
-        FinalizeRCDOperation(uid, component, gridUid.Value, mapGrid, tile, position, args.Direction, args.Target, args.User, location);
+        FinalizeRCDOperation(uid, component, gridUid.Value, mapGrid, tile, position, args.Direction, args.Target, args.User, location); //Sector Vestige: RPD Logic
 
         // Play audio and consume charges
         _audio.PlayPredicted(component.SuccessSound, uid, args.User);
@@ -404,8 +404,8 @@ public sealed class RCDSystem : EntitySystem
             case RcdMode.ConstructObject:
                 return IsConstructionLocationValid(uid, component, gridUid, mapGrid, tile, position, user, popMsgs);
             case RcdMode.Deconstruct:
-            case RcdMode.DeconstructPipe:  //Sector Vestige: RPD Logic
-                return IsDeconstructionStillValid(uid, tile, target, user, component, popMsgs);
+            case RcdMode.DeconstructPipe: //Sector Vestige: RPD Logic
+                return IsDeconstructionStillValid(uid, tile, target, user, component, popMsgs); //Sector Vestige: RPD Logic
         }
 
         return false;
@@ -601,7 +601,7 @@ public sealed class RCDSystem : EntitySystem
 
     #region Entity construction/deconstruction
 
-    private void FinalizeRCDOperation(EntityUid uid, RCDComponent component, EntityUid gridUid, MapGridComponent mapGrid, TileRef tile, Vector2i position, Direction direction, EntityUid? target, EntityUid user, EntityCoordinates location)
+    private void FinalizeRCDOperation(EntityUid uid, RCDComponent component, EntityUid gridUid, MapGridComponent mapGrid, TileRef tile, Vector2i position, Direction direction, EntityUid? target, EntityUid user, EntityCoordinates location) // Sector Vestige: Added location to help with pipe layering
     {
         if (!_net.IsServer)
             return;

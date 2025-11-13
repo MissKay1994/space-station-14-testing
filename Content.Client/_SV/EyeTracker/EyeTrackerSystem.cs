@@ -45,7 +45,11 @@ public sealed class EyeTrackerSystem : EntitySystem
         }
 
         //Set the client side for fun
-        eye.Rotation = _eyeManager.CurrentEye.Rotation;
-        _entityNetworkManager.SendSystemNetworkMessage(new GetNetworkedEyeRotationEvent(args.NetEntity, _eyeManager.CurrentEye.Rotation));
+        if (eye.Rotation != _eyeManager.CurrentEye.Rotation)
+        {
+            eye.Rotation = _eyeManager.CurrentEye.Rotation;
+            _entityNetworkManager.SendSystemNetworkMessage(
+                new GetNetworkedEyeRotationEvent(args.NetEntity, _eyeManager.CurrentEye.Rotation));
+        }
     }
 }

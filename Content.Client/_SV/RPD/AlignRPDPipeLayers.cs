@@ -161,6 +161,7 @@ public sealed class AlignRPDPipeLayers : SnapgridCenter
             _entityNetworkManager.SendSystemNetworkMessage(new GetNetworkedEyeRotationEvent(
                 _entityManager.GetNetEntity(heldEntity),
                 _eyeManager.CurrentEye.Rotation));
+            tracker.Rotation = _eyeManager.CurrentEye.Rotation;
         }
     }
 

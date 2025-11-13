@@ -18,12 +18,16 @@
   - type: SprayPainter
     colorPalette:
       red: '#FF1212FF'
+      orange: '#D67C34' # VS addition
       yellow: '#B3A234FF'
-      brown: '#947507FF'
       green: '#3AB334FF'
       cyan: '#03FCD3FF'
       blue: '#0335FCFF'
+      purple: '#A349A4' # VS addition
+      lightish red: '#B85177' # VS addition, you know what its called? PINK.
+      brown: '#B97A57' # VS change, original color: '#947507FF'
       white: '#FFFFFFFF'
+      gray: '#616161' # VS addition
       black: '#333333FF'
       # standard atmos pipes
       waste: '#990000'
@@ -33,8 +37,8 @@
   - type: StaticPrice
     price: 40
   - type: LimitedCharges
-    maxCharges: 15
-    lastCharges: 15
+    maxCharges: 30 # VS change
+    lastCharges: 30 # VS change
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
@@ -74,3 +78,19 @@
       Plastic: 10
   - type: StaticPrice
     price: 30
+  - type: FlavorProfile # VS addition (start)
+    flavors:
+      - metallic # lead
+      - plastic
+      - horrible # lead
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Lead # Lead based paint
+          Quantity: 4.5
+        - ReagentId: Cryptobiolin
+          Quantity: 10
+        - ReagentId: THC
+          Quantity: 10

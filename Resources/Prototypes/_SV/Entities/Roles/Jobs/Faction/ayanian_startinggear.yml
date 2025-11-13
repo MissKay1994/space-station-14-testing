@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: startingGear
-  id: AyanianMarineGear
+  id: SV_AyanianMarineGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitAyanianMarine
     back: ClothingBackpackSatchel
@@ -17,7 +17,7 @@
     head: ClothingHeadHatBeretFederation
 
 - type: startingGear
-  id: AyanianAdmiralGear
+  id: SV_AyanianAdmiralGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitAyanianMarine
     back: ClothingBackpackSatchel

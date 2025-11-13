@@ -1,0 +1,17 @@
+- type: startingGear
+  id: SV_AltGorlexRep
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAyanianMarine
+    back: ClothingBackpackSatchelSalvage
+    outerClothing: ClothingOuterWinterMiner
+    id: SalvagerPDA
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadHatBeretFederation
+
+- type: startingGear
+  id: SV_CybersunRep
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCybersunRep
+    shoes: ClothingShoesBootsLaceup
+    id: PassengerPDA

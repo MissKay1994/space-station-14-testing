@@ -1019,3 +1019,21 @@ Entries:
       message: Added the Rapid Piping Device.
   id: 139
   time: '2025-11-12T21:55:26.0000000+00:00'
+- author: purpleskittleo
+  changes:
+    - type: Tweak
+      message: Tweaked audio file formatting to add duration to the file name.
+    - type: Tweak
+      message: Tweaked folder formatting to (hopefully) fit more long-term use.
+    - type: Add
+      message: Added "SINGULOOSE!"
+    - type: Add
+      message: Added "L'arrivo dell'Uomo"
+    - type: Add
+      message: Added "Incognito (Stinger Ver.)"
+    - type: Add
+      message: Added 3 new event ambiences.
+    - type: Tweak
+      message: Adjusted the length of 4 ambiences to fit gameplay flow better.
+  id: 140
+  time: '2025-11-14T15:57:14.0000000+00:00'

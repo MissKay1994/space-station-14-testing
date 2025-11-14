@@ -6,7 +6,8 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - files: ["LB_dreamseq_4m.ogg",
-          "AY_shuttleintro_5m30s.ogg"]
+          "AY_shuttleintro_5m30s.ogg",
+          "STATION_singuloose_2m7s.ogg"]
   license: "CC-BY-4.0"
   copyright: "Created by purpleskittleo"
   source: "https://www.youtube.com/@purpleskittleo"

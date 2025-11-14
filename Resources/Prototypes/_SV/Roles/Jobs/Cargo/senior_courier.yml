@@ -28,6 +28,7 @@
 # SPDX-FileCopyrightText: 2024 Mr. 27 <45323883+Dutch-VanDerLinde@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 OnyxTheBrave <vinjeerik@gmail.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 # SPDX-FileCopyrightText: 2025 War Pigeon <54217755+minus1over12@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
@@ -39,6 +40,8 @@
   name: job-name-senior-courier
   description: job-description-senior-courier
   playTimeTracker: JobSeniorCourier
+  setPreference: true
+  whitelisted: true
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800 #3 hrs

@@ -3,6 +3,8 @@
   name: job-name-warden
   description: job-description-warden
   playTimeTracker: JobWarden
+  setPreference: true
+  whitelisted: true
   requirements:
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer

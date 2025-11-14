@@ -1,3 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Wizards Den contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
 meta:
   format: 7
   category: Grid
@@ -15287,5 +15294,12 @@ entities:
     components:
     - type: Transform
       pos: -10.5,-28.5
+      parent: 2
+- proto: ArrivalsSpawnPointSVMagistrate
+  entities:
+  - uid: 2298
+    components:
+    - type: Transform
+      pos: -11,-34
       parent: 2
 ...

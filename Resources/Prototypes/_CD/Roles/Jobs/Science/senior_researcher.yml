@@ -1,8 +1,17 @@
+# SPDX-FileCopyrightText: 2025 Cosmatic Drift contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
 - type: job
   id: SeniorResearcher
   name: job-name-senior-researcher
   description: job-description-senior-researcher
   playTimeTracker: JobSeniorResearcher
+  setPreference: true
+  whitelisted: true
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800 #3 hrs

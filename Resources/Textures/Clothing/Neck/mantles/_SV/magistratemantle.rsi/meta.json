@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Derived from captain's mantle by Emisse (github) for ss14, edited by Skarletto (github). Modified by ReboundQ3 (Github) for Sector Vestige",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped-NECK",
+      "directions": 4
+    }
+  ]
+}

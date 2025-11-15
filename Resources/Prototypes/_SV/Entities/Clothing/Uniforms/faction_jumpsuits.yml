@@ -23,7 +23,7 @@
   id: ClothingUniformJumpsuitCybersunRep
   name: sleek red dress shirt
   description: An outfit vaguelly reminding you of cybersun industries.
-  components: 
+  components:
   - type: Sprite
     sprite: _SV/Clothing/Uniforms/Jumpsuit/cybersun1.rsi
   - type: Clothing

@@ -10,7 +10,7 @@
   name: species-name-felinid
   roundStart: true
   prototype: MobFelinid
-  sprites: MobFelinidSprites
+  sprites: MobFelinidSprites #Sector Vestige: MobHumanSprites did not have a tail specified, so it never showed up properly
   markingLimits: MobFelinidMarkingLimits
   dollPrototype: MobFelinidDummy
   skinColoration: HumanToned

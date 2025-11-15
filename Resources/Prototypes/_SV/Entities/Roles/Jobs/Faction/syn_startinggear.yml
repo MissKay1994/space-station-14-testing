@@ -1,3 +1,4 @@
+#GORLEX MARAUDERS
 - type: startingGear
   id: SV_AltGorlexRep
   equipment:
@@ -7,11 +8,42 @@
     id: SalvagerPDA
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesBootsJack
-    head: ClothingHeadHatBeretFederation
+    eyes: ClothingEyesGlassesThermal
+    ears: ClothingHeadsetGrey
+    pocket1: WeaponPistolViper
 
+#CYBERSUN INDUSTRIES
 - type: startingGear
   id: SV_CybersunRep
   equipment:
     jumpsuit: ClothingUniformJumpsuitCybersunRep
     shoes: ClothingShoesBootsLaceup
     id: PassengerPDA
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetGrey
+    pocket1: WeaponPistolCobra
+
+#INTERDYNE PHARMACEUTICALS
+- type: startingGear
+  id: SV_InterdyneRep
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitInterdyneRep
+    outerClothing: ClothingOuterCoatLabInterdyne
+    head: ClothingHeadHatBeret
+    shoes: ClothingShoesBootsLaceup
+    id: ChemistryPDA
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetMedical
+    pocket1: WeaponRevolverPythonAP
+
+- type: startingGear
+  id: SV_AltInterdyneRep
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitInterdyneTurtleneck
+    outerClothing: ClothingOuterCoatLabOpenedInterdyne
+    head: ClothingHeadHatBeret
+    shoes: ClothingShoesBootsLaceup
+    id: ChemistryPDA
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetMedical
+    pocket1: WeaponRevolverPythonAP

@@ -45,3 +45,20 @@
     sprite: _SV/Clothing/Head/Hats/admiral_cap.rsi
   - type: Clothing
     sprite: _SV/Clothing/Head/Hats/admiral_cap.rsi
+
+- type: entity
+  parent: [ClothingHeadBase]
+  id: ClothingHeadHatCaptainTricorn
+  name: captain's tricorn
+  description: A captain hat adorned by multiple colourful feathers.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/Head/Hats/captain_tricorn.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/Head/Hats/captain_tricorn.rsi
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon

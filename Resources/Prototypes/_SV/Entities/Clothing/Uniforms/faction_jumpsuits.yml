@@ -46,7 +46,7 @@
   id: ClothingUniformJumpsuitInterdyneTurtleneck
   name: stylish red turtleneck
   description: An outfit vaguelly reminding you of interdyne pharmaceuticals.
-  components: 
+  components:
   - type: Sprite
     sprite: _SV/Clothing/Uniforms/Jumpsuit/interdyne2.rsi
   - type: Clothing

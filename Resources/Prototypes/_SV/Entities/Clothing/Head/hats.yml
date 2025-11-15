@@ -1,13 +1,15 @@
 # SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
 # SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
 # SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
+# SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <113352036+JuneSzalkowska@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatBeretFederation
-  name: Federation beret
+  name: federation beret
   description: A Federation beret bearing the insignia of an eagle. That's what I call a ... beagle?
   components:
   - type: Sprite
@@ -26,7 +28,7 @@
   parent: [ClothingHeadBase, ClothingHeadHatBeretFederation]
   id: ClothingHeadHatBeretCentComm
   name: CentComm beret
-  description: A central command beret, designed specifically for the hat haters. Don't confuse it with a leaf.
+  description: A CentComm beret, designed specifically for the hat haters. Don't confuse it with a leaf.
   components:
   - type: Sprite
     sprite: _SV/Clothing/Head/Hats/beret_centcomm.rsi
@@ -36,8 +38,8 @@
 - type: entity
   parent: [ClothingHeadBase, ClothingHeadHatBeretFederation]
   id: ClothingHeadHatAdmiralFederation
-  name: Ayanian Admiral Hat
-  description: A hat commonly worn by Ayanian Admirals
+  name: Ayanian admiral hat
+  description: A hat commonly worn by Ayanian admirals
   components:
   - type: Sprite
     sprite: _SV/Clothing/Head/Hats/admiral_cap.rsi

@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
 # SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
-# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneszalkowska@gmail.com>
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -8,8 +8,8 @@
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatAyanianAdmiral
-  name: Admiral Great Coat
-  description: A Great Coat befitting the role of a Federation Admiral.
+  name: admiral great coat
+  description: A great coat befitting the role of a Federation admiral.
   components:
   - type: Sprite
     sprite: _SV/Clothing/OuterClothing/Coats/ayanian_admiralty.rsi
@@ -19,8 +19,8 @@
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatCentCommAdmiral
-  name: CentComm Great Coat
-  description: A Great Coat befitting the role of a Central Commander.
+  name: CentComm great coat
+  description: A great coat befitting the role of a Central Commander.
   components:
   - type: Sprite
     sprite: _SV/Clothing/OuterClothing/Coats/centcomm_admiralty.rsi

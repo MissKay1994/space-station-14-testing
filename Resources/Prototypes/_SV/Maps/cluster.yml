@@ -16,6 +16,7 @@
 # SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -30,7 +31,7 @@
       stationProto: StandardNanotrasenStation
       components:
       - type: StationNameSetup
-        mapNameTemplate: '{0} Cluster Station {1}'
+        mapNameTemplate: '{0} Cluster II Class Station {1}'
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: '14-SV'
@@ -91,3 +92,5 @@
           Borg: [ 2, 2 ]
           #misc
           Prisoner: [ 2, 2 ]
+          #Central Command
+          SVMagistrate: [ 1, 1 ]

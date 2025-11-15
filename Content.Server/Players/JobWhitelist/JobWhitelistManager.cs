@@ -1,10 +1,19 @@
-﻿using System.Linq;
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2024 DrSmugleaf <10968691+DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Database;
 using Content.Shared.CCVar;
 using Content.Shared.Players.JobWhitelist;
 using Content.Shared.Roles;
+using Content.Shared._SV.JobWhitelist; // SV changes - Job whitelist groups
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
@@ -24,6 +33,9 @@ public sealed class JobWhitelistManager : IPostInjectInit
     [Dependency] private readonly UserDbDataManager _userDb = default!;
 
     private readonly Dictionary<NetUserId, HashSet<string>> _whitelists = new();
+    // SV changes start - Job whitelist groups
+    private readonly Dictionary<NetUserId, HashSet<string>> _groupWhitelists = new();
+    // SV changes end
 
     public void Initialize()
     {
@@ -32,9 +44,15 @@ public sealed class JobWhitelistManager : IPostInjectInit
 
     private async Task LoadData(ICommonSession session, CancellationToken cancel)
     {
-        var whitelists = await _db.GetJobWhitelists(session.UserId, cancel);
+        var whitelists = await _db.GetJobWhitelists(session.UserId.UserId, cancel);
+        // SV changes start - Job whitelist groups
+        var groups = await _db.GetJobWhitelistGroups(session.UserId.UserId, cancel);
+        // SV changes end
         cancel.ThrowIfCancellationRequested();
         _whitelists[session.UserId] = whitelists.ToHashSet();
+        // SV changes start - Job whitelist groups
+        _groupWhitelists[session.UserId] = groups.ToHashSet();
+        // SV changes end
     }
 
     private void FinishLoad(ICommonSession session)
@@ -45,6 +63,9 @@ public sealed class JobWhitelistManager : IPostInjectInit
     private void ClientDisconnected(ICommonSession session)
     {
         _whitelists.Remove(session.UserId);
+        // SV changes start - Job whitelist groups
+        _groupWhitelists.Remove(session.UserId);
+        // SV changes end
     }
 
     public async void AddWhitelist(NetUserId player, ProtoId<JobPrototype> job)
@@ -86,7 +107,26 @@ public sealed class JobWhitelistManager : IPostInjectInit
             return false;
         }
 
-        return whitelists.Contains(job);
+        // Check direct job whitelist
+        if (whitelists.Contains(job))
+            return true;
+
+        // SV changes start - Job whitelist groups
+        // Check if player has any groups that include this job
+        if (_groupWhitelists.TryGetValue(player, out var groups))
+        {
+            foreach (var groupId in groups)
+            {
+                if (_prototypes.TryIndex<JobWhitelistGroupPrototype>(groupId, out var groupProto) &&
+                    groupProto.Jobs.Contains(job))
+                {
+                    return true;
+                }
+            }
+        }
+        // SV changes end
+
+        return false;
     }
 
     public async void RemoveWhitelist(NetUserId player, ProtoId<JobPrototype> job)
@@ -98,11 +138,62 @@ public sealed class JobWhitelistManager : IPostInjectInit
             SendJobWhitelist(session);
     }
 
+    // SV changes start - Job whitelist groups
+    public async void AddGroup(NetUserId player, string groupId)
+    {
+        if (!_groupWhitelists.TryGetValue(player, out var groups))
+        {
+            groups = new HashSet<string>();
+            _groupWhitelists[player] = groups;
+        }
+
+        groups.Add(groupId);
+
+        await _db.AddJobWhitelistGroup(player.UserId, groupId);
+
+        if (_player.TryGetSessionById(player, out var session))
+            SendJobWhitelist(session);
+    }
+
+    public async void RemoveGroup(NetUserId player, string groupId)
+    {
+        _groupWhitelists.GetValueOrDefault(player)?.Remove(groupId);
+        await _db.RemoveJobWhitelistGroup(player.UserId, groupId);
+
+        if (_player.TryGetSessionById(new NetUserId(player), out var session))
+            SendJobWhitelist(session);
+    }
+
+    public IEnumerable<string> GetPlayerGroups(NetUserId player)
+    {
+        return _groupWhitelists.GetValueOrDefault(player) ?? Enumerable.Empty<string>();
+    }
+    // SV changes end
+
     public void SendJobWhitelist(ICommonSession player)
     {
+        var whitelist = new HashSet<string>(_whitelists.GetValueOrDefault(player.UserId) ?? new HashSet<string>());
+
+        // SV changes start - Job whitelist groups
+        // Add jobs from all groups the player is in
+        if (_groupWhitelists.TryGetValue(player.UserId, out var groups))
+        {
+            foreach (var groupId in groups)
+            {
+                if (_prototypes.TryIndex<JobWhitelistGroupPrototype>(groupId, out var groupProto))
+                {
+                    foreach (var job in groupProto.Jobs)
+                    {
+                        whitelist.Add(job.Id);
+                    }
+                }
+            }
+        }
+        // SV changes end
+
         var msg = new MsgJobWhitelist
         {
-            Whitelist = _whitelists.GetValueOrDefault(player.UserId) ?? new HashSet<string>()
+            Whitelist = whitelist
         };
 
         _net.ServerSendMessage(msg, player.Channel);

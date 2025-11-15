@@ -1037,3 +1037,9 @@ Entries:
       message: Adjusted the length of 4 ambiences to fit gameplay flow better.
   id: 140
   time: '2025-11-14T15:57:14.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Fix
+      message: Felinids now show their tails.
+  id: 141
+  time: '2025-11-15T17:00:54.0000000+00:00'

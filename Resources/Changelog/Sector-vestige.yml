@@ -1043,3 +1043,11 @@ Entries:
       message: Felinids now show their tails.
   id: 141
   time: '2025-11-15T17:00:54.0000000+00:00'
+- author: JuneSzalkowska
+  changes:
+    - type: Add
+      message: Added a new weapon.
+    - type: Tweak
+      message: Changed the GM outfits ID for the Ayanian Stuff
+  id: 142
+  time: '2025-11-16T14:47:50.0000000+00:00'

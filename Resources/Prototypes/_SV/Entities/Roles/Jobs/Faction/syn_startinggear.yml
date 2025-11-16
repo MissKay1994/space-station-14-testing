@@ -1,0 +1,57 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <113352036+JuneSzalkowska@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneszalkowska@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+#GORLEX MARAUDERS
+- type: startingGear
+  id: SV_AltGorlexRep
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAyanianMarine
+    back: ClothingBackpackSatchelSalvage
+    outerClothing: ClothingOuterWinterMiner
+    id: SalvagePDA
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsJack
+    eyes: ClothingEyesGlassesThermal
+    ears: ClothingHeadsetGrey
+    pocket1: WeaponPistolViper
+
+#CYBERSUN INDUSTRIES
+- type: startingGear
+  id: SV_CybersunRep
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCybersunRep
+    shoes: ClothingShoesBootsLaceup
+    id: PassengerPDA
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetGrey
+    pocket1: WeaponPistolCobra
+
+#INTERDYNE PHARMACEUTICALS
+- type: startingGear
+  id: SV_InterdyneRep
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitInterdyneRep
+    outerClothing: ClothingOuterCoatLabInterdyne
+    head: ClothingHeadHatBeret
+    shoes: ClothingShoesBootsLaceup
+    id: ChemistryPDA
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetMedical
+    pocket1: WeaponRevolverPythonAP
+
+- type: startingGear
+  id: SV_AltInterdyneRep
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitInterdyneTurtleneck
+    outerClothing: ClothingOuterCoatLabOpenedInterdyne
+    head: ClothingHeadHatBeret
+    shoes: ClothingShoesBootsLaceup
+    id: ChemistryPDA
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetMedical
+    pocket1: WeaponRevolverPythonAP

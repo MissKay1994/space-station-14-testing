@@ -12,7 +12,7 @@
     jumpsuit: ClothingUniformJumpsuitAyanianMarine
     back: ClothingBackpackSatchelSalvage
     outerClothing: ClothingOuterWinterMiner
-    id: SalvagerPDA
+    id: SalvagePDA
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesBootsJack
     eyes: ClothingEyesGlassesThermal

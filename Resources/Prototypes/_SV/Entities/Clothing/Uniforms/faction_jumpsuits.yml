@@ -37,7 +37,7 @@
   id: ClothingUniformJumpsuitInterdyneRep
   name: sleek white dress shirt
   description: An outfit vaguelly reminding you of interdyne pharmaceuticals.
-  components: 
+  components:
   - type: Sprite
     sprite: _SV/Clothing/Uniforms/Jumpsuit/interdyne1.rsi
   - type: Clothing

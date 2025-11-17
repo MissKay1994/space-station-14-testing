@@ -1051,3 +1051,13 @@ Entries:
       message: Changed the GM outfits ID for the Ayanian Stuff
   id: 142
   time: '2025-11-16T14:47:50.0000000+00:00'
+- author: Mangohydra
+  changes:
+    - type: Tweak
+      message: Compressed paint now holds 30 charges instead of 15.
+    - type: Add
+      message: 4-5 new colors for pipes.
+    - type: Add
+      message: Paint is now edible.
+  id: 143
+  time: '2025-11-17T10:06:49.0000000+00:00'

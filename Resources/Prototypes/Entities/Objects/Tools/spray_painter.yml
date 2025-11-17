@@ -18,16 +18,16 @@
   - type: SprayPainter
     colorPalette:
       red: '#FF1212FF'
-      orange: '#D67C34' # VS addition
+      orange: '#D67C34' # SV addition
       yellow: '#B3A234FF'
       green: '#3AB334FF'
       cyan: '#03FCD3FF'
       blue: '#0335FCFF'
-      purple: '#A349A4' # VS addition
-      lightish red: '#B85177' # VS addition, you know what its called? PINK.
-      brown: '#B97A57' # VS change, original color: '#947507FF'
+      purple: '#9446A3' # SV addition
+      lightish red: '#B85177' # SV addition, you know what its called? PINK.
+      brown: '#B97A57' # SV change, original color: '#947507FF'
       white: '#FFFFFFFF'
-      gray: '#616161' # VS addition
+      gray: '#616161' # SV addition
       black: '#333333FF'
       # standard atmos pipes
       waste: '#990000'
@@ -37,8 +37,8 @@
   - type: StaticPrice
     price: 40
   - type: LimitedCharges
-    maxCharges: 30 # VS change
-    lastCharges: 30 # VS change
+    maxCharges: 30 # SV change, used to be 15
+    lastCharges: 30 # SV change, used to be 15
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
@@ -66,6 +66,7 @@
   description: A cartridge of highly compressed paint, commonly used in spray painters.
   components:
   - type: SprayPainterAmmo
+    charges: 30 # SV Change
   - type: Sprite
     sprite: Objects/Tools/spray_painter.rsi
     state: ammo
@@ -78,3 +79,20 @@
       Plastic: 10
   - type: StaticPrice
     price: 30
+  - type: Food # SV addition (start)
+  - type: FlavorProfile
+    flavors:
+      - metallic # lead
+      - plastic
+      - horrible # lead
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Lead # Lead based paint
+          Quantity: 0.5
+        - ReagentId: Cryptobiolin
+          Quantity: 20
+        - ReagentId: THC
+          Quantity: 5 # SV addition (end)

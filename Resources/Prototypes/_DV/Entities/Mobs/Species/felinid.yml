@@ -43,8 +43,8 @@
   - type: Stamina
   - type: TypingIndicator
     proto: felinid
-  - type: Vocal
-    wilhelm: "/Audio/_DV/Voice/Felinid/cat_wilhelm.ogg"
+  # type: Vocal
+    # wilhelm: "/Audio/_DV/Voice/Felinid/cat_wilhelm.ogg" SV change, removed this sound effect from the repo so we don't get annihalted by Japanese coypright lawyers(tm)
     sounds:
       Male: SoundsFelinidMale
       Female: SoundsFelinidFemale

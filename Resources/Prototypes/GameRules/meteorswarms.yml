@@ -45,12 +45,12 @@
     - id: GameRuleMeteorSwarmSmall
     - id: GameRuleMeteorSwarmMedium
     - id: GameRuleMeteorSwarmLarge
-    - id: GameRuleUristSwarm
-    - id: GameRuleClownSwarm
-    - id: GameRuleCowSwarm
-    - id: GameRulePotatoSwarm
-    - id: GameRuleFunSwarm
-    - id: ImmovableRodSpawn
+    #- id: GameRuleUristSwarm #SV disabled
+    #- id: GameRuleClownSwarm #SV disabled
+    #- id: GameRuleCowSwarm #SV disabled
+    #- id: GameRulePotatoSwarm #SV disabled
+    #- id: GameRuleFunSwarm #SV disabled
+    #- id: ImmovableRodSpawn #SV disabled
 
 - type: weightedRandomEntity
   id: MeteorSpawnAsteroidWallTable

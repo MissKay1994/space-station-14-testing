@@ -1,6 +1,9 @@
 # SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
 # SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
 # SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneszalkowska@gmail.com>
+# SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <113352036+JuneSzalkowska@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -22,7 +25,7 @@
   id: ClothingUniformJumpsuitCybersunRep
   name: sleek red dress shirt
   description: An outfit vaguelly reminding you of cybersun industries.
-  components: 
+  components:
   - type: Sprite
     sprite: _SV/Clothing/Uniforms/Jumpsuit/cybersun1.rsi
   - type: Clothing
@@ -34,7 +37,7 @@
   id: ClothingUniformJumpsuitInterdyneRep
   name: sleek white dress shirt
   description: An outfit vaguelly reminding you of interdyne pharmaceuticals.
-  components: 
+  components:
   - type: Sprite
     sprite: _SV/Clothing/Uniforms/Jumpsuit/interdyne1.rsi
   - type: Clothing
@@ -45,7 +48,7 @@
   id: ClothingUniformJumpsuitInterdyneTurtleneck
   name: stylish red turtleneck
   description: An outfit vaguelly reminding you of interdyne pharmaceuticals.
-  components: 
+  components:
   - type: Sprite
     sprite: _SV/Clothing/Uniforms/Jumpsuit/interdyne2.rsi
   - type: Clothing

@@ -41,8 +41,6 @@
   name: loadout-group-senior-courier-jumpsuit
   loadouts:
   - SeniorCourierPants
-  - SeniorCourierJumpsuit
-  - SeniorCourierJumpskirt
   - SeniorCourierJumpsuitLight
   - SeniorCourierJumpskirtLight
   - SeniorCourierJumpsuitDark

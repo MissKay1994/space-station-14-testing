@@ -4,6 +4,6 @@
   name: salvage mining jacket
   components:
   - type: Sprite
-    sprite: _SV/Clothing/OuterClothing/Wintercoats/miningjacket.rsi 
+    sprite: _SV/Clothing/OuterClothing/Wintercoats/miningjacket.rsi
   - type: Clothing
     sprite: _SV/Clothing/OuterClothing/Wintercoats/miningjacket.rsi

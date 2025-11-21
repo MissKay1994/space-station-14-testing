@@ -998,6 +998,7 @@
   minLimit: 0
   loadouts:
   - ResearchDirectorLabCoat
+  - HighCutRD
   - ResearchDirectorWintercoat
 
 - type: loadoutGroup

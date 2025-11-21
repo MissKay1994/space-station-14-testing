@@ -56,9 +56,9 @@
   description: Fashionable AND scientific. Some would say "Eureka".
   components:
   - type: Sprite
-    sprite: _SV/Clothing/OuterClothing/Coats/base_highcut.rsi
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_base.rsi
   - type: Clothing
-    sprite: _SV/Clothing/OuterClothing/Coats/base_highcut.rsi
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_base.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -78,9 +78,9 @@
   description: Fashionable AND scientific. Some would say "Eureka".
   components:
   - type: Sprite
-    sprite: _SV/Clothing/OuterClothing/Coats/science_highcut.rsi
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_science.rsi
   - type: Clothing
-    sprite: _SV/Clothing/OuterClothing/Coats/science_highcut.rsi
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_science.rsi
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutScience]
@@ -96,9 +96,9 @@
   description: Fashionable AND scientific. Some would say "Eureka".
   components:
   - type: Sprite
-    sprite: _SV/Clothing/OuterClothing/Coats/chem_highcut.rsi
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_chem.rsi
   - type: Clothing
-    sprite: _SV/Clothing/OuterClothing/Coats/chem_highcut.rsi
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_chem.rsi
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutChemist]
@@ -114,12 +114,30 @@
   description: Fashionable AND smart. Some would say "BOMB MEDICAL".
   components:
   - type: Sprite
-    sprite: _SV/Clothing/OuterClothing/Coats/cmo_highcut.rsi
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_cmo.rsi
   - type: Clothing
-    sprite: _SV/Clothing/OuterClothing/Coats/cmo_highcut.rsi
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_cmo.rsi
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutCMO]
   id: ClothingOuterCoatHighcutOpenedCMO
   name: chief medical officer high-cut coat
   description: Fashionable AND smart. Some would say "BOMB MEDICAL".
+
+#High-cut RD labcoat
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, ClothingOuterCoatLabInterdyne]
+  id: ClothingOuterCoatHighcutRD
+  name: chief medical officer high-cut coat
+  description: Fashionable AND smart. Some would say "BOMB SCIENCE".
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_rd.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Coats/highcut_rd.rsi
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutRD]
+  id: ClothingOuterCoatHighcutOpenedRD
+  name: chief medical officer high-cut coat
+  description: Fashionable AND smart. Some would say "BOMB SCIENCE".

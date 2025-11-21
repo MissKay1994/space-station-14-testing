@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingOuterWinterCoat
   id: ClothingOuterMiningJacket
-  name: salvage leather jacket
+  name: salvage mining jacket
   components:
   - type: Sprite
     sprite: _SV/Clothing/OuterClothing/Wintercoats/miningjacket.rsi 

@@ -1,3 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Delta-V contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 Mangohydra <156087924+Mangohydra@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   name: Urist McFelinid
   parent: BaseMobSpeciesOrganic
@@ -44,7 +52,7 @@
   - type: TypingIndicator
     proto: felinid
   - type: Vocal
-    wilhelm: "/Audio/_DV/Voice/Felinid/cat_wilhelm.ogg"
+    # wilhelm: "/Audio/_DV/Voice/Felinid/cat_wilhelm.ogg" SV change, removed this sound effect from the repo so we don't get annihalted by Japanese coypright lawyers(tm)
     sounds:
       Male: SoundsFelinidMale
       Female: SoundsFelinidFemale

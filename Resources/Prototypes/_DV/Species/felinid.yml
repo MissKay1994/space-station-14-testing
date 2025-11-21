@@ -1,12 +1,44 @@
+# SPDX-FileCopyrightText: 2025 Delta-V contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+# SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: species
   id: Felinid
   name: species-name-felinid
   roundStart: true
   prototype: MobFelinid
-  sprites: MobHumanSprites
+  sprites: MobFelinidSprites #Sector Vestige: MobHumanSprites did not have a tail specified, so it never showed up properly
   markingLimits: MobFelinidMarkingLimits
   dollPrototype: MobFelinidDummy
   skinColoration: HumanToned
+
+#Sector Vestige - Begin: Cat boy needs his tail
+- type: speciesBaseSprites
+  id: MobFelinidSprites
+  sprites:
+    Special: MobHumanoidAnyMarking
+    Head: MobHumanHead
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
+    Chest: MobHumanTorso
+    Eyes: MobHumanoidEyes
+    HeadTop: MobHumanoidAnyMarking
+    LArm: MobHumanLArm
+    RArm: MobHumanRArm
+    LHand: MobHumanLHand
+    RHand: MobHumanRHand
+    LLeg: MobHumanLLeg
+    RLeg: MobHumanRLeg
+    LFoot: MobHumanLFoot
+    RFoot: MobHumanRFoot
+    Tail: MobHumanoidAnyMarking
+#Sector Vestige - End: Cat boy needs his tail
 
 - type: markingPoints
   id: MobFelinidMarkingLimits

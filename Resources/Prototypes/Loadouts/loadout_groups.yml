@@ -198,7 +198,7 @@
   loadouts:
   - CaptainHead
   - CaptainCap
-  - CaptainTricorn
+  - CaptainTricorn #Added by Sector-Vestige
 
 - type: loadoutGroup
   id: CaptainJumpsuit
@@ -699,6 +699,7 @@
   loadouts:
   - QuartermasterHead
   - QuartermasterBeret
+  - QuartermasterTricorn
 
 - type: loadoutGroup
   id: QuartermasterJumpsuit
@@ -802,6 +803,7 @@
   minLimit: 0
   loadouts:
   - SalvageSpecialistWintercoat
+  - SalvageSpecialistMiningJacket #Added by Sector-Vestige
 
 - type: loadoutGroup
   id: SalvageSpecialistShoes
@@ -1047,8 +1049,9 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
-  - ModernLabCoat # CD
+  - HighCutBase #Sector-Vestige
   - ScienceLabCoat
+  - HighCutScience #Sector-Vestige
   - ScienceWintercoat
   - RoboticistLabCoat
   - RoboticistWintercoat
@@ -1297,7 +1300,7 @@
   minLimit: 0
   loadouts:
   - ChiefMedicalOfficerLabCoat
-  - ChiefMedicalOfficerModernLabCoat # CD
+  - HighCutCMO #Added by Sector-Vestige
   - ChiefMedicalOfficerWintercoat
 
 - type: loadoutGroup
@@ -1353,11 +1356,10 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
-  - ModernLabCoat # CD
+  - HighCutBase #Sector-Vestige
   - MedicalDoctorWintercoat
   # - SeniorPhysicianLabCoat
   - ViroCoat # CD
-  - ModernViroCoat # CD
   - ViroWintercoat # CD
   - GeneCoat # CD
   - GeneWintercoat # CD
@@ -1422,9 +1424,9 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
-  - ModernLabCoat # CD
+  - HighCutBase #Sector-Vestige
   - ChemistLabCoat
-  - ChemistModernLabCoat # CD
+  - HighCutChemist #Sector-Vestige
   - ChemistWintercoat
 
 - type: loadoutGroup

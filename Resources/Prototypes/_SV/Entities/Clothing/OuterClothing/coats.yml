@@ -47,3 +47,79 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabInterdyne]
   id: ClothingOuterCoatLabOpenedInterdyne
   name: lab coat
+
+#High-cut labcoat
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ClothingOuterCoatHighcutBase
+  name: high-cut coat
+  description: Fashionable AND scientific. Some would say "Eureka".
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Coats/base_highcut.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Coats/base_highcut.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutBase]
+  id: ClothingOuterCoatHighcutOpenedBase
+  name: high-cut coat
+  description: Fashionable AND scientific. Some would say "Eureka".
+
+#High-cut science labcoat
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, ClothingOuterCoatLabInterdyne]
+  id: ClothingOuterCoatHighcutScience
+  name: science high-cut coat
+  description: Fashionable AND scientific. Some would say "Eureka".
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Coats/science_highcut.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Coats/science_highcut.rsi
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutScience]
+  id: ClothingOuterCoatHighcutOpenedScience
+  name: science high-cut coat
+  description: Fashionable AND scientific. Some would say "Eureka".
+
+#High-cut chemist labcoat
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, ClothingOuterCoatLabInterdyne]
+  id: ClothingOuterCoatHighcutChemist
+  name: chemist high-cut coat
+  description: Fashionable AND scientific. Some would say "Eureka".
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Coats/chem_highcut.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Coats/chem_highcut.rsi
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutChemist]
+  id: ClothingOuterCoatHighcutOpenedChemist
+  name: chemist high-cut coat
+  description: Fashionable AND scientific. Some would say "Eureka".
+
+#High-cut CMO labcoat
+- type: entity
+  parent: [ClothingOuterStorageFoldableBase, ClothingOuterCoatLabInterdyne]
+  id: ClothingOuterCoatHighcutCMO
+  name: chief medical officer high-cut coat
+  description: Fashionable AND smart. Some would say "BOMB MEDICAL".
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Coats/cmo_highcut.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Coats/cmo_highcut.rsi
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutCMO]
+  id: ClothingOuterCoatHighcutOpenedCMO
+  name: chief medical officer high-cut coat
+  description: Fashionable AND smart. Some would say "BOMB MEDICAL".

@@ -12,17 +12,6 @@
   equipment:
     head: ClothingHeadHatCargosoft
 
-# Jumpsuit
-- type: loadout
-  id: SeniorCourierJumpsuit
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitCargo
-
-- type: loadout
-  id: SeniorCourierJumpskirt
-  equipment:
-    jumpsuit: ClothingUniformJumpskirtCargo
-
 - type: loadout
   id: SeniorCourierPants
   equipment:

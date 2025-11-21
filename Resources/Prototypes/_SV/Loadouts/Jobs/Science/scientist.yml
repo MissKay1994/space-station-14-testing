@@ -1,0 +1,10 @@
+# OuterClothing
+- type: loadout
+  id: HighCutScience
+  equipment:
+    outerClothing: ClothingOuterCoatHighcutOpenedScience
+
+- type: loadout
+  id: HighCutBase
+  equipment:
+    outerClothing: ClothingOuterCoatHighcutOpenedBase

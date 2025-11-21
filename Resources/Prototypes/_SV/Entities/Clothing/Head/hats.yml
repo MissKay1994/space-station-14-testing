@@ -48,7 +48,7 @@
 
 - type: entity
   parent: [ClothingHeadBase]
-  id: ClothingHeadHatCaptainTricorn
+  id: ClothingHeadHatTricornCaptain
   name: captain's tricorn
   description: A captain hat adorned by multiple colourful feathers.
   components:
@@ -56,6 +56,23 @@
     sprite: _SV/Clothing/Head/Hats/captain_tricorn.rsi
   - type: Clothing
     sprite: _SV/Clothing/Head/Hats/captain_tricorn.rsi
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingHeadBase, ClothingHeadHatTricornCaptain]
+  id: ClothingHeadHatTricornQM
+  name: quartermaster's tricorn
+  description: A hat designed for those that want a good accesory to the quartermaster's formal suit. Only for the most formal and serious of quartermasters.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/Head/Hats/quartermaster_tricorn.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/Head/Hats/quartermaster_tricorn.rsi
     tags:
     - PetWearable
     - CorgiWearable

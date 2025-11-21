@@ -1,0 +1,4 @@
+- type: loadout
+  id: HighCutChemist
+  equipment:
+    outerClothing: ClothingOuterCoatHighcutOpenedChemist

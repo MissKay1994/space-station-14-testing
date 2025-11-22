@@ -1067,3 +1067,17 @@ Entries:
       message: hazardous copyrighted material relating to cats
   id: 144
   time: '2025-11-20T19:32:15.0000000+00:00'
+- author: JuneSzalkowska
+  changes:
+    - type: Add
+      message: Added a new winterjacket (Salvage Mining Jacket)
+    - type: Add
+      message: Added 5 new labcoats (basic, science, chemistry, RD, CMO)
+    - type: Add
+      message: Added 2 new tricorn hats (Captain, Quartermaster)
+    - type: Tweak
+      message: Added the new outfits to the loadouts
+    - type: Remove
+      message: Removed all Modern Labcoats from loadouts
+  id: 145
+  time: '2025-11-22T15:13:21.0000000+00:00'

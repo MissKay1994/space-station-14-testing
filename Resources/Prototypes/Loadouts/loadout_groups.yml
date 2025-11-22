@@ -40,11 +40,14 @@
 # SPDX-FileCopyrightText: 2025 Cass <45694413+CubixThree@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Jajsha <101492056+Zap527@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Julian Giebel <juliangiebel@live.de>
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <113352036+JuneSzalkowska@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneszalkowska@gmail.com>
 # SPDX-FileCopyrightText: 2025 KingFroozy <140668342+KingFroozy@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 MissKay1994 <15877268+MissKay1994@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Momo <Rsnesrud@gmail.com>
 # SPDX-FileCopyrightText: 2025 MoonlightHollow <muszynskinicholas8@gmail.com>
 # SPDX-FileCopyrightText: 2025 NakataRin <45946146+NakataRin@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 Phooooooooooooooooooooooooooooooosphate <184853112+Phooooooooooooooooooooooooooooooosphate@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 # SPDX-FileCopyrightText: 2025 T <theo75cg@gmail.com>
@@ -198,6 +201,7 @@
   loadouts:
   - CaptainHead
   - CaptainCap
+  - CaptainTricorn #Added by Sector-Vestige
 
 - type: loadoutGroup
   id: CaptainJumpsuit
@@ -698,6 +702,7 @@
   loadouts:
   - QuartermasterHead
   - QuartermasterBeret
+  - QuartermasterTricorn #Added by Sector-Vestige
 
 - type: loadoutGroup
   id: QuartermasterJumpsuit
@@ -801,6 +806,7 @@
   minLimit: 0
   loadouts:
   - SalvageSpecialistWintercoat
+  - SalvageSpecialistMiningJacket #Added by Sector-Vestige
 
 - type: loadoutGroup
   id: SalvageSpecialistShoes
@@ -995,6 +1001,7 @@
   minLimit: 0
   loadouts:
   - ResearchDirectorLabCoat
+  - HighCutRD #Added by Sector-Vestige
   - ResearchDirectorWintercoat
 
 - type: loadoutGroup
@@ -1046,8 +1053,9 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
-  - ModernLabCoat # CD
+  - HighCutBase #Sector-Vestige
   - ScienceLabCoat
+  - HighCutScience #Sector-Vestige
   - ScienceWintercoat
   - RoboticistLabCoat
   - RoboticistWintercoat
@@ -1296,7 +1304,7 @@
   minLimit: 0
   loadouts:
   - ChiefMedicalOfficerLabCoat
-  - ChiefMedicalOfficerModernLabCoat # CD
+  - HighCutCMO #Added by Sector-Vestige
   - ChiefMedicalOfficerWintercoat
 
 - type: loadoutGroup
@@ -1352,11 +1360,10 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
-  - ModernLabCoat # CD
+  - HighCutBase #Sector-Vestige
   - MedicalDoctorWintercoat
   # - SeniorPhysicianLabCoat
   - ViroCoat # CD
-  - ModernViroCoat # CD
   - ViroWintercoat # CD
   - GeneCoat # CD
   - GeneWintercoat # CD
@@ -1421,9 +1428,9 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
-  - ModernLabCoat # CD
+  - HighCutBase #Sector-Vestige
   - ChemistLabCoat
-  - ChemistModernLabCoat # CD
+  - HighCutChemist #Sector-Vestige
   - ChemistWintercoat
 
 - type: loadoutGroup

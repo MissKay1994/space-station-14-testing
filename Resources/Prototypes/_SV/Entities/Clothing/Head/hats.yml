@@ -1,8 +1,9 @@
 # SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
 # SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
-# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
-# SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 JuneSzalkowska <113352036+JuneSzalkowska@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneszalkowska@gmail.com>
+# SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -45,3 +46,32 @@
     sprite: _SV/Clothing/Head/Hats/admiral_cap.rsi
   - type: Clothing
     sprite: _SV/Clothing/Head/Hats/admiral_cap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatTricornCaptain
+  name: captain's tricorn
+  description: A captain hat adorned by multiple colourful feathers.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/Head/Hats/captain_tricorn.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/Head/Hats/captain_tricorn.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadHatTricornCaptain
+  id: ClothingHeadHatTricornQM
+  name: quartermaster's tricorn
+  description: A hat designed for those that want a good accesory to the quartermaster's formal suit. Only for the most formal and serious of quartermasters.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/Head/Hats/quartermaster_tricorn.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/Head/Hats/quartermaster_tricorn.rsi

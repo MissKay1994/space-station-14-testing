@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
 # SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneszalkowska@gmail.com>
 # SPDX-FileCopyrightText: 2025 OnyxTheBrave <vinjeerik@gmail.com>
 # SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 # SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
@@ -11,17 +12,6 @@
   id: SeniorCourierHead
   equipment:
     head: ClothingHeadHatCargosoft
-
-# Jumpsuit
-- type: loadout
-  id: SeniorCourierJumpsuit
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitCargo
-
-- type: loadout
-  id: SeniorCourierJumpskirt
-  equipment:
-    jumpsuit: ClothingUniformJumpskirtCargo
 
 - type: loadout
   id: SeniorCourierPants

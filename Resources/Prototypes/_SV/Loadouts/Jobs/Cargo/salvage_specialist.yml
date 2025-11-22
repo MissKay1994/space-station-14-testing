@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneszalkowska@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# OuterClothing
+- type: loadout
+  id: SalvageSpecialistMiningJacket
+  equipment:
+    outerClothing: ClothingOuterMiningJacket

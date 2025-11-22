@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneszalkowska@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingOuterMiningJacket
+  name: salvage mining jacket
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/OuterClothing/Wintercoats/miningjacket.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/OuterClothing/Wintercoats/miningjacket.rsi

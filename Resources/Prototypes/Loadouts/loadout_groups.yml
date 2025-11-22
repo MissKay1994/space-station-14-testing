@@ -999,7 +999,7 @@
   minLimit: 0
   loadouts:
   - ResearchDirectorLabCoat
-  - HighCutRD
+  - HighCutRD #Added by Sector-Vestige
   - ResearchDirectorWintercoat
 
 - type: loadoutGroup

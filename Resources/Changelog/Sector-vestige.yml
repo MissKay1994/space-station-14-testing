@@ -1081,3 +1081,13 @@ Entries:
       message: Removed all Modern Labcoats from loadouts
   id: 145
   time: '2025-11-22T15:13:21.0000000+00:00'
+- author: purpleskittleo
+  changes:
+    - type: Add
+      message: Added "Incognito (NIGHTMARE Stinger Ver.)"
+    - type: Add
+      message: Added "Silksilver (Stinger Ver.)"
+    - type: Tweak
+      message: Fixed a bunch of ambiences not fading out properly.
+  id: 146
+  time: '2025-11-22T17:04:07.0000000+00:00'

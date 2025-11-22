@@ -6,8 +6,8 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - files: ["IA_activation_41s.ogg",
-          "IA_activation_NIGHTMARE_19s.ogg"]
-          "SPIDER_introduction_31s.ogg"
+          "IA_activation_NIGHTMARE_19s.ogg",
+          "SPIDER_introduction_31s.ogg"]
   license: "CC-BY-4.0"
   copyright: "Created by purpleskittleo"
   source: "https://www.youtube.com/@purpleskittleo"

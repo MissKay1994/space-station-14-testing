@@ -240,6 +240,7 @@
     - id: DoorRemoteEngineering
     - id: CargoRequestEngineeringComputerCircuitboard
     - id: RCD
+    - id: RPD #Sector Vestige: Add RPD to CE's locker
     - id: RCDAmmo
     - id: RubberStampCE
     - id: MetalFoamGrenade

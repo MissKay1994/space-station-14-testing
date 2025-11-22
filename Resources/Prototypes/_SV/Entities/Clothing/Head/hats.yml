@@ -65,7 +65,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, ClothingHeadHatTricornCaptain]
+  parent: ClothingHeadHatTricornCaptain
   id: ClothingHeadHatTricornQM
   name: quartermaster's tricorn
   description: A hat designed for those that want a good accesory to the quartermaster's formal suit. Only for the most formal and serious of quartermasters.

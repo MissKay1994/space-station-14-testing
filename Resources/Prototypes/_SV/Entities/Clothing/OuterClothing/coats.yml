@@ -106,7 +106,6 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutChemist]
   id: ClothingOuterCoatHighcutOpenedChemist
   name: chemist high-cut coat
-  description: Fashionable AND scientific. Some would say "Eureka".
 
 #High-cut CMO labcoat
 - type: entity

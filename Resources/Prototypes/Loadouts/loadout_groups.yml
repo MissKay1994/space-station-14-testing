@@ -700,7 +700,7 @@
   loadouts:
   - QuartermasterHead
   - QuartermasterBeret
-  - QuartermasterTricorn
+  - QuartermasterTricorn #Added by Sector-Vestige
 
 - type: loadoutGroup
   id: QuartermasterJumpsuit

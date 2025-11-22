@@ -48,7 +48,7 @@
     sprite: _SV/Clothing/Head/Hats/admiral_cap.rsi
 
 - type: entity
-  parent: [ClothingHeadBase]
+  parent: ClothingHeadBase
   id: ClothingHeadHatTricornCaptain
   name: captain's tricorn
   description: A captain hat adorned by multiple colourful feathers.

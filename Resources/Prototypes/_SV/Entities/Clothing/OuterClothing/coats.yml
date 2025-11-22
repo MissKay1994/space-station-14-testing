@@ -71,7 +71,6 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatHighcutBase]
   id: ClothingOuterCoatHighcutOpenedBase
   name: high-cut coat
-  description: Fashionable AND scientific. Some would say "Eureka".
 
 #High-cut science labcoat
 - type: entity

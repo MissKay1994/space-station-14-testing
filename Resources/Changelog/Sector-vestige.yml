@@ -1091,3 +1091,9 @@ Entries:
       message: Fixed a bunch of ambiences not fading out properly.
   id: 146
   time: '2025-11-22T17:04:07.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Fix
+      message: High-cut labcoats no longer show up as 'item' in loadouts.
+  id: 147
+  time: '2025-11-23T09:25:20.0000000+00:00'

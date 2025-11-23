@@ -1097,3 +1097,11 @@ Entries:
       message: High-cut labcoats no longer show up as 'item' in loadouts.
   id: 147
   time: '2025-11-23T09:25:20.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Add
+      message: RPD can now be bought from cargo.
+    - type: Add
+      message: RPD now spawns in the CE's locker roundstart
+  id: 148
+  time: '2025-11-23T10:56:52.0000000+00:00'

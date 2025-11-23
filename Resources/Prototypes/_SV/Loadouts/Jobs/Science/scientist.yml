@@ -8,9 +8,9 @@
 - type: loadout
   id: HighCutScience
   equipment:
-    outerClothing: ClothingOuterCoatHighcutOpenedScience
+    outerClothing: ClothingOuterCoatHighcutScience
 
 - type: loadout
   id: HighCutBase
   equipment:
-    outerClothing: ClothingOuterCoatHighcutOpenedBase
+    outerClothing: ClothingOuterCoatHighcutBase

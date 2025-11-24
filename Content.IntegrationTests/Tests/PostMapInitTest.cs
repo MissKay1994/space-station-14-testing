@@ -40,7 +40,6 @@
 // SPDX-FileCopyrightText: 2025 KravinDes <cib20@humboldt.edu>
 // SPDX-FileCopyrightText: 2025 Lachri <lachri.lachryphage@gmail.com>
 // SPDX-FileCopyrightText: 2025 Lachryphage <lachri.lachryphage@gmail.com>
-// SPDX-FileCopyrightText: 2025 Lachryphage <stuart.e.clough@gmail.com>
 // SPDX-FileCopyrightText: 2025 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
 // SPDX-FileCopyrightText: 2025 Rellu225 <1blackrilfe1@gmail.com>
 // SPDX-FileCopyrightText: 2025 Spanky <scott@wearejacob.com>
@@ -53,7 +52,6 @@
 // SPDX-FileCopyrightText: 2025 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
 // SPDX-FileCopyrightText: 2025 tanuko <signar2005@gmail.com>
-// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 //
 // SPDX-License-Identifier: MIT
 

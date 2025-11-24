@@ -73,7 +73,7 @@ public sealed partial class CrewMonitoringNavMapControl : NavMapControl
                 continue;
 
             if (!LocalizedNames.TryGetValue(netEntity, out var name))
-                name = "Unknown";
+                name = Loc.GetString("navmap-unknown-entity");
 
             // Moffstation - Start - Make crewmon match GPS coords.
             var mapCoords = _transform.ToMapCoordinates(blip.Coordinates);

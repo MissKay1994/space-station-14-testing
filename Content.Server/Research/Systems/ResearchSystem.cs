@@ -49,7 +49,7 @@ namespace Content.Server.Research.Systems
             serverUid = null;
             serverComponent = null;
 
-            var query = GetServers(client).ToList();
+            var query = GetServers(client);
             foreach (var (uid, server) in query)
             {
                 if (server.Id != id)
@@ -67,15 +67,7 @@ namespace Content.Server.Research.Systems
         /// <returns></returns>
         public string[] GetServerNames(EntityUid client)
         {
-            var allServers = GetServers(client).ToArray();
-            var list = new string[allServers.Length];
-
-            for (var i = 0; i < allServers.Length; i++)
-            {
-                list[i] = allServers[i].Comp.ServerName;
-            }
-
-            return list;
+            return GetServers(client).Select(x => x.Comp.ServerName).ToArray();
         }
 
         /// <summary>
@@ -84,15 +76,18 @@ namespace Content.Server.Research.Systems
         /// <returns></returns>
         public int[] GetServerIds(EntityUid client)
         {
-            var allServers = GetServers(client).ToArray();
-            var list = new int[allServers.Length];
+            return GetServers(client).Select(x => x.Comp.Id).ToArray();
+        }
 
-            for (var i = 0; i < allServers.Length; i++)
-            {
-                list[i] = allServers[i].Comp.Id;
-            }
+        public HashSet<Entity<ResearchServerComponent>> GetServers(EntityUid client)
+        {
+            var clientXform = Transform(client);
+            if (clientXform.GridUid is not { } grid)
+                return [];
 
-            return list;
+            var set = new HashSet<Entity<ResearchServerComponent>>();
+            _lookup.GetGridEntities(grid, set);
+            return set;
         }
 
         public HashSet<Entity<ResearchServerComponent>> GetServers(EntityUid client)

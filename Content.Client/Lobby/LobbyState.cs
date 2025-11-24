@@ -248,16 +248,10 @@ namespace Content.Client.Lobby
             else
             {
                 Lobby!.StartTime.Text = string.Empty;
-                // Sector Vestige - Begin - Fix ready button text and state order
-                Lobby!.ReadyButton.Text = Loc.GetString(_gameTicker.AreWeReady ? "lobby-state-player-status-ready" : "lobby-state-player-status-not-ready");
+                Lobby!.ReadyButton.Pressed = _gameTicker.AreWeReady;
+                Lobby!.ReadyButton.Text = Loc.GetString(Lobby!.ReadyButton.Pressed ? "lobby-state-player-status-ready": "lobby-state-player-status-not-ready");
                 Lobby!.ReadyButton.ToggleMode = true;
                 Lobby!.ReadyButton.Disabled = false;
-                Lobby!.ManifestButton.Disabled = false; // Moffstation - Ready manifest
-                // Sector Vestige - Set flag to prevent OnReadyToggled from firing when we set Pressed programmatically
-                _updatingReadyButton = true;
-                Lobby!.ReadyButton.Pressed = _gameTicker.AreWeReady;
-                _updatingReadyButton = false;
-                // Sector Vestige - End
                 Lobby!.ObserveButton.Disabled = true;
             }
 

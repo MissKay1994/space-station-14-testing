@@ -1105,3 +1105,9 @@ Entries:
       message: RPD now spawns in the CE's locker roundstart
   id: 148
   time: '2025-11-23T10:56:52.0000000+00:00'
+- author: Mixmaster49
+  changes:
+    - type: Add
+      message: Riyada personal item
+  id: 149
+  time: '2025-11-24T14:06:16.0000000+00:00'

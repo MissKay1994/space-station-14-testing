@@ -25,7 +25,6 @@
     - WhitelistChameleonIdCard
   - type: StealTarget
     stealGroup: IDCard
-  - type: NanoChatCard # CD
 
 #IDs with layers
 
@@ -924,23 +923,14 @@
 #Antags
 
 - type: entity
-  name: passenger ID card
-  parent: [IDCardStandard, BaseChameleon]
+  parent: [PassengerIDCard, BaseChameleon]
   id: AgentIDCard
   suffix: Agent
   components:
-  - type: PresetIdCard
-    job: Passenger
   - type: Access
     tags:
     - Maintenance
     - SyndicateAgent
-  - type: Sprite
-    layers:
-    - state: default
-    - sprite: *icon-rsi
-      offset: *icon-offset
-      state: Passenger
   - type: AgentIDCard
   - type: UIRequiresLock
   - type: ActivatableUI
@@ -959,11 +949,8 @@
         type: AgentIDCardBoundUserInterface
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
-  - type: NanoChatCard # CD
-    listNumber: false
 
 - type: entity
-  name: passenger ID card
   parent: AgentIDCard
   id: NukieAgentIDCard
   suffix: Nukie
@@ -973,8 +960,6 @@
     - Maintenance
     - SyndicateAgent
     - NuclearOperative
-  - type: NanoChatCard # CD
-    listNumber: false
 
 - type: entity
   parent: [ IDCardStandard, BaseSyndicateContraband ]
@@ -997,39 +982,6 @@
     tags:
     - NuclearOperative
     - SyndicateAgent
-  - type: NanoChatCard # CD
-    listNumber: false
-
-- type: entity
-  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
-  id: SyndiOperativeIDCard
-  name: syndicate operative ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: black
-    - state: syndi_operative
-  - type: AgentIDCard
-
-- type: entity
-  parent: [ SyndiOperativeIDCard, BaseSyndicateContraband ]
-  id: SyndiCorpsmanIDCard
-  name: syndicate corpsman ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: black
-    - state: syndi_corpsman
-
-- type: entity
-  parent: [ SyndiOperativeIDCard, BaseSyndicateContraband ]
-  id: SyndiCommanderIDCard
-  name: syndicate commander ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: black
-    - state: syndi_commander
 
 - type: entity
   parent: [ SyndicateIDCard, BaseSyndicateContraband ]
@@ -1113,8 +1065,6 @@
     - Wizard
     - External
     - Maintenance
-  - type: NanoChatCard # CD
-    listNumber: false
 
 #ERT/Centcomm
 
@@ -1339,6 +1289,3 @@
     interfaces:
       enum.AgentIDCardUiKey.Key:
         type: AgentIDCardBoundUserInterface
-  - type: NanoChatCard # CD
-    notificationsMuted: true
-    listNumber: false

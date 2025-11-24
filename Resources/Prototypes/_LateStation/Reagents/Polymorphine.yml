@@ -15,83 +15,99 @@
         probability: 0.084
         prototype: HumanPoly
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: MothPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: VoxPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: DionaPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: SlimePoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: ArachnidPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: DwarfPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: VulpkaninPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: AvaliPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: FelinidPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: HarpyPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: ReptilianPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: ScurretPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
       - !type:Polymorph
         prototype: KoboldPoly
         probability: 0.084
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
+          reagent: Polymorphine
           min: 13
+
+

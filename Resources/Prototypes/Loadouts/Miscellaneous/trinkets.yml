@@ -491,7 +491,7 @@
   groupBy: "towels"
 
 - type: loadout
-  id: OffsetCaneMime
+  id: TowelColorMime
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:

@@ -21,7 +21,7 @@
     - type: MeleeWeapon
       soundHit:
         path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
+    - type: Edible
       requiresSpecialDigestion: true
       useSound:
         path: /Audio/Voice/Moth/moth_chitter.ogg
@@ -52,7 +52,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -109,7 +109,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -164,7 +164,7 @@
    - type: EmitSoundOnCollide
      sound:
       collection: ToySqueak
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       collection: ToySqueak
@@ -213,7 +213,7 @@
    - type: EmitSoundOnCollide
      sound:
       collection: ToySqueak
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       collection: ToySqueak
@@ -262,7 +262,7 @@
    - type: EmitSoundOnCollide
      sound:
       collection: ToySqueak
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       collection: ToySqueak
@@ -311,7 +311,7 @@
    - type: EmitSoundOnCollide
      sound:
       collection: ToySqueak
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       collection: ToySqueak
@@ -360,7 +360,7 @@
    - type: EmitSoundOnCollide
      sound:
       collection: ToySqueak
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       collection: ToySqueak
@@ -411,7 +411,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -468,7 +468,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -525,7 +525,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -582,7 +582,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -639,7 +639,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -696,7 +696,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -753,7 +753,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -810,7 +810,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg
@@ -867,7 +867,7 @@
    - type: EmitSoundOnCollide
      sound:
       path: /Audio/Items/Toys/weh.ogg
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       path: /Audio/Items/Toys/weh.ogg

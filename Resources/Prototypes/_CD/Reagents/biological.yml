@@ -18,10 +18,6 @@
       effects:
       - !type:SatiateThirst
         factor: 1.5
-        conditions:
-          - !type:OrganType
-            type: Human
-            shouldHave: false
   footstepSound:
     collection: FootstepBlood
     params:

@@ -40,7 +40,6 @@ public sealed class HolopadSystem : SharedHolopadSystem
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly PvsOverrideSystem _pvs = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
 
     private float _updateTimer = 1.0f;
     private const float UpdateTime = 1.0f;

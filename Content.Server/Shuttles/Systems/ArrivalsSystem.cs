@@ -32,7 +32,7 @@ using Content.Server.DeviceNetwork.Systems;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Events;
 using Content.Server.Parallax;
-using Content.Server.Power.Components;  // Moffstation
+using Content.Shared.Power.Components;  // Moffstation // SV -> Changed to Shared
 using Content.Server.Power.EntitySystems; // Moffstation
 using Content.Server.Screens.Components;
 using Content.Server.Shuttles.Components;
@@ -488,7 +488,7 @@ public sealed class ArrivalsSystem : EntitySystem
             while (query.MoveNext(out var entity, out var comp))
             {
                 if (_station.GetOwningStation(entity) == station)
-                    _batterySystem.SetCharge(entity, comp.MaxCharge, comp);
+                    _batterySystem.SetCharge((entity, comp), comp.MaxCharge);
             }
         }
     }

@@ -4,7 +4,6 @@ using Content.Server.Cargo.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Vocalization.Systems;
 using Content.Shared.Cargo;
-using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Destructible;
 using Content.Shared.Emp;
@@ -255,11 +254,6 @@ namespace Content.Server.VendingMachines
             }
 
             args.Price += priceSets.Max();
-        }
-
-        private void OnTryVocalize(Entity<VendingMachineComponent> ent, ref TryVocalizeEvent args)
-        {
-            args.Cancelled |= ent.Comp.Broken;
         }
 
         private void OnTryVocalize(Entity<VendingMachineComponent> ent, ref TryVocalizeEvent args)

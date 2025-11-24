@@ -23,8 +23,6 @@ namespace Content.Server.Research.Systems
         [Dependency] private readonly SharedPopupSystem _popup = default!;
         [Dependency] private readonly RadioSystem _radio = default!;
 
-        private static readonly HashSet<Entity<ResearchServerComponent>> ClientLookup = new();
-
         public override void Initialize()
         {
             base.Initialize();
@@ -88,18 +86,6 @@ namespace Content.Server.Research.Systems
             var set = new HashSet<Entity<ResearchServerComponent>>();
             _lookup.GetGridEntities(grid, set);
             return set;
-        }
-
-        public HashSet<Entity<ResearchServerComponent>> GetServers(EntityUid client)
-        {
-            ClientLookup.Clear();
-
-            var clientXform = Transform(client);
-            if (clientXform.GridUid is not { } grid)
-                return ClientLookup;
-
-            _lookup.GetGridEntities(grid, ClientLookup);
-            return ClientLookup;
         }
 
         public override void Update(float frameTime)

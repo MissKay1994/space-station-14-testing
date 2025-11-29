@@ -11,8 +11,10 @@
   name: senior courier ID card
   components:
   - type: Sprite
+    sprite: _SV/Objects/Misc/id_cards.rsi
     layers:
     - state: default
+      sprite: Objects/Misc/id_cards.rsi
     - state: idseniorcourier
   - type: PresetIdCard
     job: SeniorCourier

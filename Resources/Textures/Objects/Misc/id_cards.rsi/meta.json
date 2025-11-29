@@ -11,9 +11,6 @@
             "name": "admin"
         },
         {
-            "name": "blue"
-        },
-        {
             "name": "black"
         },
         {
@@ -104,12 +101,6 @@
         },
         {
             "name": "wizard"
-        },
-        {
-            "name": "idseniorcourier"
-        },
-        {
-            "name": "sv-idmagistrate"
         }
     ]
 }

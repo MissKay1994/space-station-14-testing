@@ -11,7 +11,7 @@
   parent: JobIcon
   id: JobIconSeniorCourier
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_SV/Interface/Misc/job_icons.rsi
     state: SeniorCourier
   jobName: job-name-senior-courier
 
@@ -20,6 +20,6 @@
   parent: JobIcon
   id: JobIconSVMagistrate
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_SV/Interface/Misc/job_icons.rsi
     state: SV-Magistrate
   jobName: job-name-sv-magistrate

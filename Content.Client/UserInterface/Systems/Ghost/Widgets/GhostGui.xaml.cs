@@ -74,7 +74,7 @@ public sealed partial class GhostGui : UIWidget
             }
             else
             {
-                GhostRolesButton.StyleClasses.Remove(StyleBase.ButtonCaution);
+                GhostRolesButton.StyleClasses.Remove(StyleClass.Negative);
             }
         }
 

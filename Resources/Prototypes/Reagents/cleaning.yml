@@ -60,7 +60,7 @@
     requiredSlipSpeed: 3.5
   friction: 0.3 # Slightly less friction than water, but not as bad as space lube
   metabolisms:
-    Food:
+    Drink:
       effects:
       - !type:Vomit
         conditions:

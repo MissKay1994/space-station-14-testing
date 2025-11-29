@@ -23,7 +23,7 @@
           - !type:MetabolizerTypeCondition
             type: [ Human ]
             inverted: true
-    Food:
+    Drink:
       effects:
         - !type:AdjustReagent
           reagent: UncookedAnimalProteins
@@ -71,7 +71,7 @@
   tileReactions:
     - !type:SpillTileReaction
   metabolisms:
-    Food:
+    Drink:
       # Delicious!
       effects:
       - !type:SatiateHunger
@@ -103,7 +103,7 @@
   tileReactions:
     - !type:SpillTileReaction
   metabolisms:
-    Food:
+    Drink:
       # Sweet!
       effects:
       - !type:SatiateHunger

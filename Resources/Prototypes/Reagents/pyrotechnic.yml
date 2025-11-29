@@ -1,4 +1,4 @@
-﻿- type: reagent
+- type: reagent
   id: BasePyrotechnic
   group: Pyrotechnic
   abstract: true
@@ -165,7 +165,7 @@
   tileReactions:
   - !type:FlammableTileReaction {}
   metabolisms:
-    Food:
+    Drink:
       effects:
       - !type:SatiateThirst
         factor: 1

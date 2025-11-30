@@ -499,7 +499,7 @@
   flavor: cheapnoodles
   color: "#664300"
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:SatiateHunger
         factor: 1
@@ -513,7 +513,7 @@
   flavor: cheapnoodles
   color: "#664300"
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:SatiateHunger
         factor: 4

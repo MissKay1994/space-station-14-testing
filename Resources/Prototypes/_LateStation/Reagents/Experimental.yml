@@ -56,7 +56,6 @@
       - !type:ModifyBloodLevel
         amount: -5
       - !type:HealthChange
-        scaleByQuantity: true
         ignoreResistances: false
         damage:
           types:
@@ -128,7 +127,6 @@
         component: PointLight
         type: Add
         time: 5
-        refresh: true
       - !type:AdjustTemperature
         conditions:
         - !type:TemperatureCondition
@@ -319,7 +317,6 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaleByQuantity: true
         ignoreResistances: false #Do not set this to true, or the acid will be unstoppable in a water gun.
         damage:
           types:

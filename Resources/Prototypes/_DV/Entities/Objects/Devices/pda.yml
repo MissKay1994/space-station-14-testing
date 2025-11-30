@@ -11,9 +11,9 @@
         - Write
   - type: Appearance
     appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-syndi-agent
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-syndi-operative
   - type: Icon
-    state: pda-syndi-agent
+    state: pda-syndi-operative
 

@@ -485,7 +485,7 @@
   flavor: bitter
   color: "#FFFFE5"
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:PopupMessage
         conditions:
@@ -744,7 +744,7 @@
   flavor: trashy
   physicalDesc: reagent-physical-desc-nondescript
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:SatiateHunger
         factor: 1

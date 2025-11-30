@@ -10,7 +10,7 @@
     - !type:PlantAdjustNutrition
       amount: 2
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:SatiateHunger
         conditions:

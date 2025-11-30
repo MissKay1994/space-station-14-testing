@@ -35,7 +35,7 @@
   flavor: fiber
   color: "#808080"
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:SatiateHunger
         conditions:

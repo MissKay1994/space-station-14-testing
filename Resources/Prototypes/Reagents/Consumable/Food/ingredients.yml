@@ -8,7 +8,7 @@
   color: white
   recognizable: true
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: Sugar
@@ -28,7 +28,7 @@
   flavor: corn #so corn doesnt taste chalky
   color: tan
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:SatiateThirst
         factor: -0.2 #its cornflour
@@ -45,7 +45,7 @@
   flavor: oats
   color: tan
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: Sugar
@@ -73,7 +73,7 @@
   color: white
   recognizable: true
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: UncookedAnimalProteins
@@ -89,7 +89,7 @@
   color: white
   recognizable: true
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: Protein
@@ -105,7 +105,7 @@
   color: black
   recognizable: true
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:Emote
         emote: Cough
@@ -134,7 +134,7 @@
   color: tan
   recognizable: true
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: Water
@@ -159,7 +159,7 @@
   color: white
   recognizable: true
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: Sugar
@@ -179,7 +179,7 @@
   color: olive
   recognizable: true
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: Nutriment
@@ -213,7 +213,7 @@
   meltingPoint: 146
   boilingPoint: 410 # Really high boiling point compared to its melting
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: Nutriment #Oils enhance nutrition
@@ -245,7 +245,7 @@
   color: "#800000"
   meltingPoint: 146.0
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:SatiateHunger
         conditions:
@@ -273,7 +273,7 @@
   boilingPoint: 100.0
   recognizable: true
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: Nutriment
@@ -288,7 +288,7 @@
   color: "#7F8400"
   group: Foods
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:SatiateThirst
         factor: -0.2
@@ -305,7 +305,7 @@
   flavor: cold
   color: skyblue
   metabolisms:
-    Drink:
+    Food:
       effects:
       - !type:AdjustReagent
         reagent: Nutriment #Oils enhance nutrition

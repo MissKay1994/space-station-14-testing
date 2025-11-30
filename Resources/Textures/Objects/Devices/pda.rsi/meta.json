@@ -242,6 +242,12 @@
             "name": "pda-seniorcourier"
         },
         {
+            "name": "pda-privateinvestigator"
+        },
+        {
+            "name": "harmony-pda-prisoner"
+        },
+        {
             "name": "pda-wizard",
             "delays": [
                 [

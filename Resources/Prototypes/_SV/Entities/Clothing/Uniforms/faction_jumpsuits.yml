@@ -1,13 +1,15 @@
 # SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
 # SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 JuneSzalkowska <113352036+JuneSzalkowska@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneowo69@gmail.com>
 # SPDX-FileCopyrightText: 2025 JuneSzalkowska <juneszalkowska@gmail.com>
 # SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
-# SPDX-FileCopyrightText: 2025 JuneSzalkowska <113352036+JuneSzalkowska@users.noreply.github.com>
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-# Marine Uniform
+#!!!AYANIAN FEDERATION!!!
+
+#Ayanian Marine Uniform
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitAyanianMarine
@@ -18,6 +20,21 @@
     sprite: _SV/Clothing/Uniforms/Jumpsuit/marine.rsi
   - type: Clothing
     sprite: _SV/Clothing/Uniforms/Jumpsuit/marine.rsi
+
+# New Andalusian Uniform
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAndalusian
+  name: andalusian naval jumpsuit
+  description: Standard issue jumpsuit issued to most people vaguelly adjacent to the New Andalusain Government.
+  components:
+  - type: Sprite
+    sprite: _SV/Clothing/Uniforms/Jumpsuit/andalusian.rsi
+  - type: Clothing
+    sprite: _SV/Clothing/Uniforms/Jumpsuit/andalusian.rsi
+
+
+#!!!THE SYNDICATE COMPANIES!!!
 
 #Cybersun
 - type: entity

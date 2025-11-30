@@ -27,3 +27,14 @@
     gloves: ClothingHandsGlovesHop
     shoes: ClothingShoesBootsLaceup
     head: ClothingHeadHatAdmiralFederation
+
+- type: startingGear
+  id: SV_AndalusianHighNoble
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAndalusian
+    back: ClothingBackpackSatchel
+    neck: ClothingNeckCloakAndalusian
+    id: VisitorPDA
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatTricornAndalusian

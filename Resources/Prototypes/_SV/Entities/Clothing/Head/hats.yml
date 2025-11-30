@@ -79,7 +79,7 @@
 - type: entity
   parent: ClothingHeadHatTricornCaptain
   id: ClothingHeadHatTricornAndalusian
-  name: new andalusian high-noble's tricorn
+  name: new andalusian high noble's tricorn
   description: A white tricorn adorned with an extreme amount of feathers from birds you've never seen before.
   components:
   - type: Sprite

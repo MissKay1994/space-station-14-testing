@@ -102,7 +102,7 @@
       Plastic: 10
   - type: StaticPrice
     price: 30
-  - type: Food # SV addition (start)
+  - type: Edible # SV addition (start)
   - type: FlavorProfile
     flavors:
       - metallic # lead

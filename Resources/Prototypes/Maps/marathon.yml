@@ -60,25 +60,30 @@
             Librarian: [ 1, 1 ]
             ServiceWorker: [ 2, 2 ]
             #engineering (7)
+            SeniorEngineer: [ 1, 1 ] #CD Role.
             AtmosphericTechnician: [ 3, 3 ]
             StationEngineer: [ 4, 4 ]
             TechnicalAssistant: [ 3, 3 ] #intern, not counted
             #medical (8)
+            SeniorPhysician: [ 1, 1 ] #CD Role.
             Chemist: [ 2, 2 ]
             MedicalDoctor: [ 4, 4 ]
             MedicalIntern: [ 3, 3 ] #intern, not counted
             Psychologist: [ 1, 1 ]
             Paramedic: [ 1, 1 ]
             #science (4)
+            SeniorResearcher: [ 1, 1 ] #CD Role
             Scientist: [ 4, 4 ]
             ResearchAssistant: [ 3, 3 ] #intern, not counted
             #security (12)
             Warden: [ 1, 1 ]
+            SeniorOfficer: [ 1, 1 ] #CD Role.
             SecurityOfficer: [ 8, 8 ]
             Detective: [ 1, 1 ]
             SecurityCadet: [ 4, 4 ] #intern, not counted
             Lawyer: [ 2, 2 ]
             #supply (6)
+            SeniorCourier: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
             CargoTechnician: [ 3, 3 ]
             #civilian (3+)
@@ -91,3 +96,5 @@
             Borg: [ 2, 2 ]
             #misc (2)
             Prisoner: [ 2, 2 ] #Sector Vestige: Add prioner to the map rotations
+            #Central Command
+            SVMagistrate: [ 1, 1 ]

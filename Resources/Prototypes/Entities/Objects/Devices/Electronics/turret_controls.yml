@@ -40,3 +40,4 @@
     state: command
   - type: ElectronicsBoard
     prototype: WeaponEnergyTurretCommandControlPanel
+

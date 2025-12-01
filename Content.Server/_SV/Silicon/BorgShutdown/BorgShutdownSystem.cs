@@ -45,7 +45,7 @@ public sealed class BorgShutdownSystem : EntitySystem
         if (component.IsShutdown)
         {
             // Wake up: restore battery charge
-            _battery.SetCharge(batteryUid.Value, component.StoredCharge, battery);
+            _battery.SetCharge((batteryUid.Value, battery), component.StoredCharge);
             component.IsShutdown = false;
             component.StoredCharge = 0;
             _popup.PopupEntity("Systems online.", uid, uid);
@@ -54,7 +54,7 @@ public sealed class BorgShutdownSystem : EntitySystem
         {
             // Shutdown: save current charge and drain to 0
             component.StoredCharge = battery.CurrentCharge;
-            _battery.SetCharge(batteryUid.Value, 0, battery);
+            _battery.SetCharge((batteryUid.Value, battery), 0);
             component.IsShutdown = true;
             _popup.PopupEntity("Entering sleep mode...", uid, uid);
         }

@@ -1,9 +1,9 @@
-- type: cargoProduct
-  id: FunLatePlushies
-  icon:
-    sprite: _LateStation/Objects/Fun/Toys/hides-plushie.rsi
-    state: hides-plushie
-  product: CrateFunLatePlushie
-  cost: 10000
-  category: cargoproduct-category-name-fun
-  group: market
+# - type: cargoProduct
+#   id: FunLatePlushies
+#   icon:
+#     sprite: _LateStation/Objects/Fun/Toys/hides-plushie.rsi
+#     state: hides-plushie
+#   product: CrateFunLatePlushie
+#   cost: 10000
+#   category: cargoproduct-category-name-fun
+#   group: market

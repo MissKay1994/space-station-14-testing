@@ -32,7 +32,7 @@ using Content.Server.DeviceNetwork.Systems;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Events;
 using Content.Server.Parallax;
-using Content.Server.Power.Components;  // Moffstation
+using Content.Shared.Power.Components;  // Moffstation // SV -> Changed to Shared
 using Content.Server.Power.EntitySystems; // Moffstation
 using Content.Server.Screens.Components;
 using Content.Server.Shuttles.Components;
@@ -256,7 +256,7 @@ public sealed class ArrivalsSystem : EntitySystem
 
             if (component.FirstRun)
             {
-                var station = _station.GetLargestGrid((component.Station, Comp<StationDataComponent>(component.Station)));
+                var station = _station.GetLargestGrid(component.Station);
                 sourceMap = station == null ? null : Transform(station.Value)?.MapUid;
                 arrivalsDelay += RoundStartFTLDuration;
                 component.FirstRun = false;
@@ -488,7 +488,7 @@ public sealed class ArrivalsSystem : EntitySystem
             while (query.MoveNext(out var entity, out var comp))
             {
                 if (_station.GetOwningStation(entity) == station)
-                    _batterySystem.SetCharge(entity, comp.MaxCharge, comp);
+                    _batterySystem.SetCharge((entity, comp), comp.MaxCharge);
             }
         }
     }
@@ -532,7 +532,7 @@ public sealed class ArrivalsSystem : EntitySystem
         {
             while (query.MoveNext(out var uid, out var comp, out var shuttle, out var xform))
             {
-                if (comp.NextTransfer > curTime || !TryComp<StationDataComponent>(comp.Station, out var data))
+                if (comp.NextTransfer > curTime)
                     continue;
 
                 var tripTime = _shuttles.DefaultTravelTime + _shuttles.DefaultStartupTime;
@@ -548,7 +548,7 @@ public sealed class ArrivalsSystem : EntitySystem
                 // Go to station
                 else
                 {
-                    var targetGrid = _station.GetLargestGrid((comp.Station, data));
+                    var targetGrid = _station.GetLargestGrid(comp.Station);
 
                     if (targetGrid != null)
                         _shuttles.FTLToDock(uid, shuttle, targetGrid.Value);

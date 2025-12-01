@@ -47,10 +47,6 @@
       Ammonia: stationAmmonia
       NitrousOxide: stationNO
       Frezon: danger
-  - type: Tag
-    tags:
-      - AirSensor
-      - ForceFixRotations
   - type: GuideHelp
     guides:
     - DeviceMonitoringAndControl
@@ -116,6 +112,10 @@
     cost: 1 #Sector Vestige: Able to be deconstructed by RPD
     delay: 1 #Sector Vestige: Able to be deconstructed by RPD
     fx: EffectRCDConstruct0 #Sector Vestige: Able to be deconstructed by RPD
+  - type: Tag
+    tags:
+    - AirSensor
+    - ForceFixRotations
 
 - type: entity
   parent: BaseItem

@@ -4,6 +4,9 @@
 //
 // SPDX-License-Identifier: MIT
 
+using Content.Shared.Chat.TypingIndicator;
+using Robust.Shared.Prototypes;
+
 namespace Content.Server._CD.Traits;
 
 /// <summary>
@@ -17,4 +20,10 @@ public sealed partial class SynthComponent : Component
     /// </summary>
     [DataField]
     public float AlertChance = 0.3f;
+
+    /// <summary>
+    /// The typing indicator prototype to use for synths
+    /// </summary>
+    [DataField]
+    public ProtoId<TypingIndicatorPrototype> TypingIndicatorPrototype = "robot";
 }

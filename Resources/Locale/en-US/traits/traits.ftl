@@ -31,7 +31,7 @@ trait-pirate-accent-name = Pirate accent
 trait-pirate-accent-desc = You can't stop speaking like a pirate!
 
 trait-accentless-name = Accentless
-trait-accentless-desc = You don't have the accent that your species would usually have
+trait-accentless-desc = You don't have the accent that your species would usually have.
 
 trait-frontal-lisp-name = Frontal lisp
 trait-frontal-lisp-desc = You thpeak with a lithp.
@@ -62,9 +62,6 @@ trait-french-desc = Your accent seems to have a certain «je ne sais quoi».
 
 trait-spanish-name = Spanish accent
 trait-spanish-desc = Hola señor, donde esta la biblioteca.
-
-trait-russian-name = Russian accent
-trait-russian-desc = You speak with a distinct Russian accent, comrade.
 
 trait-painnumbness-name = Numb
 trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of how hurt you may be.

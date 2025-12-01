@@ -1,10 +1,19 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
 // SPDX-FileCopyrightText: 2023 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2023 Riggle <27156122+RigglePrime@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
 // SPDX-FileCopyrightText: 2024 Tornado Tech <54727692+Tornado-Technology@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2024 nikthechampiongr <32041239+nikthechampiongr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Errant <35878406+Errant-4@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 PJB3005 <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2025 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2025 Pok <113675512+Pok27@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+// SPDX-FileCopyrightText: 2025 Vasilis The Pikachu <vasilis@pikachu.systems>
+// SPDX-FileCopyrightText: 2025 beck-thompson <107373427+beck-thompson@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 beck-thompson <beck314159@hotmail.com>
 //
 // SPDX-License-Identifier: MIT
 
@@ -236,7 +245,7 @@ public sealed partial class BanPanel : DefaultWindow
         var roleGroupCheckbox = new Button
         {
             Name = $"{groupName}GroupCheckbox",
-            Text = "Ban all",
+            Text = Loc.GetString("role-bans-ban-group"),
             Margin = new Thickness(0, 0, 5, 0),
             ToggleMode = true,
         };
@@ -304,19 +313,19 @@ public sealed partial class BanPanel : DefaultWindow
     }
 
     /// <summary>
-    /// Adds a check button specifically for one "role" in a "group"
+    /// Adds a toggle button specifically for one "role" in a "group"
     /// E.g. it would add the Chief Medical Officer "role" into the "Medical" group.
     /// </summary>
     private void AddRoleCheckbox(string group, string role, GridContainer roleGroupInnerContainer, Button roleGroupCheckbox)
     {
         var roleCheckboxContainer = new BoxContainer();
-        var roleCheckButton = new Button
+        var roleToggleButton = new Button
         {
             Name = role,
             Text = role,
             ToggleMode = true,
         };
-        roleCheckButton.OnToggled += args =>
+        roleToggleButton.OnToggled += args =>
         {
             // Checks the role group checkbox if all the children are pressed
             if (args.Pressed && _roleCheckboxes[group].All(e => e.Item1.Pressed))
@@ -353,12 +362,12 @@ public sealed partial class BanPanel : DefaultWindow
             roleCheckboxContainer.AddChild(jobIconTexture);
         }
 
-        roleCheckboxContainer.AddChild(roleCheckButton);
+        roleCheckboxContainer.AddChild(roleToggleButton);
 
         roleGroupInnerContainer.AddChild(roleCheckboxContainer);
 
         _roleCheckboxes.TryAdd(group, []);
-        _roleCheckboxes[group].Add((roleCheckButton, rolePrototype));
+        _roleCheckboxes[group].Add((roleToggleButton, rolePrototype));
     }
 
     public void UpdateBanFlag(bool newFlag)
@@ -401,7 +410,7 @@ public sealed partial class BanPanel : DefaultWindow
         TimeLine.Text = args.Text;
         if (!double.TryParse(args.Text, out var result))
         {
-            ExpiresLabel.Text = "err";
+            ExpiresLabel.Text = Loc.GetString("ban-panel-expiry-error");
             ErrorLevel |= ErrorLevelEnum.Minutes;
             TimeLine.ModulateSelfOverride = Color.Red;
             UpdateSubmitEnabled();

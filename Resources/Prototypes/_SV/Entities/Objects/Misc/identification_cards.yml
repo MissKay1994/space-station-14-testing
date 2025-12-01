@@ -11,6 +11,7 @@
   description: A prestigious identification card bearing the seal of judicial authority from Central Command.
   components:
   - type: Sprite
+    sprite: _SV/Objects/Misc/id_cards.rsi
     layers:
     - state: blue
     - state: sv-idmagistrate

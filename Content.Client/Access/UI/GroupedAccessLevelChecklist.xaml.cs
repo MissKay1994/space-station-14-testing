@@ -1,4 +1,11 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2025 Brandon Li <48413902+aspiringLich@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 LordCarve <27449516+LordCarve@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
 // SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+// SPDX-FileCopyrightText: 2025 Tayrtahn <tayrtahn@gmail.com>
+// SPDX-FileCopyrightText: 2025 chromiumboy <50505512+chromiumboy@users.noreply.github.com>
 //
 // SPDX-License-Identifier: MIT
 
@@ -123,11 +130,11 @@ public sealed partial class GroupedAccessLevelChecklist : BoxContainer
             if (_groupedAccessLevels.Count > 1)
             {
                 if (AccessGroupList.ChildCount == 0)
-                    accessGroupButton.AddStyleClass(StyleBase.ButtonOpenLeft);
+                    accessGroupButton.AddStyleClass(StyleClass.ButtonOpenLeft);
                 else if (_groupedAccessLevels.Count > 1 && AccessGroupList.ChildCount == (_groupedAccessLevels.Count - 1))
-                    accessGroupButton.AddStyleClass(StyleBase.ButtonOpenRight);
+                    accessGroupButton.AddStyleClass(StyleClass.ButtonOpenRight);
                 else
-                    accessGroupButton.AddStyleClass(StyleBase.ButtonOpenBoth);
+                    accessGroupButton.AddStyleClass(StyleClass.ButtonOpenBoth);
             }
 
             accessGroupButton.Pressed = _accessGroupTabIndex == orderedAccessGroups.IndexOf(accessGroup);

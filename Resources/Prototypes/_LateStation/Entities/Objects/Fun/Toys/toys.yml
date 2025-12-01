@@ -1,291 +1,291 @@
- -  type: entity
-    parent: BasePlushie
-    id: BaseMothPlushie  # To reduce clutter
-    abstract: true
-    components:
-    - type: EmitSoundOnUse
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnLand
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnActivate
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnTrigger
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: EmitSoundOnCollide
-      sound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: MeleeWeapon
-      soundHit:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
-    - type: Food
-      requiresSpecialDigestion: true
-      useSound:
-        path: /Audio/Voice/Moth/moth_chitter.ogg
+#  -  type: entity
+#     parent: BasePlushie
+#     id: BaseMothPlushie  # To reduce clutter
+#     abstract: true
+#     components:
+#     - type: EmitSoundOnUse
+#       sound:
+#         path: /Audio/Voice/Moth/moth_chitter.ogg
+#     - type: EmitSoundOnLand
+#       sound:
+#         path: /Audio/Voice/Moth/moth_chitter.ogg
+#     - type: EmitSoundOnActivate
+#       sound:
+#         path: /Audio/Voice/Moth/moth_chitter.ogg
+#     - type: EmitSoundOnTrigger
+#       sound:
+#         path: /Audio/Voice/Moth/moth_chitter.ogg
+#     - type: EmitSoundOnCollide
+#       sound:
+#         path: /Audio/Voice/Moth/moth_chitter.ogg
+#     - type: MeleeWeapon
+#       soundHit:
+#         path: /Audio/Voice/Moth/moth_chitter.ogg
+#     - type: Edible
+#       requiresSpecialDigestion: true
+#       useSound:
+#         path: /Audio/Voice/Moth/moth_chitter.ogg
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieHides #attention deprived
-   name: Plushie of Hides
-   description: Someone's star
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/hides-plushie.rsi
-     state: hides-plushie
-   - type: Item
-     heldPrefix: hides
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: CubaLibre
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: CubaLibre
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/hides-plushie.rsi
-     equippedPrefix: hides
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieHides #attention deprived
+#    name: Plushie of Hides
+#    description: Someone's star
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/hides-plushie.rsi
+#      state: hides-plushie
+#    - type: Item
+#      heldPrefix: hides
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: CubaLibre
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: CubaLibre
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/hides-plushie.rsi
+#      equippedPrefix: hides
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieDrafts #emnjineer
-   name: Plushie of Drafts
-   description: This anxious looking chartreuse plush smells of welding fuel and Starset Sasparilla.
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/drafts-plushie.rsi
-     state: drafts-plushie
-   - type: Item
-     heldPrefix: drafts
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: StarsetSarsaparilla
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: StarsetSarsaparilla
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/drafts-plushie.rsi
-     equippedPrefix: drafts
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieDrafts #emnjineer
+#    name: Plushie of Drafts
+#    description: This anxious looking chartreuse plush smells of welding fuel and Starset Sasparilla.
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/drafts-plushie.rsi
+#      state: drafts-plushie
+#    - type: Item
+#      heldPrefix: drafts
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: StarsetSarsaparilla
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: StarsetSarsaparilla
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/drafts-plushie.rsi
+#      equippedPrefix: drafts
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieGarret #EGG
-   name: Plushie of Garret
-   description: Human Cargo plush, smells of paper, stamp ink and cigarettes. Looks tired and haunted.
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/garret-plushie.rsi
-     state: garret-plushie
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/ian.ogg
-   - type: EmitSoundOnLand
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnActivate
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnTrigger
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnCollide
-     sound:
-      collection: ToySqueak
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      collection: ToySqueak
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/ian.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: Egg
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: Egg
-          Quantity: 10
-   - type: Speech
-     speechVerb: Default
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieGarret #EGG
+#    name: Plushie of Garret
+#    description: Human Cargo plush, smells of paper, stamp ink and cigarettes. Looks tired and haunted.
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/garret-plushie.rsi
+#      state: garret-plushie
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/ian.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnActivate
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnCollide
+#      sound:
+#       collection: ToySqueak
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       collection: ToySqueak
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/ian.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: Egg
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: Egg
+#           Quantity: 10
+#    - type: Speech
+#      speechVerb: Default
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieMarcus #nose bleed
-   name: Plushie of Marcus
-   description: Protect his fragile head
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/marcus-plushie.rsi
-     state: marcus-plushie
-   - type: EmitSoundOnUse
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnLand
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnActivate
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnTrigger
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnCollide
-     sound:
-      collection: ToySqueak
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      collection: ToySqueak
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      collection: ToySqueak
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: Blood
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: Blood
-          Quantity: 10
-   - type: Speech
-     speechVerb: Default
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieMarcus #nose bleed
+#    name: Plushie of Marcus
+#    description: Protect his fragile head
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/marcus-plushie.rsi
+#      state: marcus-plushie
+#    - type: EmitSoundOnUse
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnLand
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnActivate
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnCollide
+#      sound:
+#       collection: ToySqueak
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       collection: ToySqueak
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       collection: ToySqueak
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: Blood
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: Blood
+#           Quantity: 10
+#    - type: Speech
+#      speechVerb: Default
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieJuan #Contraband stealer
-   name: Plushie of Juan
-   description: Made as an attempt to show security as friendly and likeable, but you can't help but feel judged.
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/juan-plushie.rsi
-     state: juan-plushie
-   - type: EmitSoundOnUse
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnLand
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnActivate
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnTrigger
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnCollide
-     sound:
-      collection: ToySqueak
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      collection: ToySqueak
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      collection: ToySqueak
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: JuiceOrange
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: JuiceOrange
-          Quantity: 10
-   - type: Speech
-     speechVerb: Default
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieJuan #Contraband stealer
+#    name: Plushie of Juan
+#    description: Made as an attempt to show security as friendly and likeable, but you can't help but feel judged.
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/juan-plushie.rsi
+#      state: juan-plushie
+#    - type: EmitSoundOnUse
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnLand
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnActivate
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnCollide
+#      sound:
+#       collection: ToySqueak
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       collection: ToySqueak
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       collection: ToySqueak
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: JuiceOrange
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: JuiceOrange
+#           Quantity: 10
+#    - type: Speech
+#      speechVerb: Default
 
  - type: entity
    parent: BasePlushie
@@ -311,7 +311,7 @@
    - type: EmitSoundOnCollide
      sound:
       collection: ToySqueak
-   - type: Food
+   - type: Edible
      requiresSpecialDigestion: true
      useSound:
       collection: ToySqueak
@@ -336,901 +336,901 @@
    - type: Speech
      speechVerb: Default
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushiePebbles #senile
-   name: Plushie of Pebbles
-   description: pet rock
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/pebbles-plushie.rsi
-     state: pebbles-plushie
-   - type: EmitSoundOnUse
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnLand
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnActivate
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnTrigger
-     sound:
-      collection: ToySqueak
-   - type: EmitSoundOnCollide
-     sound:
-      collection: ToySqueak
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      collection: ToySqueak
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      collection: ToySqueak
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: Silicon
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: Silicon
-          Quantity: 10
-   - type: Speech
-     speechVerb: Default
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushiePebbles #senile
+#    name: Plushie of Pebbles
+#    description: pet rock
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/pebbles-plushie.rsi
+#      state: pebbles-plushie
+#    - type: EmitSoundOnUse
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnLand
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnActivate
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       collection: ToySqueak
+#    - type: EmitSoundOnCollide
+#      sound:
+#       collection: ToySqueak
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       collection: ToySqueak
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       collection: ToySqueak
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: Silicon
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: Silicon
+#           Quantity: 10
+#    - type: Speech
+#      speechVerb: Default
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieKicks #disfunctional lizard
-   name: Plushie of Kicks
-   description: The bucket was kicked
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/kicks-plushie.rsi
-     state: kicks-plushie
-   - type: Item
-     heldPrefix: kicks
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: Ethanol
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: Ethanol
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/kicks-plushie.rsi
-     equippedPrefix: kicks
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieKicks #disfunctional lizard
+#    name: Plushie of Kicks
+#    description: The bucket was kicked
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/kicks-plushie.rsi
+#      state: kicks-plushie
+#    - type: Item
+#      heldPrefix: kicks
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: Ethanol
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: Ethanol
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/kicks-plushie.rsi
+#      equippedPrefix: kicks
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieLucerne #HIDE THE VODKA
-   name: Plushie of Lucerne
-   description: This Lizard can Stomach so much Trauma, and Alcohol
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/lucerne-plushie.rsi
-     state: lucerne-plushie
-   - type: Item
-     heldPrefix: lucerne
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: BlackRussian
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: BlackRussian
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/lucerne-plushie.rsi
-     equippedPrefix: lucerne
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieLucerne #HIDE THE VODKA
+#    name: Plushie of Lucerne
+#    description: This Lizard can Stomach so much Trauma, and Alcohol
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/lucerne-plushie.rsi
+#      state: lucerne-plushie
+#    - type: Item
+#      heldPrefix: lucerne
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: BlackRussian
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: BlackRussian
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/lucerne-plushie.rsi
+#      equippedPrefix: lucerne
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieQuiet #LOUD AF
-   name: Plushie of Quiet
-   description: If they are mute why the plushie still wehs?
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/quiet-plushie.rsi
-     state: quiet-plushie
-   - type: Item
-     heldPrefix: quiet
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: MuteToxin
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: MuteToxin
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/quiet-plushie.rsi
-     equippedPrefix: quiet
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieQuiet #LOUD AF
+#    name: Plushie of Quiet
+#    description: If they are mute why the plushie still wehs?
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/quiet-plushie.rsi
+#      state: quiet-plushie
+#    - type: Item
+#      heldPrefix: quiet
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: MuteToxin
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: MuteToxin
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/quiet-plushie.rsi
+#      equippedPrefix: quiet
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieSnacks #i have no snarky comment so uh yea
-   name: Plushie of Snacks
-   description: Cold-blooded, warm-hearted
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/snacks-plushie.rsi
-     state: snacks-plushie
-   - type: Item
-     heldPrefix: snacks
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: MilkSoy
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: MilkSoy
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/snacks-plushie.rsi
-     equippedPrefix: snacks
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieSnacks #i have no snarky comment so uh yea
+#    name: Plushie of Snacks
+#    description: Cold-blooded, warm-hearted
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/snacks-plushie.rsi
+#      state: snacks-plushie
+#    - type: Item
+#      heldPrefix: snacks
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: MilkSoy
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: MilkSoy
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/snacks-plushie.rsi
+#      equippedPrefix: snacks
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieThriz #MEAT!!!!
-   name: Plushie of Thriz
-   description: The reformed cannibal, hopefully she doesn't get hungry again...
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/thriz-plushie.rsi
-     state: thriz-plushie
-   - type: Item
-     heldPrefix: thriz
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: Protein
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: Protein
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/thriz-plushie.rsi
-     equippedPrefix: thriz
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieThriz #MEAT!!!!
+#    name: Plushie of Thriz
+#    description: The reformed cannibal, hopefully she doesn't get hungry again...
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/thriz-plushie.rsi
+#      state: thriz-plushie
+#    - type: Item
+#      heldPrefix: thriz
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: Protein
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: Protein
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/thriz-plushie.rsi
+#      equippedPrefix: thriz
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieSleeps #kill me
-   name: Plushie of Sleeps
-   description: urple
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/sleeps-plushie.rsi
-     state: sleeps-plushie
-   - type: Item
-     heldPrefix: sleeps
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: JuiceThatMakesYouWeh
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: JuiceThatMakesYouWeh
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/sleeps-plushie.rsi
-     equippedPrefix: sleeps
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieSleeps #kill me
+#    name: Plushie of Sleeps
+#    description: urple
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/sleeps-plushie.rsi
+#      state: sleeps-plushie
+#    - type: Item
+#      heldPrefix: sleeps
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: JuiceThatMakesYouWeh
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: JuiceThatMakesYouWeh
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/sleeps-plushie.rsi
+#      equippedPrefix: sleeps
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieDino #rawr xd
-   name: Off brand plushie
-   description: low cost shit
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/dino-plushie.rsi
-     state: dino-plushie
-   - type: Item
-     heldPrefix: dino
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: JuiceThatMakesYouWeh
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: JuiceThatMakesYouWeh
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/dino-plushie.rsi
-     equippedPrefix: dino
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieDino #rawr xd
+#    name: Off brand plushie
+#    description: low cost shit
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/dino-plushie.rsi
+#      state: dino-plushie
+#    - type: Item
+#      heldPrefix: dino
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: JuiceThatMakesYouWeh
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: JuiceThatMakesYouWeh
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/dino-plushie.rsi
+#      equippedPrefix: dino
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieBets #he rolled a 1
-   name: Plushie of Bets
-   description: Originally came bundled with a deck of playing cards, but don't be tempted. The house...er, plush, always wins.
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/bets-plushie.rsi
-     state: bets-plushie
-   - type: Item
-     heldPrefix: bets
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: Stimulants
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: Stimulants
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/bets-plushie.rsi
-     equippedPrefix: bets
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieBets #he rolled a 1
+#    name: Plushie of Bets
+#    description: Originally came bundled with a deck of playing cards, but don't be tempted. The house...er, plush, always wins.
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/bets-plushie.rsi
+#      state: bets-plushie
+#    - type: Item
+#      heldPrefix: bets
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: Stimulants
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: Stimulants
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/bets-plushie.rsi
+#      equippedPrefix: bets
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
- - type: entity
-   parent: BasePlushie
-   id: ToyPlushieLooks #kill me
-   name: Plushie of Looks
-   description: This dull-eyed plush smells faintly of spesos and chemical smoke.
-   components:
-   - type: Sprite
-     sprite: _LateStation/Objects/Fun/Toys/looks-plushie.rsi
-     state: looks-plushie
-   - type: Item
-     heldPrefix: looks
-   - type: EmitSoundOnUse
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnLand
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnActivate
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnTrigger
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: EmitSoundOnCollide
-     sound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Food
-     requiresSpecialDigestion: true
-     useSound:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: MeleeWeapon
-     wideAnimationRotation: 180
-     soundHit:
-      path: /Audio/Items/Toys/weh.ogg
-   - type: Extractable
-     juiceSolution:
-      reagents:
-      - ReagentId: Nothing
-        Quantity: 30
-   - type: SolutionContainerManager
-     solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 10
-        - ReagentId: Nothing
-          Quantity: 10
-   - type: Clothing
-     quickEquip: false
-     sprite: _LateStation/Objects/Fun/Toys/looks-plushie.rsi
-     equippedPrefix: looks
-     slots:
-     - HEAD
-   - type: Speech
-     speechVerb: Reptilian # for pais (In the secret stash)
+#  - type: entity
+#    parent: BasePlushie
+#    id: ToyPlushieLooks #kill me
+#    name: Plushie of Looks
+#    description: This dull-eyed plush smells faintly of spesos and chemical smoke.
+#    components:
+#    - type: Sprite
+#      sprite: _LateStation/Objects/Fun/Toys/looks-plushie.rsi
+#      state: looks-plushie
+#    - type: Item
+#      heldPrefix: looks
+#    - type: EmitSoundOnUse
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnLand
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnActivate
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnTrigger
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: EmitSoundOnCollide
+#      sound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Edible
+#      requiresSpecialDigestion: true
+#      useSound:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: MeleeWeapon
+#      wideAnimationRotation: 180
+#      soundHit:
+#       path: /Audio/Items/Toys/weh.ogg
+#    - type: Extractable
+#      juiceSolution:
+#       reagents:
+#       - ReagentId: Nothing
+#         Quantity: 30
+#    - type: SolutionContainerManager
+#      solutions:
+#       food:
+#         maxVol: 20
+#         reagents:
+#         - ReagentId: Fiber
+#           Quantity: 10
+#         - ReagentId: Nothing
+#           Quantity: 10
+#    - type: Clothing
+#      quickEquip: false
+#      sprite: _LateStation/Objects/Fun/Toys/looks-plushie.rsi
+#      equippedPrefix: looks
+#      slots:
+#      - HEAD
+#    - type: Speech
+#      speechVerb: Reptilian # for pais (In the secret stash)
 
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieScarlet #Eepy.
-    name: Scarlet Plushie
-    description: A very intimidating looking little plushie. Also very cute!
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/scarlet-plushie.rsi
-      state: scarlet-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: Nocturine
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Nocturine
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieScarlet #Eepy.
+#     name: Scarlet Plushie
+#     description: A very intimidating looking little plushie. Also very cute!
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/scarlet-plushie.rsi
+#       state: scarlet-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: Nocturine
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Nocturine
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieRose #I think they might be blind?
-    name: Rose Plushie
-    description: A little fluffy scientist, for all your science related needs!
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/rose-plushie.rsi
-      state: rose-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: Happiness
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Happiness
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieRose #I think they might be blind?
+#     name: Rose Plushie
+#     description: A little fluffy scientist, for all your science related needs!
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/rose-plushie.rsi
+#       state: rose-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: Happiness
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Happiness
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieRadios #I honestly am not sure what to put here. Hope you have a good day!
-    name: Radios Plushie
-    description: A mysterious moth, in a purple outfit. Made of the prettiest of white fiber!
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/radios-plushie.rsi
-      state: radios-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: Artifexium
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Artifexium
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieRadios #I honestly am not sure what to put here. Hope you have a good day!
+#     name: Radios Plushie
+#     description: A mysterious moth, in a purple outfit. Made of the prettiest of white fiber!
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/radios-plushie.rsi
+#       state: radios-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: Artifexium
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Artifexium
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieEris # The moff suffering...
-    name: Eris Plushie
-    description: A helpful little doctor, in the most majestic of blue coats! Surprisingly not very fluffy.
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/eris-plushie.rsi
-      state: eris-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: JuiceWatermelon
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: JuiceWatermelon
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieEris # The moff suffering...
+#     name: Eris Plushie
+#     description: A helpful little doctor, in the most majestic of blue coats! Surprisingly not very fluffy.
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/eris-plushie.rsi
+#       state: eris-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: JuiceWatermelon
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: JuiceWatermelon
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieJuni # They need to go on a vacation.
-    name: Juni Plushie
-    description: A moth, clearly prepared to fly around in space... the final Frontier!
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/juni-plushie.rsi
-      state: juni-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: SuiDream
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: SuiDream
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieJuni # They need to go on a vacation.
+#     name: Juni Plushie
+#     description: A moth, clearly prepared to fly around in space... the final Frontier!
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/juni-plushie.rsi
+#       state: juni-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: SuiDream
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: SuiDream
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieAtlas # Awoo?
-    name: Atlas Plushie
-    description: A very inimidating looking moth. It smells like dog fur for some reason.
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/atlas-plushie.rsi
-      state: atlas-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: Puncturase
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Puncturase
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieAtlas # Awoo?
+#     name: Atlas Plushie
+#     description: A very inimidating looking moth. It smells like dog fur for some reason.
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/atlas-plushie.rsi
+#       state: atlas-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: Puncturase
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Puncturase
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieIris # Eeeek!!
-    name: Iris Plushie
-    description: A particularly fluffy moth. They will save you in an emergency!
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/iris-plushie.rsi
-      state: iris-plushie
-    - type: Extractable
-      juiceSolution:
-        reagents:
-        - ReagentId: Epinephrine
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Epinephrine
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieIris # Eeeek!!
+#     name: Iris Plushie
+#     description: A particularly fluffy moth. They will save you in an emergency!
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/iris-plushie.rsi
+#       state: iris-plushie
+#     - type: Extractable
+#       juiceSolution:
+#         reagents:
+#         - ReagentId: Epinephrine
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Epinephrine
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieSam # Coffee drinker!
-    name: Samuel Plushie
-    description: A very professional looking little engineer. They seem to be asleep...
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/sam-plushie.rsi
-      state: sam-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: Amasec
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Amasec
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieSam # Coffee drinker!
+#     name: Samuel Plushie
+#     description: A very professional looking little engineer. They seem to be asleep...
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/sam-plushie.rsi
+#       state: sam-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: Amasec
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Amasec
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieWillow # Sneaky salvie
-    name: Willow Plushie
-    description: Do you have any idea, what this one is? Do you? I don't. How did you even find this?
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/willow-plushie.rsi
-      state: willow-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: Phlogiston #Placeholder
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Phlogiston
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieWillow # Sneaky salvie
+#     name: Willow Plushie
+#     description: Do you have any idea, what this one is? Do you? I don't. How did you even find this?
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/willow-plushie.rsi
+#       state: willow-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: Phlogiston #Placeholder
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Phlogiston
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieFlap # It's made of pancakes!
-    name: Flap Plushie
-    description: You swear they are bigger than this. Regardless, your doubloons are plundered! Yarr!
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/flap-plushie.rsi
-      state: flap-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: Cognizine
-          Quantity: 10
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Cognizine
-            Quantity: 5
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieFlap # It's made of pancakes!
+#     name: Flap Plushie
+#     description: You swear they are bigger than this. Regardless, your doubloons are plundered! Yarr!
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/flap-plushie.rsi
+#       state: flap-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: Cognizine
+#           Quantity: 10
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Cognizine
+#             Quantity: 5
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieAttacus # squints
-    name: Attacus Plushie
-    description: This plushie comes packed with 15 pre-recorded curses and swears. For some reason you know it's disappointed in you.
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/attacus-plushie.rsi
-      state: attacus-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: Tricordrazine
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Tricordrazine
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieAttacus # squints
+#     name: Attacus Plushie
+#     description: This plushie comes packed with 15 pre-recorded curses and swears. For some reason you know it's disappointed in you.
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/attacus-plushie.rsi
+#       state: attacus-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: Tricordrazine
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Tricordrazine
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieSunny # Always sunny in... no.
-    name: Sunny Plushie
-    description: A moth who loves salvaging and science work with a side of explosions. Comes with a soft crusherdagger reperesenting her favourite weapon.
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/sunny-plushie.rsi
-      state: sunny-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: ManlyDorf
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: ManlyDorf
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieSunny # Always sunny in... no.
+#     name: Sunny Plushie
+#     description: A moth who loves salvaging and science work with a side of explosions. Comes with a soft crusherdagger reperesenting her favourite weapon.
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/sunny-plushie.rsi
+#       state: sunny-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: ManlyDorf
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: ManlyDorf
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieAstrus # I honestly don't know this one
-    name: Astrus Plushie
-    description: You get a bad feeling looking at this plushie. As if something evil would be behind it...
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/astrus-plushie.rsi
-      state: astrus-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: SyndicateBomb
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: SyndicateBomb
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieAstrus # I honestly don't know this one
+#     name: Astrus Plushie
+#     description: You get a bad feeling looking at this plushie. As if something evil would be behind it...
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/astrus-plushie.rsi
+#       state: astrus-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: SyndicateBomb
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: SyndicateBomb
+#             Quantity: 10
 
- -  type: entity
-    parent: BaseMothPlushie
-    id: ToyPlushieWist # Tossing this one out the airlock so you can fetch it back :)
-    name: Wist Plushie
-    description: "\"Remember, Wisteria, it's never lame to be kind.\" -Verne Solfeather"
-    components:
-    - type: Sprite
-      sprite: _LateStation/Objects/Fun/Toys/wist-plushie.rsi
-      state: wist-plushie
-    - type: Extractable
-      juiceSolution:
-       reagents:
-        - ReagentId: Psicodine
-          Quantity: 30
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          maxVol: 20
-          reagents:
-          - ReagentId: Fiber
-            Quantity: 10
-          - ReagentId: Psicodine
-            Quantity: 10
+#  -  type: entity
+#     parent: BaseMothPlushie
+#     id: ToyPlushieWist # Tossing this one out the airlock so you can fetch it back :)
+#     name: Wist Plushie
+#     description: "\"Remember, Wisteria, it's never lame to be kind.\" -Verne Solfeather"
+#     components:
+#     - type: Sprite
+#       sprite: _LateStation/Objects/Fun/Toys/wist-plushie.rsi
+#       state: wist-plushie
+#     - type: Extractable
+#       juiceSolution:
+#        reagents:
+#         - ReagentId: Psicodine
+#           Quantity: 30
+#     - type: SolutionContainerManager
+#       solutions:
+#         food:
+#           maxVol: 20
+#           reagents:
+#           - ReagentId: Fiber
+#             Quantity: 10
+#           - ReagentId: Psicodine
+#             Quantity: 10

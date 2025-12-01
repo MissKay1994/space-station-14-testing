@@ -214,16 +214,6 @@ namespace Content.Server.GameTicking
             }
 
             _playerGameStatuses[player.UserId] = ready ? PlayerGameStatus.ReadyToPlay : PlayerGameStatus.NotReadyToPlay;
-            // Moffstation - Ready manifest
-            var status = ready ? PlayerGameStatus.ReadyToPlay : PlayerGameStatus.NotReadyToPlay;
-            // No need to update anything or raise events if the player is already (un)readied
-            if (_playerGameStatuses[player.UserId] == status)
-            {
-                return;
-            }
-            // Moffstatation - End
-
-            _playerGameStatuses[player.UserId] = ready ? PlayerGameStatus.ReadyToPlay : PlayerGameStatus.NotReadyToPlay;
             RaiseNetworkEvent(GetStatusMsg(player), player.Channel);
             // Moffstation - Start - Ready Manifest
             var ev = new PlayerToggleReadyEvent(player);

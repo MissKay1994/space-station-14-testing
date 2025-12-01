@@ -122,6 +122,7 @@ namespace Content.IntegrationTests.Tests
             {"/Maps/Shuttles/ShuttleEvent/instigator.yml", ["ShuttleGunFriendship"]},
             {"/Maps/_LateStation/shuttles/avenger.yml", ["ShuttleGunSvalinnMachineGun", "ShuttleGunDuster"]},
             {"/Maps/_SV/cluster.yml", ["RubberStampMime"]},
+            {"/Maps/_Harmony/Shuttles/emergency_pioneer.yml", ["HandheldCrewMonitor"]},
         };
 
         /// <summary>

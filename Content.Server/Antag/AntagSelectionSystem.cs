@@ -1,3 +1,31 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2023 Ed <96445749+TheShuEd@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers <pieterjan.briers@gmail.com>
+// SPDX-FileCopyrightText: 2023 TemporalOroboros <TemporalOroboros@gmail.com>
+// SPDX-FileCopyrightText: 2023 Vasilis <vasilis@pikachu.systems>
+// SPDX-FileCopyrightText: 2023 coolmankid12345 <55817627+coolmankid12345@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 coolmankid12345 <coolmankid12345@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Brandon Hu <103440971+Brandon-Huu@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Jezithyr <jezithyr@gmail.com>
+// SPDX-FileCopyrightText: 2024 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 LordCarve <27449516+LordCarve@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Mervill <mervills.email@gmail.com>
+// SPDX-FileCopyrightText: 2024 NakataRin <45946146+NakataRin@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Rainfey <rainfey0+github@gmail.com>
+// SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 faint <46868845+ficcialfaint@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Errant <35878406+Errant-4@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+// SPDX-FileCopyrightText: 2025 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 beck-thompson <beck314159@hotmail.com>
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
 using System.Linq;
 using Content.Server.Administration.Managers;
 using Content.Server.Antag.Components;
@@ -271,7 +299,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         bool midround = false)
     {
         var playerPool = GetPlayerPool(ent, pool, def);
-        var existingAntagCount = ent.Comp.PreSelectedSessions.TryGetValue(def, out var existingAntags) ?  existingAntags.Count : 0;
+        var existingAntagCount = ent.Comp.PreSelectedSessions.TryGetValue(def, out var existingAntags) ? existingAntags.Count : 0;
         var count = GetTargetAntagCount(ent, GetTotalPlayerCount(pool), def) - existingAntagCount;
 
         // if there is both a spawner and players getting picked, let it fall back to a spawner.
@@ -396,7 +424,8 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 
         if (!antagEnt.HasValue)
         {
-            var getEntEv = new AntagSelectEntityEvent(session, ent);
+            var getEntEv = new AntagSelectEntityEvent(session, ent, def.PrefRoles);
+
             RaiseLocalEvent(ent, ref getEntEv, true);
             antagEnt = getEntEv.Entity;
         }
@@ -404,7 +433,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         if (antagEnt is not { } player)
         {
             Log.Error($"Attempted to make {session} antagonist in gamerule {ToPrettyString(ent)} but there was no valid entity for player.");
-            _adminLogger.Add(LogType.AntagSelection,$"Attempted to make {session} antagonist in gamerule {ToPrettyString(ent)} but there was no valid entity for player.");
+            _adminLogger.Add(LogType.AntagSelection, $"Attempted to make {session} antagonist in gamerule {ToPrettyString(ent)} but there was no valid entity for player.");
             if (session != null && ent.Comp.RemoveUponFailedSpawn)
             {
                 ent.Comp.AssignedSessions.Remove(session);
@@ -419,7 +448,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         // Therefore any component subscribing to this has to make sure both subscriptions return the same value
         // or the ghost role raffle location preview will be wrong.
 
-        var getPosEv = new AntagSelectLocationEvent(session, ent);
+        var getPosEv = new AntagSelectLocationEvent(session, ent, player);
         RaiseLocalEvent(ent, ref getPosEv, true);
         if (getPosEv.Handled)
         {
@@ -435,7 +464,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             if (!TryComp<GhostRoleAntagSpawnerComponent>(player, out var spawnerComp))
             {
                 Log.Error($"Antag spawner {player} does not have a GhostRoleAntagSpawnerComponent.");
-                _adminLogger.Add(LogType.AntagSelection,$"Antag spawner {player} in gamerule {ToPrettyString(ent)} failed due to not having GhostRoleAntagSpawnerComponent.");
+                _adminLogger.Add(LogType.AntagSelection, $"Antag spawner {player} in gamerule {ToPrettyString(ent)} failed due to not having GhostRoleAntagSpawnerComponent.");
                 if (session != null)
                 {
                     ent.Comp.AssignedSessions.Remove(session);
@@ -538,21 +567,21 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         switch (def.MultiAntagSetting)
         {
             case AntagAcceptability.None:
-            {
-                if (_role.MindIsAntagonist(mind))
-                    return false;
-                if (GetPreSelectedAntagSessions(def).Contains(session)) // Used for rules where the antag has been selected, but not started yet
-                    return false;
-                break;
-            }
+                {
+                    if (_role.MindIsAntagonist(mind))
+                        return false;
+                    if (GetPreSelectedAntagSessions(def).Contains(session)) // Used for rules where the antag has been selected, but not started yet
+                        return false;
+                    break;
+                }
             case AntagAcceptability.NotExclusive:
-            {
-                if (_role.MindIsExclusiveAntagonist(mind))
-                    return false;
-                if (GetPreSelectedExclusiveAntagSessions(def).Contains(session))
-                    return false;
-                break;
-            }
+                {
+                    if (_role.MindIsExclusiveAntagonist(mind))
+                        return false;
+                    if (GetPreSelectedExclusiveAntagSessions(def).Contains(session))
+                        return false;
+                    break;
+                }
         }
 
         // todo: expand this to allow for more fine antag-selection logic for game rules.
@@ -607,9 +636,12 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 /// Only raised if the selected player's current entity is invalid.
 /// </summary>
 [ByRefEvent]
-public record struct AntagSelectEntityEvent(ICommonSession? Session, Entity<AntagSelectionComponent> GameRule)
+public record struct AntagSelectEntityEvent(ICommonSession? Session, Entity<AntagSelectionComponent> GameRule, List<ProtoId<AntagPrototype>> AntagRoles)
 {
     public readonly ICommonSession? Session = Session;
+
+    /// list of antag role prototypes associated with a entity. used by the <see cref="AntagMultipleRoleSpawnerComponent"/>
+    public readonly List<ProtoId<AntagPrototype>> AntagRoles = AntagRoles;
 
     public bool Handled => Entity != null;
 
@@ -620,11 +652,14 @@ public record struct AntagSelectEntityEvent(ICommonSession? Session, Entity<Anta
 /// Event raised on a game rule entity to determine the location for the antagonist.
 /// </summary>
 [ByRefEvent]
-public record struct AntagSelectLocationEvent(ICommonSession? Session, Entity<AntagSelectionComponent> GameRule)
+public record struct AntagSelectLocationEvent(ICommonSession? Session, Entity<AntagSelectionComponent> GameRule, EntityUid Entity)
 {
     public readonly ICommonSession? Session = Session;
 
     public bool Handled => Coordinates.Any();
+
+    // the entity of the antagonist
+    public EntityUid Entity = Entity;
 
     public List<MapCoordinates> Coordinates = new();
 }

@@ -1,3 +1,18 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 B_Kirill <153602297+B-Kirill@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Hannah Giovanna Dawson <karakkaraz@gmail.com>
+// SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+// SPDX-FileCopyrightText: 2025 Samuka-C <47865393+Samuka-C@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 ScarKy0 <106310278+ScarKy0@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.Damage.Components;
@@ -98,7 +113,7 @@ public sealed partial class BorgSystem
         if (command == RoboticsConsoleConstants.NET_DISABLE_COMMAND)
             Disable(ent);
         else if (command == RoboticsConsoleConstants.NET_DESTROY_COMMAND)
-            Destroy(ent);
+            Destroy(ent.Owner);
     }
 
     private void Disable(Entity<BorgTransponderComponent, BorgChassisComponent?> ent)
@@ -118,8 +133,15 @@ public sealed partial class BorgSystem
         ent.Comp1.NextDisable = _timing.CurTime + ent.Comp1.DisableDelay;
     }
 
-    private void Destroy(Entity<BorgTransponderComponent> ent)
+    /// <summary>
+    /// Makes a borg with <see cref="BorgTransponderComponent"/> explode
+    /// </summary>
+    /// <param name="ent">the entity of the borg</param>
+    public void Destroy(Entity<BorgTransponderComponent?> ent)
     {
+        if (!Resolve(ent, ref ent.Comp))
+            return;
+
         // this is stealthy until someone realises you havent exploded
         if (CheckEmagged(ent, "destroyed"))
         {

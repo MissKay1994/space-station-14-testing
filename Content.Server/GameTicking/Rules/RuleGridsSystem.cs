@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Server.Antag;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Spawners.Components;
@@ -64,6 +71,12 @@ public sealed class RuleGridsSystem : GameRuleSystem<RuleGridsComponent>
 
             if (_whitelist.IsWhitelistFail(ent.Comp.SpawnerWhitelist, uid))
                 continue;
+
+            if (TryComp<GridSpawnPointWhitelistComponent>(uid, out var gridSpawnPointWhitelistComponent))
+            {
+                if (!_whitelist.CheckBoth(args.Entity, gridSpawnPointWhitelistComponent.Blacklist, gridSpawnPointWhitelistComponent.Whitelist))
+                    continue;
+            }
 
             args.Coordinates.Add(_transform.GetMapCoordinates(xform));
         }

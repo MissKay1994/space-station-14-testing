@@ -1,3 +1,42 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2022 Justin Trotter <trotter.justin@gmail.com>
+// SPDX-FileCopyrightText: 2022 LittleBuilderJane <63973502+LittleBuilderJane@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 SpaceManiac <tad@platymuus.com>
+// SPDX-FileCopyrightText: 2022 metalgearsloth <metalgearsloth@gmail.com>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Kevin Zheng <kevinz5000@gmail.com>
+// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers <pieterjan.briers@gmail.com>
+// SPDX-FileCopyrightText: 2023 Tom Leys <tom@crump-leys.com>
+// SPDX-FileCopyrightText: 2023 Varen <ychwack@hotmail.it>
+// SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+// SPDX-FileCopyrightText: 2024 DrSmugleaf <10968691+DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Gansu <68031780+GansuLalan@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 IProduceWidgets <107586145+IProduceWidgets@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Mervill <mervills.email@gmail.com>
+// SPDX-FileCopyrightText: 2024 MilenVolf <63782763+MilenVolf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Plykiya <58439124+Plykiya@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 PopGamer46 <yt1popgamer@gmail.com>
+// SPDX-FileCopyrightText: 2024 no <165581243+pissdemon@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aaron <betterwithketchup@gmail.com>
+// SPDX-FileCopyrightText: 2025 Ilya246 <57039557+Ilya246@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2025 Princess Cheeseballs <66055347+Princess-Cheeseballs@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Princess Cheeseballs <66055347+Pronana@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+// SPDX-FileCopyrightText: 2025 Tayrtahn <tayrtahn@gmail.com>
+// SPDX-FileCopyrightText: 2025 TemporalOroboros <TemporalOroboros@gmail.com>
+// SPDX-FileCopyrightText: 2025 jajsha <corbinbinouche7@gmail.com>
+// SPDX-FileCopyrightText: 2025 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
@@ -801,7 +840,11 @@ public sealed partial class ShuttleSystem
         while (iteration < FTLProximityIterations)
         {
             grids.Clear();
-            _mapManager.FindGridsIntersecting(mapId, targetAABB, ref grids);
+            // We pass in an expanded offset here so we can safely do a random offset later.
+            // We don't include this in the actual targetAABB because then we would be double-expanding it.
+            // Once in this loop, then again when placing the shuttle later.
+            // Note that targetAABB already has expansionAmount factored in already.
+            _mapManager.FindGridsIntersecting(mapId, targetAABB.Enlarged(maxOffset), ref grids);
 
             foreach (var grid in grids)
             {
@@ -834,10 +877,6 @@ public sealed partial class ShuttleSystem
                 if (nearbyGrids.Contains(uid))
                     continue;
 
-                // We pass in an expanded offset here so we can safely do a random offset later.
-                // We don't include this in the actual targetAABB because then we would be double-expanding it.
-                // Once in this loop, then again when placing the shuttle later.
-                // Note that targetAABB already has expansionAmount factored in already.
                 targetAABB = targetAABB.Union(
                     _transform.GetWorldMatrix(uid)
                     .TransformBox(Comp<MapGridComponent>(uid).LocalAABB.Enlarged(expansionAmount)));
@@ -857,7 +896,7 @@ public sealed partial class ShuttleSystem
 
         // TODO: This should prefer the position's angle instead.
         // TODO: This is pretty crude for multiple landings.
-        if (nearbyGrids.Count >= 1)
+        if (nearbyGrids.Count > 1 || !HasComp<MapComponent>(targetXform.GridUid))
         {
             // Pick a random angle
             var offsetAngle = _random.NextAngle();
@@ -866,9 +905,13 @@ public sealed partial class ShuttleSystem
             var minRadius = MathF.Max(targetAABB.Width / 2f, targetAABB.Height / 2f);
             spawnPos = targetAABB.Center + offsetAngle.RotateVec(new Vector2(_random.NextFloat(minRadius + minOffset, minRadius + maxOffset), 0f));
         }
+        else if (shuttleBody != null)
+        {
+            (spawnPos, angle) = _transform.GetWorldPositionRotation(targetXform);
+        }
         else
         {
-            spawnPos = _transform.ToWorldPosition(targetCoordinates);
+            spawnPos = _transform.GetWorldPosition(targetXform);
         }
 
         var offset = Vector2.Zero;
@@ -889,10 +932,10 @@ public sealed partial class ShuttleSystem
         }
 
         // Rotate our localcenter around so we spawn exactly where we "think" we should (center of grid on the dot).
-        var transform = new Transform(_transform.ToWorldPosition(xform.Coordinates), angle);
-        var adjustedOffset = Robust.Shared.Physics.Transform.Mul(transform, offset);
+        var transform = new Transform(spawnPos, angle);
+        spawnPos = Robust.Shared.Physics.Transform.Mul(transform, offset);
 
-        coordinates = new EntityCoordinates(targetXform.MapUid.Value, spawnPos + adjustedOffset);
+        coordinates = new EntityCoordinates(targetXform.MapUid.Value, spawnPos - offset);
         return true;
     }
 

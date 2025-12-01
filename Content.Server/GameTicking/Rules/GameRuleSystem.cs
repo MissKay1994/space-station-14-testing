@@ -1,3 +1,21 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 Moony <moonheart08@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 Paul Ritter <ritter.paul1@googlemail.com>
+// SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2022 wrexbe <81056464+wrexbe@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Kara <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2024 Mr. 27 <45323883+Dutch-VanDerLinde@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Rainfey <rainfey0+github@gmail.com>
+// SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Chat.Managers;
 using Content.Shared.GameTicking.Components;
@@ -38,6 +56,8 @@ public abstract partial class GameRuleSystem<T> : EntitySystem where T : ICompon
         while (query.MoveNext(out var uid, out _, out var gameRule))
         {
             var minPlayers = gameRule.MinPlayers;
+            var name = ToPrettyString(uid);
+
             if (args.Players.Length >= minPlayers)
                 continue;
 
@@ -46,8 +66,10 @@ public abstract partial class GameRuleSystem<T> : EntitySystem where T : ICompon
                 ChatManager.SendAdminAnnouncement(Loc.GetString("preset-not-enough-ready-players",
                     ("readyPlayersCount", args.Players.Length),
                     ("minimumPlayers", minPlayers),
-                    ("presetName", ToPrettyString(uid))));
+                    ("presetName", name)));
                 args.Cancel();
+                //TODO remove this once announcements are logged
+                Log.Info($"Rule '{name}' requires {minPlayers} players, but only {args.Players.Length} are ready.");
             }
             else
             {

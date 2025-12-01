@@ -197,7 +197,6 @@
   - Survival
   - Trinkets
   - JanitorJobTrinkets
-  - JanitorPlunger
   - GroupSpeciesBreathTool
   - PersonalItemsJobAgnostic #SV Change
 
@@ -444,7 +443,6 @@
   - SurvivalSecurity
   - Trinkets
   - HeadofSecurityJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - PersonalItemsJobAgnostic #SV Change
 
@@ -461,7 +459,6 @@
   - SurvivalSecurity
   - Trinkets
   - WardenJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - PersonalItemsJobAgnostic #SV Change
 
@@ -479,7 +476,6 @@
   - SurvivalSecurity
   - Trinkets
   - SecurityJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - PersonalItemsJobAgnostic #SV Change
 
@@ -496,7 +492,6 @@
   - SurvivalSecurity
   - Trinkets
   - DetectiveJobTrinkets
-  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - PersonalItemsJobAgnostic #SV Change
 

@@ -83816,10 +83816,8 @@ entities:
       edible: Drink
       utensil: Spoon
       trash: []
-      destroyOnEmpty: False
-      solution: pool
       destroyOnEmpty: false
-      utensil: Spoon
+      solution: pool
   - uid: 16868
     components:
     - type: Transform
@@ -83829,10 +83827,8 @@ entities:
       edible: Drink
       utensil: Spoon
       trash: []
-      destroyOnEmpty: False
-      solution: pool
       destroyOnEmpty: false
-      utensil: Spoon
+      solution: pool
   - uid: 16872
     components:
     - type: Transform
@@ -83842,10 +83838,8 @@ entities:
       edible: Drink
       utensil: Spoon
       trash: []
-      destroyOnEmpty: False
-      solution: pool
       destroyOnEmpty: false
-      utensil: Spoon
+      solution: pool
   - uid: 16907
     components:
     - type: Transform
@@ -83855,10 +83849,8 @@ entities:
       edible: Drink
       utensil: Spoon
       trash: []
-      destroyOnEmpty: False
-      solution: pool
       destroyOnEmpty: false
-      utensil: Spoon
+      solution: pool
   - uid: 17621
     components:
     - type: Transform

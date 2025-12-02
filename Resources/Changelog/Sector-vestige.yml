@@ -1129,3 +1129,11 @@ Entries:
       message: Nanochat now works again.
   id: 152
   time: '2025-12-02T18:06:38.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Fix
+      message: RPD can now deconstruct pipes again.
+    - type: Tweak
+      message: RPD takes 1 second to deconstruct radiators.
+  id: 153
+  time: '2025-12-02T19:35:55.0000000+00:00'

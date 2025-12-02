@@ -25,6 +25,7 @@
     - WhitelistChameleonIdCard
   - type: StealTarget
     stealGroup: IDCard
+  - type: NanoChatCard #CD
 
 #IDs with layers
 
@@ -1087,6 +1088,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: CentralCommandOfficial
+  - type: NanoChatCard # CD
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1107,6 +1110,8 @@
     heldPrefix: gold
   - type: PresetIdCard
     job: ERTLeader
+  - type: NanoChatCard # CD
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1127,6 +1132,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTChaplain
+  - type: NanoChatCard # CD
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1147,6 +1154,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTEngineer
+  - type: NanoChatCard # CD
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1167,6 +1176,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTJanitor
+  - type: NanoChatCard # CD
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1187,6 +1198,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTMedical
+  - type: NanoChatCard # CD
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1207,6 +1220,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: ERTSecurity
+  - type: NanoChatCard # CD
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1225,6 +1240,8 @@
       state: DeathSquad
   - type: PresetIdCard
     job: DeathSquad
+  - type: NanoChatCard # CD
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1246,6 +1263,8 @@
     heldPrefix: blue
   - type: PresetIdCard
     job: CBURN
+  - type: NanoChatCard # CD
+    listNumber: false
 
 - type: entity
   parent: IDCardStandard
@@ -1289,3 +1308,6 @@
     interfaces:
       enum.AgentIDCardUiKey.Key:
         type: AgentIDCardBoundUserInterface
+  - type: NanoChatCard # CD
+    notificationsMuted: true
+    listNumber: false

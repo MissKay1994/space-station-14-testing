@@ -4,7 +4,7 @@
     HorizontalExpand="True"
     VerticalExpand="True"
     StyleClasses="AngleRect">
-    <ScrollContainer Margin="-10"
+    <ScrollContainer Margin="10"
                      VerticalExpand="True"
                      HorizontalExpand="True">
         <BoxContainer Name="ContactsList"

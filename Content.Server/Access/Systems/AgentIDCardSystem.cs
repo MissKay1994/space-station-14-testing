@@ -68,7 +68,7 @@ namespace Content.Server.Access.Systems
             if (!TryComp<IdCardComponent>(ent, out var idCardComp))
                 return;
 
-            _prototypeManager.Resolve(args.Args.ChameleonOutfit.Job, out var jobProto);
+            _prototypeManager.TryIndex(args.Args.ChameleonOutfit.Job, out var jobProto); // CD - Nanochat
 
             var jobIcon = args.Args.ChameleonOutfit.Icon ?? jobProto?.Icon;
             var jobName = args.Args.ChameleonOutfit.Name ?? jobProto?.Name ?? "";
@@ -115,8 +115,9 @@ namespace Content.Server.Access.Systems
 
         private void OnAfterInteract(EntityUid uid, AgentIDCardComponent component, AfterInteractEvent args)
         {
-            if (args.Target == null || !args.CanReach || _lock.IsLocked(uid) ||
-                !TryComp<AccessComponent>(args.Target, out var targetAccess) || !HasComp<IdCardComponent>(args.Target))
+            if (args.Target == null || !args.CanReach || //CD - Nanochat
+                !TryComp<AccessComponent>(args.Target, out var targetAccess) || //CD - Nanochat
+                !HasComp<IdCardComponent>(args.Target)) //CD - Nanochat
                 return;
 
             if (!TryComp<AccessComponent>(uid, out var access) || !HasComp<IdCardComponent>(uid))
@@ -216,7 +217,7 @@ namespace Content.Server.Access.Systems
             if (!TryComp<IdCardComponent>(uid, out var idCard))
                 return;
 
-            if (!_prototypeManager.Resolve(args.JobIconId, out var jobIcon))
+            if (!_prototypeManager.TryIndex(args.JobIconId, out var jobIcon)) // CD - Nanochat
                 return;
 
             _cardSystem.TryChangeJobIcon(uid, jobIcon, idCard);

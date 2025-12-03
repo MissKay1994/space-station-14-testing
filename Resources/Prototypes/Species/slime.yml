@@ -39,13 +39,13 @@
       points: 1
       required: false
     Chest:
-      points: 2
+      points: 8 #SV change, orignally 2
       required: false
     Legs:
-      points: 4
+      points: 8 #SV change, orignally 4
       required: false
     Arms:
-      points: 4
+      points: 8 #SV change, orignally 4
       required: false
 
 - type: humanoidBaseSprite

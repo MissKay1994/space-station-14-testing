@@ -76,7 +76,7 @@
       points: 6 #SV change, orignally 2
       required: false
     Overlay:
-      points: 2 #SV change, orignally 2
+      points: 2 #SV change, orignally 1
       required: true
       defaultMarkings: [ DionaVineOverlay ]
 

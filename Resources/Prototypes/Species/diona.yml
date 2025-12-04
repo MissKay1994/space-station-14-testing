@@ -52,7 +52,7 @@
   onlyWhitelisted: true
   points:
     Head:
-      points: 2 #SV change, orignally 2
+      points: 3 #SV change, orignally "2" because Onyx thinks it was 2 (it wasn't, Hes a goober) -Mango
       required: false
     HeadTop:
       points: 3 #SV change, orignally 1
@@ -76,7 +76,7 @@
       points: 6 #SV change, orignally 2
       required: false
     Overlay:
-      points: 2 #SV change, orignally 2
+      points: 2 #SV change, orignally 1
       required: true
       defaultMarkings: [ DionaVineOverlay ]
 

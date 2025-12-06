@@ -1137,3 +1137,9 @@ Entries:
       message: RPD takes 1 second to deconstruct radiators.
   id: 153
   time: '2025-12-02T19:35:55.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Tweak
+      message: Increased the MaxTitleLength and MaxContentLength for the news system
+  id: 154
+  time: '2025-12-06T14:17:30.0000000+00:00'

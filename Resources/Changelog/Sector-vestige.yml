@@ -1155,3 +1155,11 @@ Entries:
       message: Dog tags are now selectable in the loadout tab.
   id: 156
   time: '2025-12-07T10:40:57.0000000+00:00'
+- author: Mangohydra
+  changes:
+    - type: Tweak
+      message: >-
+        Increased the marking limits on the upstream species for much more
+        sillier goobers.
+  id: 157
+  time: '2025-12-07T14:00:26.0000000+00:00'

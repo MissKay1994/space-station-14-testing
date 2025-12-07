@@ -1149,3 +1149,9 @@ Entries:
       message: Command headsets now come with the hailing comms encryption key.
   id: 155
   time: '2025-12-07T10:40:21.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Tweak
+      message: Dog tags are now selectable in the loadout tab.
+  id: 156
+  time: '2025-12-07T10:40:57.0000000+00:00'

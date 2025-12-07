@@ -1143,3 +1143,9 @@ Entries:
       message: Increased the MaxTitleLength and MaxContentLength for the news system
   id: 154
   time: '2025-12-06T14:17:30.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Add
+      message: Command headsets now come with the hailing comms encryption key.
+  id: 155
+  time: '2025-12-07T10:40:21.0000000+00:00'

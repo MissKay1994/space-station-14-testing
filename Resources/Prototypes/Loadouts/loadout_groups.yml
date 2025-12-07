@@ -135,6 +135,7 @@
   - TowelColorMime
   - TowelColorSilver
   - TowelColorGold
+  - CDDogtags #Sector Vestige - Dogtags to loadout
 
 - type: loadoutGroup
   id: Glasses

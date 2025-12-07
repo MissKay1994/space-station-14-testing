@@ -1,3 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Wizards Den contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 eclips_e <67359748+Just-a-Unity-Dev@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Adrian16199 <144424013+Adrian16199@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Boaz1111 <boazwand@gmail.com>
+# SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus <90893484+LaCumbiaDelCoronavirus@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Mangohydra <156087924+Mangohydra@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+# SPDX-FileCopyrightText: 2025 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Zalycon <84675130+Zalycon@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
 - type: species
   id: SlimePerson
   name: species-name-slime
@@ -39,13 +55,13 @@
       points: 1
       required: false
     Chest:
-      points: 2
+      points: 8 #SV change, orignally 2
       required: false
     Legs:
-      points: 4
+      points: 8 #SV change, orignally 4
       required: false
     Arms:
-      points: 4
+      points: 8 #SV change, orignally 4
       required: false
 
 - type: humanoidBaseSprite

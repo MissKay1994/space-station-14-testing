@@ -1,3 +1,21 @@
+# SPDX-FileCopyrightText: 2025 Wizards Den contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Errant <35878406+Errant-4@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Boaz1111 <boazwand@gmail.com>
+# SPDX-FileCopyrightText: 2025 Ed <96445749+TheShuEd@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Mangohydra <156087924+Mangohydra@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 MilenVolf <63782763+MilenVolf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Mora <46364955+TrixxedHeart@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+# SPDX-FileCopyrightText: 2025 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Zalycon <84675130+Zalycon@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
 - type: species
   id: Vox
   name: species-name-vox
@@ -57,13 +75,13 @@
       points: 1
       required: false
     Arms:
-      points: 4
+      points: 6 #SV change, orignally 4
       required: true
-      defaultMarkings: [ VoxLArmScales, VoxRArmScales, VoxRHandScales, VoxLHandScales ]
+      defaultMarkings: [ VoxLArmScales, VoxRArmScales, VoxRHandScales, VoxLHandScales, VoxLArmScales, VoxRArmScales ]
     Legs:
-      points: 4
+      points: 6 #SV change, orignally 4
       required: true
-      defaultMarkings: [ VoxLLegScales, VoxRLegScales, VoxRFootScales, VoxLFootScales ]
+      defaultMarkings: [ VoxLLegScales, VoxRLegScales, VoxRFootScales, VoxLFootScales, VoxLArmScales, VoxRArmScales ]
     UndergarmentTop:
       points: 1
       required: false
@@ -71,7 +89,7 @@
       points: 1
       required: false
     Chest:
-      points: 2
+      points: 4 #SV change, orignally 2
       required: false
     Tail:
       points: 1

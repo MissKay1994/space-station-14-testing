@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2025 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+# SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingHeadBase
+  id: PersonalItemCloverBeret
+  name: old delta beret
+  description: An old worn beret, with a blue flower enamel pin.
+  components:
+  - type: Sprite
+    sprite: _SV/PersonalItems/Wearables/cloverberet.rsi
+  - type: Clothing
+    sprite: _SV/PersonalItems/Wearables/cloverberet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon
+
+- type: loadout
+  id: PersonalItemCloverBeret
+  storage:
+    back:
+    - PersonalItemCloverBeret
+  effects:
+  - !type:PersonalItemLoadoutEffect
+    character:
+    - Clover Evergreen

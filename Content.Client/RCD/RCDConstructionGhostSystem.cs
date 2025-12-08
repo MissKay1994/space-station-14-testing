@@ -38,6 +38,7 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
     [Dependency] private readonly IPlacementManager _placementManager = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
+
     private Direction _placementDirection = default;
 
     //Sector Vestige - Begin: Logic to get the RPD to flip the prototype.
@@ -102,6 +103,11 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
             return;
 
         var heldEntity = _hands.GetActiveItem(player);
+
+        // Don't open the placement overlay for client-side RCDs.
+        // This may happen when predictively spawning one in your hands.
+        if (heldEntity != null && IsClientSide(heldEntity.Value))
+            return;
 
         if (!TryComp<RCDComponent>(heldEntity, out var rcd))
         {

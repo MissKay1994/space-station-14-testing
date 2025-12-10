@@ -1,6 +1,14 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 OnyxTheBrave (GitHub)
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Shared.Silicons.Borgs;
 using JetBrains.Annotations;
-using Robust.Client.GameObjects;
 using Robust.Client.UserInterface;
 
 namespace Content.Client.Silicons.Borgs;
@@ -24,31 +32,29 @@ public sealed class BorgBoundUserInterface : BoundUserInterface
 
         _menu.BrainButtonPressed += () =>
         {
-            SendMessage(new BorgEjectBrainBuiMessage());
+            SendPredictedMessage(new BorgEjectBrainBuiMessage());
         };
 
         _menu.EjectBatteryButtonPressed += () =>
         {
-            SendMessage(new BorgEjectBatteryBuiMessage());
+            SendPredictedMessage(new BorgEjectBatteryBuiMessage());
         };
 
         _menu.NameChanged += name =>
         {
-            SendMessage(new BorgSetNameBuiMessage(name));
+            SendPredictedMessage(new BorgSetNameBuiMessage(name));
         };
 
         _menu.RemoveModuleButtonPressed += module =>
         {
-            SendMessage(new BorgRemoveModuleBuiMessage(EntMan.GetNetEntity(module)));
+            SendPredictedMessage(new BorgRemoveModuleBuiMessage(EntMan.GetNetEntity(module)));
         };
     }
 
-    protected override void UpdateState(BoundUserInterfaceState state)
+    public override void Update()
     {
-        base.UpdateState(state);
-
-        if (state is not BorgBuiState msg)
-            return;
-        _menu?.UpdateState(msg);
+        _menu?.UpdateBatteryButton();
+        _menu?.UpdateBrainButton();
+        _menu?.UpdateModulePanel();
     }
 }

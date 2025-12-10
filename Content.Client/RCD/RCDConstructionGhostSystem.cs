@@ -3,11 +3,13 @@
 // SPDX-FileCopyrightText: 2024 August Eymann <august.eymann@gmail.com>
 // SPDX-FileCopyrightText: 2024 chromiumboy <50505512+chromiumboy@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 Kyle Tyo <36606155+VerinSenpai@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
 // SPDX-FileCopyrightText: 2025 OnyxTheBrave <vinjeerik@gmail.com>
 // SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
 // SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
 // SPDX-FileCopyrightText: 2025 jajsha <corbinbinouche7@gmail.com>
+// SPDX-FileCopyrightText: 2025 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
 //
 // SPDX-License-Identifier: MIT
 
@@ -38,6 +40,7 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
     [Dependency] private readonly IPlacementManager _placementManager = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
+
     private Direction _placementDirection = default;
 
     //Sector Vestige - Begin: Logic to get the RPD to flip the prototype.
@@ -102,6 +105,11 @@ public sealed class RCDConstructionGhostSystem : EntitySystem
             return;
 
         var heldEntity = _hands.GetActiveItem(player);
+
+        // Don't open the placement overlay for client-side RCDs.
+        // This may happen when predictively spawning one in your hands.
+        if (heldEntity != null && IsClientSide(heldEntity.Value))
+            return;
 
         if (!TryComp<RCDComponent>(heldEntity, out var rcd))
         {

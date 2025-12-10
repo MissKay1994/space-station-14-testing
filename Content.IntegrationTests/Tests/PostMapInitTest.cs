@@ -1,3 +1,62 @@
+// SPDX-FileCopyrightText: 2025 Wizards Den contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2021 20kdc <asdd2808@gmail.com>
+// SPDX-FileCopyrightText: 2021 Acruid <shatter66@gmail.com>
+// SPDX-FileCopyrightText: 2021 Javier Guardia Fernández <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 corentt <36075110+corentt@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 metalgearsloth <metalgearsloth@gmail.com>
+// SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2022 wrexbe <81056464+wrexbe@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Kara <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2023 Moony <moony@hellomouse.net>
+// SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 TemporalOroboros <TemporalOroboros@gmail.com>
+// SPDX-FileCopyrightText: 2023 TsjipTsjip <19798667+TsjipTsjip@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Ubaser <134914314+UbaserB@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Ygg01 <y.laughing.man.y@gmail.com>
+// SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 metalgearsloth <comedian_vs_clown@hotmail.com>
+// SPDX-FileCopyrightText: 2024 778b <33431126+778b@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ed <96445749+TheShuEd@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Emisse <99158783+Emisse@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Errant <35878406+Errant-4@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 FluffMe <dex.stb@gmail.com>
+// SPDX-FileCopyrightText: 2024 Golinth <amh2023@gmail.com>
+// SPDX-FileCopyrightText: 2024 IProduceWidgets <107586145+IProduceWidgets@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Jacob Scott <scott@wearejacob.com>
+// SPDX-FileCopyrightText: 2024 Kelderan <66748890+KeldWolf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Rainfey <rainfey0+github@gmail.com>
+// SPDX-FileCopyrightText: 2024 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Southbridge <7013162+southbridge-fur@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 TytosB <54259736+TytosB@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Anzuneth <malachigene@gmail.com>
+// SPDX-FileCopyrightText: 2025 Deerstop <edainturner@gmail.com>
+// SPDX-FileCopyrightText: 2025 ElectroJr <leonsfriedrich@gmail.com>
+// SPDX-FileCopyrightText: 2025 Killerqu00 <killerqueen1777@gmail.com>
+// SPDX-FileCopyrightText: 2025 KravinDes <cib20@humboldt.edu>
+// SPDX-FileCopyrightText: 2025 Lachri <lachri.lachryphage@gmail.com>
+// SPDX-FileCopyrightText: 2025 Lachryphage <lachri.lachryphage@gmail.com>
+// SPDX-FileCopyrightText: 2025 Lachryphage <stuart.e.clough@gmail.com>
+// SPDX-FileCopyrightText: 2025 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2025 Rellu225 <1blackrilfe1@gmail.com>
+// SPDX-FileCopyrightText: 2025 Spanky <scott@wearejacob.com>
+// SPDX-FileCopyrightText: 2025 Spessmann <156740760+Spessmann@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Tayrtahn <tayrtahn@gmail.com>
+// SPDX-FileCopyrightText: 2025 Unisol <1929445+Unisol@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Vortebo <64214314+Vortebo@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 compilatron <40789662+jbox144@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 jajsha <corbinbinouche7@gmail.com>
+// SPDX-FileCopyrightText: 2025 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
+// SPDX-FileCopyrightText: 2025 tanuko <signar2005@gmail.com>
+// SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,7 +82,14 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Map.Events;
 using Robust.Shared.Prototypes;
+using Content.Shared.Station.Components;
+using Robust.Shared.EntitySerialization;
+using Robust.Shared.EntitySerialization.Systems;
+using Robust.Shared.IoC;
 using Robust.Shared.Utility;
+using YamlDotNet.RepresentationModel;
+using Robust.Shared.Map.Events;
+
 namespace Content.IntegrationTests.Tests
 {
     [TestFixture]
@@ -35,13 +101,13 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] NoSpawnMaps =
         {
             "CentComm",
-            "Dart"
+            "Dart",
         };
 
         private static readonly string[] Grids =
         {
             "/Maps/centcomm.yml",
-            AdminTestArenaSystem.ArenaMapPath
+            AdminTestArenaSystem.ArenaMapPath,
         };
 
         /// <summary>
@@ -60,6 +126,8 @@ namespace Content.IntegrationTests.Tests
             {"/Maps/Shuttles/ShuttleEvent/syndie_evacpod.yml", ["RubberStampSyndicate"]},
             {"/Maps/Shuttles/ShuttleEvent/cruiser.yml", ["ShuttleGunPerforator"]},
             {"/Maps/Shuttles/ShuttleEvent/instigator.yml", ["ShuttleGunFriendship"]},
+            {"/Maps/_LateStation/shuttles/avenger.yml", ["ShuttleGunSvalinnMachineGun", "ShuttleGunDuster"]},
+            {"/Maps/_SV/cluster.yml", ["RubberStampMime"]},
         };
 
         /// <summary>
@@ -72,7 +140,9 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] DoNotMapWhitelist =
         {
             "/Maps/centcomm.yml",
-            "/Maps/Shuttles/AdminSpawn/**" // admin gaming
+            "/Maps/Misc/terminal.yml", // Contains CentComm rubber stamp
+            "/Maps/Shuttles/AdminSpawn/**", // admin gaming
+            "/Maps/_Harmony/Nonstations/**" // custom nonstations may have various stamps and items
         };
 
         /// <summary>
@@ -86,22 +156,25 @@ namespace Content.IntegrationTests.Tests
         {
             "Dev",
             "TestTeg",
-            "Fland",
+            // "Fland", // Vestige: Derotated Map
             "Packed",
             "Bagel",
             "CentComm",
-            "Box",
+            // "Box", // Vestige: Derotated Map
             "Marathon",
             "MeteorArena",
             "Saltern",
-            "Reach",
-            "Oasis",
+            // "Reach", // Vestige: Derotated Map
+            // "Oasis", // Vestige: Derotated Map
+            "Amber",
             "Plasma",
             "Elkridge",
-            "Relic",
-            "dm01-entryway",
-            "Exo",
             "Snowball",
+            // "Relic", // Vestige: Derotated Map
+            "dm01-entryway",
+            // "Exo", // Vestige: Derotated Map
+            "Vanquish", // LateStation Map by Lachri
+            "Cluster", // Sector Vestige, remade by Rebound
         };
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
@@ -429,38 +502,43 @@ namespace Content.IntegrationTests.Tests
 
                 mapSystem.DeleteMap(shuttleMap);
 
-                if (entManager.HasComponent<StationJobsComponent>(station))
-                {
-                    // Test that the map has valid latejoin spawn points or container spawn points
-                    if (!NoSpawnMaps.Contains(mapProto))
-                    {
-                        var lateSpawns = 0;
+				// NOTE: This if statement is disabled as the test below (checking for a latejoin spawn) is also disabled
+				// This is because our arrivals works as a fallback for roles who don't have a latejoin spawn point,
+				// And anyone should be spawning there anyways.
+                // if (entManager.HasComponent<StationJobsComponent>(station))
+                // {
+                    // // Test that the map has valid latejoin spawn points or container spawn points
+                    // if (!NoSpawnMaps.Contains(mapProto))
+                    // {
+                        // var lateSpawns = 0;
 
-                        lateSpawns += GetCountLateSpawn<SpawnPointComponent>(gridUids, entManager);
-                        lateSpawns += GetCountLateSpawn<ContainerSpawnPointComponent>(gridUids, entManager);
+                        // lateSpawns += GetCountLateSpawn<SpawnPointComponent>(gridUids, entManager);
+                        // lateSpawns += GetCountLateSpawn<ContainerSpawnPointComponent>(gridUids, entManager);
 
-                        Assert.That(lateSpawns, Is.GreaterThan(0), $"Found no latejoin spawn points on {mapProto}");
-                    }
+                        // Assert.That(lateSpawns, Is.GreaterThan(0), $"Found no latejoin spawn points on {mapProto}");
+                    // }
 
+                    // NOTE: This test is disabled as we use CentCom spawners anyways, with a general fallback one
+                    // There still won't be spawners mapped, but as long as a fallback spawners exists it won't ever matter
                     // Test all availableJobs have spawnPoints
                     // This is done inside gamemap test because loading the map takes ages and we already have it.
-                    var comp = entManager.GetComponent<StationJobsComponent>(station);
-                    var jobs = new HashSet<ProtoId<JobPrototype>>(comp.SetupAvailableJobs.Keys);
+                    // var comp = entManager.GetComponent<StationJobsComponent>(station);
+                    // var jobs = new HashSet<ProtoId<JobPrototype>>(comp.SetupAvailableJobs.Keys);
 
-                    var spawnPoints = entManager.EntityQuery<SpawnPointComponent>()
-                        .Where(x => x.SpawnType == SpawnPointType.Job && x.Job != null)
-                        .Select(x => x.Job.Value);
+                    // var spawnPoints = entManager.EntityQuery<SpawnPointComponent>()
+                    //     .Where(x => x.SpawnType == SpawnPointType.Job && x.Job != null)
+                    //     .Select(x => x.Job.Value);
 
-                    jobs.ExceptWith(spawnPoints);
+                    // jobs.ExceptWith(spawnPoints);
 
-                    spawnPoints = entManager.EntityQuery<ContainerSpawnPointComponent>()
-                        .Where(x => x.SpawnType is SpawnPointType.Job or SpawnPointType.Unset && x.Job != null)
-                        .Select(x => x.Job.Value);
+                    // spawnPoints = entManager.EntityQuery<ContainerSpawnPointComponent>()
+                    //     .Where(x => x.SpawnType is SpawnPointType.Job or SpawnPointType.Unset && x.Job != null)
+                    //     .Select(x => x.Job.Value);
 
-                    jobs.ExceptWith(spawnPoints);
+                    // jobs.ExceptWith(spawnPoints);
 
-                    Assert.That(jobs, Is.Empty, $"There is no spawnpoints for {string.Join(", ", jobs)} on {mapProto}.");
-                }
+                    // Assert.That(jobs, Is.Empty, $"There is no spawnpoints for {string.Join(", ", jobs)} on {mapProto}.");
+                // }
 
                 try
                 {

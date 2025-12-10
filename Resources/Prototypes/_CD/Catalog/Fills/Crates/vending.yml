@@ -4,6 +4,7 @@
   name: QuickThreads restock crate
   description: Contains a restock box for the QuickThreads.
   components:
-  - type: StorageFill
-    contents:
-      - id: VendingMachineRestockQuickThreads
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage:
+        id: VendingMachineRestockQuickThreads

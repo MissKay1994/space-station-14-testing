@@ -68,25 +68,27 @@
   category: cargoproduct-category-name-service
   group: market
 
-- type: cargoProduct
-  id: ServiceSmokeables
-  icon:
-    sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
-    state: icon
-  product: CrateServiceSmokeables
-  cost: 1500
-  category: cargoproduct-category-name-service
-  group: market
+# SV -Begin: Smokers blight event, revert when event is concluded
+#- type: cargoProduct
+#  id: ServiceSmokeables
+#  icon:
+#   sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
+#    state: icon
+#  product: CrateServiceSmokeables
+#  cost: 1500
+#  category: cargoproduct-category-name-service
+#  group: market
 
-- type: cargoProduct
-  id: ServiceCustomSmokable
-  icon:
-    sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
-    state: icon
-  product: CrateServiceCustomSmokable
-  cost: 1000
-  category: cargoproduct-category-name-service
-  group: market
+#- type: cargoProduct
+#  id: ServiceCustomSmokable
+#  icon:
+#    sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
+#    state: icon
+#  product: CrateServiceCustomSmokable
+#  cost: 1000
+#  category: cargoproduct-category-name-service
+#  group: market
+# SV - End: Smokers blight event, revert when event is concluded
 
 - type: cargoProduct
   id: ServiceBureaucracy

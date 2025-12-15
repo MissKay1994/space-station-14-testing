@@ -29,6 +29,7 @@
   - BioGenMaterialCardboard1
   - BioGenPaper
   - BioGenPaperRolling1
+  - BioGenCigaretteFilter1 # SV Addition
 
 - type: latheRecipePack
   id: BioGenEmagStatic

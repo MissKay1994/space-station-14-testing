@@ -271,8 +271,8 @@
   materials:
     Biomass: 20
 
-    # SV additions below
-- type: latheRecipe 
+# SV additions below
+- type: latheRecipe
   id: BioGenCigaretteFilter1
   result: CigaretteFilter1
   categories:

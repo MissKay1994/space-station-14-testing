@@ -1,4 +1,10 @@
-﻿using Content.Server.Chat.Systems;
+// SPDX-FileCopyrightText: 2025 Umbra contributors
+// SPDX-FileCopyrightText: 2025 Sector Vestige contributors (modifications)
+// SPDX-FileCopyrightText: 2025 OnyxTheBrave <131422822+OnyxTheBrave@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
+using Content.Server.Chat.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server._Umbra.Power.Components;
 using Content.Shared.Chat;

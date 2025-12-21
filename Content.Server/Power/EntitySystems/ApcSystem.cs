@@ -140,6 +140,8 @@ public sealed class ApcSystem : EntitySystem
         if (apc.MainBreakerEnabled)
             apc.TripFlag = false;
 
+        RaiseLocalEvent(uid, new ApcToggledMainBreakerEvent(apc.MainBreakerEnabled)); //Umbra-APCs explode when toggled on during power outages
+
         UpdateUIState(uid, apc);
         _audio.PlayPvs(apc.OnReceiveMessageSound, uid, AudioParams.Default.WithVolume(-2f));
 
@@ -263,3 +265,5 @@ public sealed class ApcSystem : EntitySystem
 
 [ByRefEvent]
 public record struct ApcToggleMainBreakerAttemptEvent(bool Cancelled);
+
+public record struct ApcToggledMainBreakerEvent(bool Enabled); //Umbra-APCs explode when toggled on during power outages

@@ -1,4 +1,5 @@
 using System.Threading;
+using Content.Server._Umbra.Power.Components; //Umbra-APCs explode when toggled on during power outages
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.StationEvents.Components;
@@ -52,6 +53,7 @@ namespace Content.Server.StationEvents.Events
                     if(!apcComponent.MainBreakerEnabled)
                         _apcSystem.ApcToggleBreaker(entity, apcComponent);
                 }
+                RemComp<ElectricalOverloadComponent>(entity); //Umbra-APCs explode when toggled on during power outages
             }
 
             // Can't use the default EndAudio
@@ -87,7 +89,10 @@ namespace Content.Server.StationEvents.Events
                 if (TryComp<ApcComponent>(selected, out var apcComponent))
                 {
                     if (apcComponent.MainBreakerEnabled)
+                    {
                         _apcSystem.ApcToggleBreaker(selected, apcComponent);
+                        AddComp<ElectricalOverloadComponent>(selected); //Umbra-APCs explode when toggled on during power outages
+                    }
                 }
                 component.Unpowered.Add(selected);
             }

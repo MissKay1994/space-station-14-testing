@@ -133,6 +133,7 @@
     - ServiceStatic
     - PowerCellsStatic
     - ElectronicsStatic
+    - CDAutolatheStatic #CD - Custom Recepies
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SecurityAmmoStatic

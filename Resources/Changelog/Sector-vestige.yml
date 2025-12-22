@@ -1201,3 +1201,9 @@ Entries:
       message: Cluster fixed again!
   id: 163
   time: '2025-12-21T13:58:09.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Tweak
+      message: APCs now explode when turned on during a power outage.
+  id: 164
+  time: '2025-12-22T09:24:50.0000000+00:00'

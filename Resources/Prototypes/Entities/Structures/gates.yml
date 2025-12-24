@@ -291,7 +291,6 @@
     - Output
   - type: Construction
     node: memory_cell
-
 - type: entity
   parent: BaseLogicItem
   id: RandomGate

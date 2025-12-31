@@ -170,6 +170,11 @@ public sealed partial class SleepingSystem : EntitySystem
             return;
         }
 
+        // SV Start - Allow sleeptalking but whispering
+        if (args.IsWhisper)
+            return;
+        // SV End - Allow sleeptalking but whispering
+
         args.Cancel();
     }
 
@@ -355,7 +360,9 @@ public sealed partial class SleepingSystem : EntitySystem
     /// </summary>
     public void OnEmoteAttempt(Entity<SleepingComponent> ent, ref EmoteAttemptEvent args)
     {
-        args.Cancel();
+        // SV Start - Emoting while asleep
+        // args.Cancel();
+        // SV End - Emoting while asleep
     }
 
     private void OnChangeForceSay(Entity<SleepingComponent> ent, ref BeforeForceSayEvent args)

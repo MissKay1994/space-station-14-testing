@@ -1229,3 +1229,11 @@ Entries:
         Cluster
   id: 167
   time: '2025-12-28T10:54:52.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: People can now emote in their sleep
+    - type: Add
+      message: People can now whisper in their sleep
+  id: 168
+  time: '2026-01-02T17:05:05.0000000+00:00'

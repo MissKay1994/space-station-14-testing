@@ -17,3 +17,4 @@ jobs:
     - uses: actions-ecosystem/action-add-labels@v1
       with:
         labels: "Branch: Stable"
+        github_token: ${{ secrets.GITHUB_TOKEN }}

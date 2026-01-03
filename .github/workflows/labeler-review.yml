@@ -21,9 +21,11 @@ jobs:
       uses: actions-ecosystem/action-add-labels@v1
       with:
         labels: "S: Approved"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
     - if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
       uses: actions-ecosystem/action-remove-labels@v1
       with:
         labels: |
           S: Needs Review
           S: Awaiting Changes
+        github_token: ${{ secrets.GITHUB_TOKEN }}

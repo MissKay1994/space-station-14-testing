@@ -18,11 +18,14 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: "S: Awaiting Changes"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Remove Needs Review label
         uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: "S: Needs Review"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Remove Approved label if present
         uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: "S: Approved"
+          github_token: ${{ secrets.GITHUB_TOKEN }}

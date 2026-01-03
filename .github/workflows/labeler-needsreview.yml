@@ -15,7 +15,9 @@ jobs:
       uses: actions-ecosystem/action-add-labels@v1
       with:
         labels: "S: Needs Review"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
     - if: ${{ github.event_name == 'pull_request_target' }}
       uses: actions-ecosystem/action-remove-labels@v1
       with:
         labels: "S: Awaiting Changes"
+        github_token: ${{ secrets.GITHUB_TOKEN }}

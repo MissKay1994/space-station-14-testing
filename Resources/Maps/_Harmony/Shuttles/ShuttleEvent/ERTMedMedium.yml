@@ -3421,13 +3421,6 @@ entities:
     - type: Transform
       pos: -5.2049413,-1.3975713
       parent: 1
-- proto: RandomHumanoidSpawnerERTLeaderEVALecterTime
-  entities:
-  - uid: 547
-    components:
-    - type: Transform
-      pos: -4.5,11.5
-      parent: 1
 - proto: RandomHumanoidSpawnerERTMedicalEVA
   entities:
   - uid: 544

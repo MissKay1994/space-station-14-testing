@@ -1,10 +1,5 @@
 name: "Labels: Awaiting Changes"
 
-permissions:
-  contents: read
-  pull-requests: write
-  issues: write
-
 on:
   pull_request_review:
     types: [submitted]
@@ -13,19 +8,23 @@ jobs:
   awaiting_changes:
     if: ${{ github.event.review.state == 'CHANGES_REQUESTED' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
     steps:
       - name: Add Awaiting Changes label
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: "S: Awaiting Changes"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}
       - name: Remove Needs Review label
         uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: "S: Needs Review"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}
       - name: Remove Approved label if present
         uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: "S: Approved"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}

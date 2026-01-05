@@ -115,17 +115,17 @@
     sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
     state: icon
   product: CrateServiceSmokeables
-  cost: 1500000 #SV Smokers blight
+  cost: 1500
   category: cargoproduct-category-name-service
   group: market
 
 - type: cargoProduct
   id: ServiceCustomSmokable
   icon:
-   sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
-   state: icon
+    sprite: Objects/Consumable/Smokeables/Cigarettes/Cartons/green.rsi
+    state: icon
   product: CrateServiceCustomSmokable
-  cost: 1000000 #SV Smokers blight
+  cost: 1000
   category: cargoproduct-category-name-service
   group: market
 

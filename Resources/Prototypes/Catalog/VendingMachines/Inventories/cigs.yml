@@ -28,20 +28,20 @@
 - type: vendingMachineInventory
   id: CigaretteMachineInventory
   startingInventory:
-    CigPackGreen: 0 #SV- from 2 to 0 - revert when Smoker's blight is done
-    CigPackRed: 0 #SV- from 2 to 0 - revert when Smoker's blight is done
-    CigPackBlue: 0 #SV- from 2 to 0 - revert when Smoker's blight is done
-    CigPackBlack: 0 #SV- from 2 to 0 - revert when Smoker's blight is done
-    CigPackMixed: 0 #SV- from 2 to 0 - revert when Smoker's blight is done
-    CigarCase: 0 #SV- from 2 to 0 - revert when Smoker's blight is done
+    CigPackGreen: 2
+    CigPackRed: 2
+    CigPackBlue: 2
+    CigPackBlack: 2
+    CigPackMixed: 2
+    CigarCase: 2
     SmokingPipeFilledTobacco: 0
     Vape: 1
     Matchbox: 5
-    PackPaperRollingFilters: 1 #SV- from 3 to 1 - revert when Smoker's blight is done
+    PackPaperRollingFilters: 3
     CheapLighter: 4
     Lighter: 2
     FlippoLighter: 2
   contrabandInventory:
-    GroundTobacco: 1 #SV- from 3 to 1 - revert when Smoker's blight is done
-    CigarGold: 0 #SV- from 2 to 0 - revert when Smoker's blight is done
+    GroundTobacco: 3
+    CigarGold: 2
     Igniter: 1

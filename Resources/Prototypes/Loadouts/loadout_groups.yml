@@ -96,12 +96,12 @@
   - PlushieSharkGrey # CD: Putting these up here so they show up along the existing plushies.
   - ThreeCandles
   - Lighter
-#  - CigPackGreen # SV - Smokers blight event, revert when event is concluded
-#  - CigPackRed # SV - Smokers blight event, revert when event is concluded
-#  - CigPackBlue # SV - Smokers blight event, revert when event is concluded
-#  - CigPackBlack # SV - Smokers blight event, revert when event is concluded
-#  - CigarCase # SV - Smokers blight event, revert when event is concluded
-#  - CigarGold # SV - Smokers blight event, revert when event is concluded
+  - CigPackGreen
+  - CigPackRed
+  - CigPackBlue
+  - CigPackBlack
+  - CigarCase
+  - CigarGold
   - BoxFolderBaseThreePapers
   - BoxFolderPlasticClipboardThreePapers
   - BoxFolderClipboardThreePapers

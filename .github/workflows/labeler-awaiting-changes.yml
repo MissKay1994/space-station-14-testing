@@ -1,9 +1,10 @@
-name: "Labels: Awaiting Changes"
+# SPDX-FileCopyrightText: 2026 Sector-Vestige contributors
+# SPDX-FileCopyrightText: 2025 ReboundQ3 <ReboundQ3@gmail.com>
+# SPDX-FileCopyrightText: 2026 ReboundQ3 <22770594+ReboundQ3@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
 
-permissions:
-  contents: read
-  pull-requests: write
-  issues: write
+name: "Labels: Awaiting Changes"
 
 on:
   pull_request_review:
@@ -13,19 +14,23 @@ jobs:
   awaiting_changes:
     if: ${{ github.event.review.state == 'CHANGES_REQUESTED' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
     steps:
       - name: Add Awaiting Changes label
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: "S: Awaiting Changes"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}
       - name: Remove Needs Review label
         uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: "S: Needs Review"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}
       - name: Remove Approved label if present
         uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: "S: Approved"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}

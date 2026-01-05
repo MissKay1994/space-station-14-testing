@@ -1243,3 +1243,9 @@ Entries:
       message: Added Jaytau's personal item
   id: 169
   time: '2026-01-03T14:57:48.0000000+00:00'
+- author: OnyxTheBrave
+  changes:
+    - type: Tweak
+      message: Reintroduced most ways of obtaining cigarettes.
+  id: 170
+  time: '2026-01-05T12:26:32.0000000+00:00'

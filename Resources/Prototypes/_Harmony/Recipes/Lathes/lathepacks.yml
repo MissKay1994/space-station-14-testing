@@ -56,16 +56,16 @@
   - ClothingEyesEyepatchHudMedical
   - ClothingEyesHudMedical
 
-## Security
-- type: latheRecipePack
-  id: HarmonySecurityEquipmentStatic
-  recipes:
-  - SecurityBola
+# ## Security
+# - type: latheRecipePack
+#   id: HarmonySecurityEquipmentStatic
+#   recipes:
+#   - SecurityBola
 
-- type: latheRecipePack
-  id: HarmonySecurityAmmoStatic
-  recipes:
-  - StripperClip
+# - type: latheRecipePack
+#   id: HarmonySecurityAmmoStatic
+#   recipes:
+#   - StripperClip
 
 ## Service
 - type: latheRecipePack

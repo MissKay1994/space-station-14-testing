@@ -1669,13 +1669,6 @@ entities:
     - type: Transform
       pos: -3.5,0.5
       parent: 1
-- proto: RandomHumanoidSpawnerERTMedicalEVATime
-  entities:
-  - uid: 279
-    components:
-    - type: Transform
-      pos: -2.5,7.5
-      parent: 1
 - proto: RollerBed
   entities:
   - uid: 125

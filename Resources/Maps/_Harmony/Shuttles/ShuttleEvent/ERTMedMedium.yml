@@ -3433,18 +3433,6 @@ entities:
     - type: Transform
       pos: -0.5,1.5
       parent: 1
-- proto: RandomHumanoidSpawnerERTMedicalEVATime
-  entities:
-  - uid: 545
-    components:
-    - type: Transform
-      pos: -0.5,10.5
-      parent: 1
-  - uid: 546
-    components:
-    - type: Transform
-      pos: 0.5,5.5
-      parent: 1
 - proto: ReagentContainerMayo
   entities:
   - uid: 126

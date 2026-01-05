@@ -9,6 +9,7 @@ jobs:
   this_aint_right:
     name: Submodule update in pr found
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'Maintenance') }}
     steps:
       - name: Fail
         run: exit 1

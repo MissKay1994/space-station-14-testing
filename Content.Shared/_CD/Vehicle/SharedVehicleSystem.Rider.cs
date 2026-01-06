@@ -1,9 +1,9 @@
 using Content.Shared.Hands;
 using Content.Shared.Movement.Pulling.Events;
-using Content.Shared._CD.Vehicle.Components;
+using Content.Shared.Vehicle.Components;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CD.Vehicle;
+namespace Content.Shared.Vehicle;
 
 public abstract partial class SharedVehicleSystem
 {

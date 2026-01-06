@@ -4,7 +4,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
-namespace Content.Shared._CD.Vehicle.Components;
+namespace Content.Shared.Vehicle.Components;
 
 /// <summary>
 /// This is particularly for vehicles that use

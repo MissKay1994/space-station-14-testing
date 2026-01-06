@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._CD.Vehicle.Components
+namespace Content.Shared.Vehicle.Components
 {
     /// <summary>
     /// Added to objects inside a vehicle to stop people besides the rider from

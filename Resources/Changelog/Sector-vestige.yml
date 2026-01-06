@@ -1249,3 +1249,11 @@ Entries:
       message: Reintroduced most ways of obtaining cigarettes.
   id: 170
   time: '2026-01-05T12:26:32.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Fixed the wheelchairs.
+    - type: Fix
+      message: Crutches and wheelchairs are back in the lathe.
+  id: 171
+  time: '2026-01-06T08:48:48.0000000+00:00'

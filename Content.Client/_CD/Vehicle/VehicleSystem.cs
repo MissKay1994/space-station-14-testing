@@ -1,9 +1,9 @@
-using Content.Shared.Vehicle;
-using Content.Shared.Vehicle.Components;
+using Content.Shared._CD.Vehicle;
+using Content.Shared._CD.Vehicle.Components;
 using Robust.Client.GameObjects;
 using Robust.Shared.GameStates;
 
-namespace Content.Client.Vehicle;
+namespace Content.Client._CD.Vehicle;
 
 public sealed class VehicleSystem : SharedVehicleSystem
 {

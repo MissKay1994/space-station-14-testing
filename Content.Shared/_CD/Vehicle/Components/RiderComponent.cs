@@ -1,7 +1,7 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Vehicle.Components;
+namespace Content.Shared._CD.Vehicle.Components;
 
 /// <summary>
 /// Added to people when they are riding in a vehicle

@@ -22,7 +22,7 @@
 
 using System.Numerics;
 using Content.Shared.Alert;
-using Content.Shared.Vehicle;
+using Content.Shared._CD.Vehicle;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;

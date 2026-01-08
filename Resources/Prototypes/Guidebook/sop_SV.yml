@@ -19,7 +19,7 @@
   - ResearchSOP
   - SecuritySOP
   - ServiceSOP
-  
+
 - type: guideEntry
   id: AlertSOP
   name: guide-entry-SV-alert-sop

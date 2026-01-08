@@ -5,9 +5,11 @@
   text: "/ServerInfo/Guidebook/SpaceStation14.xml"
   children:
   - Jobs
+  - SOP
   - Survival
   - Antagonists
   - Glossary
+  
 
 - type: guideEntry
   id: Glossary

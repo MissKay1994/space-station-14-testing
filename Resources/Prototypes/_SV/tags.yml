@@ -1,0 +1,4 @@
+- type: Tag
+  id: MagazineVector # Magazine for 77-Vector
+- type: Tag
+  id: CartridgeCaselessLightRifle # Cartridge for 77-Vector

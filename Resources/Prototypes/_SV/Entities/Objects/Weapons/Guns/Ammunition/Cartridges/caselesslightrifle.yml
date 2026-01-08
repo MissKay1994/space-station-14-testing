@@ -1,0 +1,29 @@
+- type: entity
+  parent: BaseCartridge
+  id: BaseCartridgeCaselessLightRifle
+  name: cartridge (.22LR)
+  components:
+  - type: Tag
+    tags:
+    - CartridgeCaselessLightRifle
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  parent: BaseCartridgeCaselessLightRifle
+  id: CartridgeCaselessLightRifle
+  name: cartridge (.22LR)
+  description: A small caliber utilizing caseless technology, omitting conventional brass casing in favor of hardened propellant. Standard kinetic ammunition is common and useful in most situations.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletCaselessLightRifle

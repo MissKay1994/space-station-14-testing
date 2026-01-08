@@ -1,0 +1,10 @@
+- type: entity
+  parent: BulletCaselessRifle
+  id: BulletCaselessLightRifle
+  categories: [ HideSpawnMenu ]
+  name: bullet (.22LR)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 5

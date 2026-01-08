@@ -1,0 +1,62 @@
+- type: entity
+  name: 77-Vector
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunVector
+  description: Formally known to be lost to time and technological advancement, 77-Vector is a continued model of the old-school Terra shooters. Chambered in .22LR and scaled down, features a retractable stock. Watch the recoil!
+  components:
+  - type: Sprite
+    sprite: _SV/Objects/Weapons/Guns/SMGs/vector.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _SV/Objects/Weapons/Guns/SMGs/vector.rsi
+    slots:
+    - Belt
+    - suitStorage
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -3
+    maxAngle: -14
+  - type: Gun
+    minAngle: 3
+    maxAngle: 32
+    shotsPerBurst: 6
+    fireRate: 22
+    burstFireRate: 22
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/smg.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 4000
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineVector
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineVector
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgeCaselessLightRifle

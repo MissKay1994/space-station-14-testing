@@ -1257,3 +1257,9 @@ Entries:
       message: Crutches and wheelchairs are back in the lathe.
   id: 171
   time: '2026-01-06T08:48:48.0000000+00:00'
+- author: Mixmaster49
+  changes:
+    - type: Add
+      message: Added SOP and Space Law to the guidebook
+  id: 172
+  time: '2026-01-09T09:55:47.0000000+00:00'

@@ -1,4 +1,4 @@
 - type: Tag
-  id: MagazineVector # Magazine for 77-Vector
+  id: MagazineLocust # Magazine for S77-Locust
 - type: Tag
-  id: CartridgeCaselessLightRifle # Cartridge for 77-Vector
+  id: CartridgeCaselessLightRifle # Cartridge for S77-Locust

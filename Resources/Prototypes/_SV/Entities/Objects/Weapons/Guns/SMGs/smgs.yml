@@ -1,18 +1,18 @@
 - type: entity
-  name: 77-Vector
+  name: S77-Locust
   parent: BaseWeaponSubMachineGun
   id: WeaponSubMachineGunVector
-  description: Formally known to be lost to time and technological advancement, 77-Vector is a continued model of the old-school Terra shooters. Chambered in .22LR and scaled down, features a retractable stock. Watch the recoil!
+  description: Formally known to be lost to time and technological advancement, S77-Locust is a continued model of the old-school Terra shooters. Chambered in .22LR and scaled down, features a retractable stock. Watch the recoil!
   components:
   - type: Sprite
-    sprite: _SV/Objects/Weapons/Guns/SMGs/vector.rsi
+    sprite: _SV/Objects/Weapons/Guns/SMGs/locust.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _SV/Objects/Weapons/Guns/SMGs/vector.rsi
+    sprite: _SV/Objects/Weapons/Guns/SMGs/locust.rsi
     slots:
     - Belt
     - suitStorage
@@ -46,13 +46,13 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineVector
+        startingItem: MagazineLocust
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
         whitelist:
           tags:
-          - MagazineVector
+          - MagazineLocust
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber

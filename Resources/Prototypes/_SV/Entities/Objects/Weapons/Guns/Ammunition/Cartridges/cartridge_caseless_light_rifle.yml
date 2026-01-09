@@ -1,4 +1,5 @@
 - type: entity
+  abstract: true
   parent: BaseCartridge
   id: BaseCartridgeCaselessLightRifle
   name: cartridge (.22LR)

@@ -1263,3 +1263,9 @@ Entries:
       message: Added SOP and Space Law to the guidebook
   id: 172
   time: '2026-01-09T09:55:47.0000000+00:00'
+- author: akirrer
+  changes:
+    - type: Add
+      message: Added S77-Locust along with .22LR caliber.
+  id: 173
+  time: '2026-01-09T12:40:09.0000000+00:00'

@@ -1269,3 +1269,9 @@ Entries:
       message: Added S77-Locust along with .22LR caliber.
   id: 173
   time: '2026-01-09T12:40:09.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Added the B.O.R.I.S module.
+  id: 174
+  time: '2026-01-10T17:56:10.0000000+00:00'

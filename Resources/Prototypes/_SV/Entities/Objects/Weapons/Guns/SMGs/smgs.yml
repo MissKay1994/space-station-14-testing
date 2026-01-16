@@ -8,7 +8,7 @@
 - type: entity
   name: S77-Locust
   parent: BaseWeaponSubMachineGun
-  id: WeaponSubMachineGunVector
+  id: WeaponSubMachineGunLocust
   description: Formally known to be lost to time and technological advancement, S77-Locust is a continued model of the old-school Terra shooters. Chambered in .22LR and scaled down, features a retractable stock. Watch the recoil!
   components:
   - type: Sprite

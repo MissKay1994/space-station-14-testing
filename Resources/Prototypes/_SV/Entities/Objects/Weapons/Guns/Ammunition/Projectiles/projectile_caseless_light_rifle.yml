@@ -15,3 +15,16 @@
     damage:
       types:
         Piercing: 5
+
+- type: entity
+  parent: BulletCaselessRifle
+  id: BulletCaselessLightRifleRubber
+  categories: [ HideSpawnMenu ]
+  name: bullet (.22LR rubber)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 0.25
+  - type: StaminaDamageOnCollide
+    damage: 5

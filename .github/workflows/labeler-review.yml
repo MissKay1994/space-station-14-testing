@@ -20,17 +20,25 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
+    - name: Generate GitHub App Token
+      id: generate-token
+      uses: actions/create-github-app-token@v1
+      with:
+        app-id: ${{ secrets.APP_ID }}
+        private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
     - uses: tspascoal/get-user-teams-membership@v3
       id: checkUserMember
       with:
         username: ${{ github.actor }}
         team: "Maintainer team"
-        GITHUB_TOKEN: ${{ secrets.WEH_BOT_PAT }}
+        GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+
     - name: Manage labels
       if: ${{ steps.checkUserMember.outputs.isTeamMember == 'true' }}
       uses: actions/github-script@v7
       with:
-        github-token: ${{ secrets.WEH_BOT_PAT }}
+        github-token: ${{ steps.generate-token.outputs.token }}
         script: |
           const issue_number = context.issue.number;
           const owner = context.repo.owner;

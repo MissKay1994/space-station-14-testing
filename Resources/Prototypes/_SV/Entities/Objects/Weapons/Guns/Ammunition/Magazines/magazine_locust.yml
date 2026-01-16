@@ -68,7 +68,7 @@
   description: 45-round magazine for S77-Locust with rubber tips. Works like a swarm of bees!
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeCaselessLightRifle
+    proto: CartridgeCaselessLightRifleRubber
   - type: Sprite
     layers:
     - state: base

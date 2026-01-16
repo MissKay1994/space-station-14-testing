@@ -19,7 +19,7 @@
     whitelist:
       tags:
       - CartridgeCaselessLightRifle
-    capacity: 90
+    capacity: 45
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -42,7 +42,7 @@
   parent: BaseMagazineLocust
   id: MagazineLocust
   name: Locust magazine (.22LR)
-  description: 90-round magazine for S77-Locust. Works like a swarm of hornets!
+  description: 45-round magazine for S77-Locust. Works like a swarm of hornets!
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeCaselessLightRifle
@@ -60,3 +60,20 @@
       - state: inhand-left-mag
       right:
       - state: inhand-right-mag
+
+- type: entity
+  parent: BaseMagazineLocust
+  id: MagazineLocustRubber
+  name: Locust magazine (.22LR rubber)
+  description: 45-round magazine for S77-Locust with rubber tips. Works like a swarm of bees!
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeCaselessLightRifle
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-1
+      map: [ "enum.GunVisualLayers.Mag" ]
+    - state: stripe
+      color: "#418ce8"

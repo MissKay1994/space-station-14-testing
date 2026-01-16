@@ -22,7 +22,7 @@ on:
   push:
     branches: [ master, staging, stable ]
   merge_group:
-  pull_request:
+  pull_request_target:
     types: [ opened, reopened, synchronize, ready_for_review ]
     branches: [ master, staging, stable ]
 
@@ -38,6 +38,9 @@ jobs:
     steps:
       - name: Checkout Master
         uses: actions/checkout@v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          submodules: 'recursive'
 
       - name: Setup Submodule
         run: |

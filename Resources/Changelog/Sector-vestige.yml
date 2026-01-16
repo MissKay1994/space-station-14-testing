@@ -1275,3 +1275,11 @@ Entries:
       message: Added the B.O.R.I.S module.
   id: 174
   time: '2026-01-10T17:56:10.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Add
+      message: Added antag categories.
+    - type: Tweak
+      message: Tweaked all the preferences to be more logical
+  id: 175
+  time: '2026-01-16T12:39:04.0000000+00:00'

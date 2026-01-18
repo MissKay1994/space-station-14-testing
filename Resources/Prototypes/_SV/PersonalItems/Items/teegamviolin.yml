@@ -1,0 +1,21 @@
+# Players: SqueakDrake - Character: Tee Gam
+- type: entity
+  parent: ViolinInstrument
+  id: PersonalItemTeegamViolin
+  name: Tee-Gam's violin
+  description: A mundane, purple violin. It has clearly been well cared for.
+  suffix: PersonalItem
+  components:
+  - type: Sprite
+    sprite: _SV/PersonalItems/Items/teegamviolin.rsi
+    state: icon
+  - type: Item
+    sprite: _SV/PersonalItems/Items/teegamviolin.rsi
+    size: Normal
+
+- type: loadout
+  id: PersonalItemTeegamViolin
+  effects:
+  - !type:PersonalItemLoadoutEffect
+    character:
+    - Tee-Gam

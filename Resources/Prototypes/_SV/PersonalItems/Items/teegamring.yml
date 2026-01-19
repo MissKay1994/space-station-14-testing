@@ -1,6 +1,6 @@
 ## Personal item for Tee-Gam
 - type: entity
-  parent: [ GoldRing ]
+  parent: GoldRing
   id: PersonalItemTeegamRing
   name: Gold Ring
   description: A simple gold ring with the added inscription "This ring belongs to the best husband that the galaxy can offer, I love you Starlight."

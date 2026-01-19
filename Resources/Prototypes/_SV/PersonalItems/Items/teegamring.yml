@@ -1,0 +1,21 @@
+## Personal item for Tee-Gam
+- type: entity
+  parent: [ GoldRing ]
+  id: PersonalItemTeegamRing
+  name: Gold Ring
+  description: A simple gold ring with the added inscription "This ring belongs to the best husband that the galaxy can offer, I love you Starlight."
+  components:
+  - type: Sprite
+    layers:
+    - state: ring
+      color: "#ffc833"
+
+- type: loadout
+  id: PersonalItemTeegamRing
+  storage:
+    back:
+    - PersonalItemTeegamRing
+  effects:
+  - !type:PersonalItemLoadoutEffect
+    character:
+    - Tee-Gam

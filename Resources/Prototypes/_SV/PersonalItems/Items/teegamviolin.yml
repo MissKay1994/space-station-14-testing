@@ -15,6 +15,9 @@
 
 - type: loadout
   id: PersonalItemTeegamViolin
+  storage:
+    back:
+    - PersonalItemTeegamViolin
   effects:
   - !type:PersonalItemLoadoutEffect
     character:

@@ -1283,3 +1283,13 @@ Entries:
       message: Tweaked all the preferences to be more logical
   id: 175
   time: '2026-01-16T12:39:04.0000000+00:00'
+- author: akirrer
+  changes:
+    - type: Add
+      message: Added .22LR rubber ammunition, magazine and ammo box
+    - type: Add
+      message: Added .22LR drum magazine
+    - type: Tweak
+      message: Adjusted .22LR base magazine.
+  id: 176
+  time: '2026-01-16T19:06:08.0000000+00:00'

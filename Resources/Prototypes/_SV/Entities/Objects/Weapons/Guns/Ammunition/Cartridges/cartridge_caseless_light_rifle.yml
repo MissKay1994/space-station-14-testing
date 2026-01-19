@@ -35,3 +35,19 @@
   components:
   - type: CartridgeAmmo
     proto: BulletCaselessLightRifle
+
+- type: entity
+  parent: BaseCartridgeCaselessLightRifle
+  id: CartridgeCaselessLightRifleRubber
+  name: cartridge (.22LR rubber)
+  description: A small caliber utilizing caseless and rubber tip technology, omitting conventional brass casing in favor of hardened propellant. Standard kinetic ammunition is common and useful in most situations.
+  components:
+  - type: CartridgeAmmo
+    proto: BulletCaselessLightRifleRubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#418ce8"

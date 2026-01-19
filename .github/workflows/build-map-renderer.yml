@@ -29,11 +29,7 @@ on:
 jobs:
   build:
     if: github.actor != 'Vestige-bot' && github.event.pull_request.draft == false
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-
-    runs-on: ${{ matrix.os }}
+    runs-on: [self-hosted, ubuntu-latest]
 
     steps:
       - name: Checkout Master
@@ -72,7 +68,7 @@ jobs:
     name: Build & Test Debug
     needs:
       - build
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, ubuntu-latest]
     steps:
       - name: CI succeeded
         run: exit 0

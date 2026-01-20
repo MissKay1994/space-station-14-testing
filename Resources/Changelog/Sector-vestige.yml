@@ -1299,3 +1299,9 @@ Entries:
       message: Silver ring personal item for Beem-Kilaya.
   id: 177
   time: '2026-01-19T10:29:34.0000000+00:00'
+- author: ReboundQ3
+  changes:
+    - type: Fix
+      message: Crutches now work as mobility aids.
+  id: 178
+  time: '2026-01-20T10:59:34.0000000+00:00'

@@ -3,5 +3,5 @@
   suffix: medical tracking
   parent: BaseImplantOnlyImplanter
   components:
-    - type: Implanter
-      implant: MedicalTrackingImplant
+  - type: Implanter
+    implant: MedicalTrackingImplant

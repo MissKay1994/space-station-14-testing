@@ -66,3 +66,12 @@
     Arms:
       points: 8 # Frontier 2<8
       required: false
+    UndergarmentTop:
+      points: 1
+      required: false
+    UndergarmentBottom:
+      points: 1
+      required: false
+    Snout:
+      points: 1
+      required: false

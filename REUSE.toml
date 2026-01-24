@@ -1,6 +1,6 @@
 version = 1
-SPDX-PackageName = "Late-station-14"
-SPDX-PackageDownloadLocation = "https://github.com/<org>/Late-station-14"
+SPDX-PackageName = "Sector-Vestige"
+SPDX-PackageDownloadLocation = "https://github.com/Sector-Vestige/Sector-Vestige"
 
 [[annotations]]
 path = "Content.Server/**"

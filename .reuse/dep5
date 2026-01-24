@@ -201,6 +201,19 @@ Copyright: 2020-2025 Moffstation contributors
  2020-2025 Sector Vestige contributors (modifications)
 License: MIT
 
+# Goob code licensed under MIT
+Files: Content.Server/_Goobstation/**
+        Content.Client/_Goobstation/**
+        Content.Shared/_Goobstation/**
+        Resources/_Goobstation/**
+        Resources/Prototypes/_Goobstation/**
+        Resources/Audio/_Goobstation/**
+        Resources/Textures/_Goobstation/**
+        Resources/Locale/_Goobstation/**
+Copyright: 2020-2025 Goob-Station contributors
+ 2020-2025 Sector Vestige contributors (modifications)
+License: AGPL-3.0-or-later
+
 # Assets
 Files: Resources/Textures/**
 Copyright: SS14 contributors (Check meta files)

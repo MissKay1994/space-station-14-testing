@@ -10,6 +10,10 @@
   description: trait-synth-desc
   components:
     - type: Synth
+      bloodReferenceSolution:
+        reagents:
+        - ReagentId: SynthBlood
+          Quantity: 300
 
 - type: trait
   id: VeryLightweightDrunk

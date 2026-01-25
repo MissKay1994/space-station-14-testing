@@ -6,6 +6,7 @@
 
 using Content.Shared.Chat.TypingIndicator;
 using Robust.Shared.Prototypes;
+using Content.Shared.Chemistry.Components;
 
 namespace Content.Server._CD.Traits;
 
@@ -20,6 +21,9 @@ public sealed partial class SynthComponent : Component
     /// </summary>
     [DataField]
     public float AlertChance = 0.3f;
+
+    [DataField]
+    public Solution BloodReferenceSolution = new([new("SynthBlood", 300)]);
 
     /// <summary>
     /// The typing indicator prototype to use for synths

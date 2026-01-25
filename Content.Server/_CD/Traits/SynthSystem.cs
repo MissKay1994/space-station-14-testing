@@ -29,7 +29,7 @@ public sealed class SynthSystem : EntitySystem
         EnsureComp<TypingIndicatorComponent>(uid);
 
         // Give them synth blood. Ion storm notif is handled in that system
-        _bloodstream.ChangeBloodReagent(uid, new ProtoId<ReagentPrototype>("SynthBlood"));
+        _bloodstream.ChangeBloodReagents(uid, component.BloodReferenceSolution);
     }
 
     private void OnBeforeShowTypingIndicator(EntityUid uid, SynthComponent component, BeforeShowTypingIndicatorEvent args)

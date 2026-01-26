@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2026 Sector-Vestige contributors
+// SPDX-FileCopyrightText: 2026 qu4drivium <aaronholiver@outlook.com>
+//
+// SPDX-License-Identifier: MIT
+
 using Content.Shared.Traits.Assorted;
 using Content.Shared.EntityEffects;
 using JetBrains.Annotations;

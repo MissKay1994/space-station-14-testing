@@ -165,7 +165,7 @@
           reagent: Neurozenium
           min: 5.1
       - !type:Emote
-        emote: Scream # makes you screna sometimes
+        emote: Scream # makes you scream sometimes
         showInChat: true
         probability: 0.05
         conditions:
@@ -797,7 +797,7 @@
           min: 20 # taking far too much has a chance to knock you out
         key: ForcedSleep
         component: ForcedSleeping
-        refresh: false
+        time: 5
         type: Add
       - !type:PopupMessage
         type: Local

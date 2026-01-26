@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 qu4drivium <aaronholiver@outlook.com>
-#
-# SPDX-License-Identifier: MIT
-
 - type: reaction
   id: Serenitol
   reactants:
@@ -126,3 +122,26 @@
       catalyst: true
   products:
     Agonolexyne: 3
+
+- type: reaction
+  id: Saprodipine
+  minTemp: 350
+  reactants:
+    Stellibinin:
+      amount: 1
+    Synaptizine:
+      amount: 1
+  products:
+    Saprodipine: 2
+
+- type: reaction
+  id: Cortexene
+  reactants:
+    Neurozenium:
+      amount: 1
+    MindbreakerToxin:
+      amount: 1
+    Cryptobiolin:
+      amount: 1
+  products:
+    Cortexene: 3

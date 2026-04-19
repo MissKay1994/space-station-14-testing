@@ -726,6 +726,18 @@
           factor: 6
         - !type:ModifyBloodLevel
           amount: 6
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Vox ]
+            inverted: true
+        - !type:HealthChange
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Vox ]
+            inverted: false
+          damage:
+            types:
+              Poison: 1
 
 - type: reagent
   id: Siderlac
@@ -1519,3 +1531,67 @@
           reagent: Heparin
           min: 15
         amount: 0.25
+
+- type: reagent
+  id: Hydrine
+  name: reagent-name-hydrine
+  group: Medicine
+  desc: reagent-desc-hydrine
+  physicalDesc: reagent-physical-desc-pungent
+  allowedDepartments:
+  - Medical
+  color: "#5b6a7b"
+  metabolisms:
+    Bloodstream:
+      effects:
+        - !type:ModifyBloodLevel
+          amount: 6
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Vox ]
+        - !type:HealthChange
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Vox ]
+            inverted: true
+          damage:
+            types:
+              Poison: 1
+
+- type: reagent
+  id: Sinistrin
+  name: reagent-name-sinistrin
+  group: Medicine
+  desc: reagent-desc-sinistrin
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: medicine
+  color: "#0041a8"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:MetabolizerTypeCondition
+            type: [ Vox, Slime ]
+            inverted: false
+        damage:
+          types:
+            Asphyxiation: -1
+            Bloodloss: -0.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentCondition
+          reagent: Sinistrin
+          min: 20
+        damage:
+          types:
+            Asphyxiation: 3
+            Cold: 1
+      - !type:HealthChange
+        conditions:
+        - !type:MetabolizerTypeCondition
+            type: [ Vox, Slime ]
+            inverted: true
+        damage:
+          types:
+            Asphyxiation: 3

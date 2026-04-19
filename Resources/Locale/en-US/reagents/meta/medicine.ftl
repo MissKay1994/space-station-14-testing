@@ -153,3 +153,9 @@ reagent-desc-haloperidol = Removes most stimulating and hallucinogenic drugs. Re
 
 reagent-name-heparin = heparin
 reagent-desc-heparin = Commonly used as an anticoagulant medication. Causes blood to have difficulty forming clots. Can cause internal bleeding when overdosed.
+
+reagent-name-hydrine = hydrine
+reagent-desc-hydrine = An vox alternative to saline. Restores lost blood in vox.
+
+reagent-name-sinistrin = sinistrin
+reagent-desc-sinistrin = Used for treating minor nitrogen deprivation and bloodloss. A required reagent for simistrin plus

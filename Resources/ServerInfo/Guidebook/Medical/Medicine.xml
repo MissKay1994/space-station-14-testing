@@ -12,6 +12,8 @@ These medications are almost always useful to medbay in one way or another.
 <GuideReagentEmbed Reagent="Dexalin"/>
 <GuideReagentEmbed Reagent="DexalinPlus"/>
 <GuideReagentEmbed Reagent="Iron"/>
+<GuideReagentEmbed Reagent="Hydrine"/>
+<GuideReagentEmbed Reagent="Sinistrin"/>
 
 # Specialty Medications
 

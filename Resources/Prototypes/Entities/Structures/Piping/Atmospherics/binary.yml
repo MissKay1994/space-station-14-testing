@@ -537,10 +537,12 @@
         !type:PipeNode
         nodeGroupID: Pipe
         pipeDirection: North
+        volume: 400
       outlet:
         !type:PipeNode
         nodeGroupID: Pipe
         pipeDirection: South
+        volume: 400
   - type: AtmosDevice
   - type: AtmosPipeColor
   - type: AmbientSound
